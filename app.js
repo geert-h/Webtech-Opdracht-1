@@ -3,6 +3,6 @@ var res = str.split("~");
 
 let i = 0;
 setInterval(function(){
-    alert(res[i]);
+    alert(res[i % res.length]);
     i++;
-}, 1000)
+}, 6000)
