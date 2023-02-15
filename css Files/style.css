@@ -50,7 +50,6 @@ nav ul {
 }
 #video {
     width: 100vw;
-    /* height: 10vh;     */
     filter: brightness(40%);
     z-index: 0;
 }
