@@ -15,7 +15,7 @@ h1 {
 a {
     color: aliceblue;
     font-family: "Compacta", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 3rem;
     text-decoration: none;
 }
@@ -59,11 +59,14 @@ nav ul {
 }
 
 #huts {
-    height: 15vh;
+    min-height: 15vh;
     position: relative;
     background-color: rgb(23, 21, 27);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: aliceblue;
+    color: rgb(199, 24, 24);
+}
+#huts a {
+    color: rgb(199, 24, 24);
 }
