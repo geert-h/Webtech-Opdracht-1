@@ -5,16 +5,16 @@
     font-size: 62.5%;
 }
 @font-face {
-    font-family: "Compacta";
-    src: url("../Resources/Fonts/unicode.compacta.ttf");
+    font-family: "Teko Bold";
+    src: url("../Resources/Fonts/Teko Font/Teko-Bold.ttf");
 }
 h1 {
     font-size: 10rem;
-    font-family: "Compacta", sans-serif;
+    font-family: "Teko Bold", sans-serif;
 }
 a {
     color: aliceblue;
-    font-family: "Compacta", sans-serif;
+    font-family: "Teko Bold", sans-serif;
     font-weight: 900;
     font-size: 4rem;
     text-decoration: none;
@@ -43,6 +43,8 @@ nav ul {
     height: 10vh;
     width: 20%;
     text-decoration: none;
+    list-style-type: none;
+
 }
 
 #vidsection {
