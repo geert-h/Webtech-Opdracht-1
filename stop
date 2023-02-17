@@ -1,0 +1,127 @@
+[33mcommit 8764f7073f520a11c86b99e771be8be9fd20e074[m[33m ([m[1;36mHEAD -> [m[1;32mMainPage[m[33m, [m[1;31morigin/MainPage[m[33m)[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Thu Feb 16 13:26:55 2023 +0100
+
+    added trailer links
+
+[33mcommit 31f5dee443e684a3f813213b3c233c81ed380bc0[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Thu Feb 16 13:26:07 2023 +0100
+
+    hahahahahahahahaha
+
+[33mcommit d10fadc599e6ecd9d7a97df9d35a5442dfd4a940[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Thu Feb 16 00:47:19 2023 +0100
+
+    small change
+
+[33mcommit ad9a927dc35abfd4ffc711f0751c7ca5cad81910[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Thu Feb 16 00:44:12 2023 +0100
+
+    added video background and changed colors and fonts
+
+[33mcommit f5971581992bd3227b8ae1244b51b298c095b05e[m
+Merge: ef0abf1 61714b1
+Author: Aidan Bruinsma <a.m.a.bruinsma@students.uu.nl>
+Date:   Wed Feb 15 16:46:25 2023 +0100
+
+    Merge branch 'MainPage' of https://github.com/geert-h/Webtech-Opdracht-1 into MainPage
+
+[33mcommit ef0abf15a3f0144cf005b880399ea7fae8387041[m
+Author: Aidan Bruinsma <a.m.a.bruinsma@students.uu.nl>
+Date:   Wed Feb 15 16:46:16 2023 +0100
+
+    nav bar
+
+[33mcommit 61714b1f4c1dbc0f3d6264a552e510bb9dd25cfa[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Wed Feb 15 16:45:27 2023 +0100
+
+    Added a resources folder which contains a font folder with the 'compacta' font, 'Logo.png' and 'Poster.png'
+
+[33mcommit 838083ccaf1519755fbf43c69064b9b48946caa8[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Wed Feb 15 16:25:28 2023 +0100
+
+    added global css style
+
+[33mcommit 507dc75cf55b1eb58104a06918e7153e92d5f2c1[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Wed Feb 15 15:57:43 2023 +0100
+
+    Deleted 'HTML Files' folder
+
+[33mcommit 072c9f513d0d5b84b284f7403d3ba74fe26fa2bd[m
+Author: DESKTOP-7AB9G8D\Geert <g.j.haans@students.uu.nl>
+Date:   Mon Feb 13 18:05:14 2023 +0100
+
+    js Files folder and Code.js?
+
+[33mcommit 84c4868301fe785308ca21f69f15088096ddb7c1[m
+Author: DESKTOP-7AB9G8D\Geert <g.j.haans@students.uu.nl>
+Date:   Mon Feb 13 17:52:36 2023 +0100
+
+    New structure for the files. Initial files such as index.html and style.css are made. For future use the folder 'js Files' is added as well
+
+[33mcommit b6e2b653cccb7703d273de01a26e4e48eba433cf[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: DESKTOP-7AB9G8D\Geert <g.j.haans@students.uu.nl>
+Date:   Mon Feb 13 16:45:20 2023 +0100
+
+    Put the old website in an archive
+
+[33mcommit 299ee1aee3cd5e9afa50c1074b21eec585339c76[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Fri Feb 10 14:59:02 2023 +0100
+
+    javascript dingen
+
+[33mcommit 40ed1264e438810165307bc7333e650b1235420a[m
+Merge: 9fcab01 0aaa82d
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Fri Feb 10 14:43:43 2023 +0100
+
+    Merge branch 'master' of https://github.com/geert-h/Webtech-Opdracht-1
+
+[33mcommit 9fcab017257881cb9b26b834e6db5351a2b05f23[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Fri Feb 10 14:43:24 2023 +0100
+
+    lekker man
+
+[33mcommit 0aaa82da8e4ef5cf26085e78734ebe2102161961[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Fri Feb 10 14:41:43 2023 +0100
+
+    Lekker man
+
+[33mcommit 21fb32772462dfb8925f4c2bbf4e43c776fa663e[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Fri Feb 10 14:14:28 2023 +0100
+
+    Nog meer epischeid
+
+[33mcommit 483611a5873cb8e705c542dd8f1e34ba2e329e6e[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Fri Feb 10 13:29:43 2023 +0100
+
+    Aron's problemen fixen
+
+[33mcommit 005bf203344516d2a1284a5c5ece2c2a01248b4f[m
+Author: Aron den Ouden <a.s.denouden@students.uu.nl>
+Date:   Fri Feb 10 13:16:32 2023 +0100
+
+    mooiste webstie ooit
+
+[33mcommit b43b324df1c5e1ffbea8517438395a53aa7e8014[m[33m ([m[1;31morigin/Huts[m[33m)[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Fri Feb 10 12:09:26 2023 +0100
+
+    Ik wanneer Huts
+
+[33mcommit 5e0431e0d685ac8a0009da509415832db92ddd44[m
+Author: geert-haans <0169951@students.uu.nl>
+Date:   Fri Feb 10 12:02:02 2023 +0100
+
+    Initial commit

@@ -16,10 +16,12 @@ a {
     color: aliceblue;
     font-family: "Compacta", sans-serif;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 4rem;
     text-decoration: none;
 }
 nav {
+    justify-content: center;
+    display: flex;
     background-color: rgb(0, 0, 0);
     z-index: 777;
     position: sticky;
@@ -27,11 +29,19 @@ nav {
     top: 0;
     left: 0;
 }
+
+#nav_spacer {
+    width: 15%;
+    background-color:  blue; 
+}
+
 nav ul {
+    background-color:rgb(199, 24, 24);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 10vh;
+    width: 20%;
     text-decoration: none;
 }
 
