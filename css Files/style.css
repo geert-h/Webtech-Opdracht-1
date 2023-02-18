@@ -49,6 +49,16 @@
     #huts {
         display: none;
     }
+
+    h1 {
+        font-size: 1rem;
+        font-family: "Teko Bold", sans-serif;
+    }
+
+    .plotDiv {
+        font-size: 1rem;
+        font-family: "Teko Bold", sans-serif;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -58,14 +68,31 @@
         box-sizing: border-box;
         font-size: 62.5%;
     }
+
     @font-face {
         font-family: "Teko Bold";
         src: url("../Resources/Fonts/Teko Font/Teko-Bold.ttf");
     }
-    h1 {
+    @font-face {
+        font-family: "Teko Regular";
+        src: url("../Resources/Fonts/Teko Font/Teko-Regular.ttf");
+    }
+
+    #plot {
+        height: 90vh;
+        background-color: blue;
+    }
+
+    #plot h1 {
         font-size: 10rem;
         font-family: "Teko Bold", sans-serif;
     }
+    
+    #plot .plotDiv {
+        font-size: 8rem;
+        font-family: "Teko Regular", sans-serif;
+    }
+
     a {
         color: aliceblue;
         font-family: "Teko Bold", sans-serif;
@@ -90,19 +117,19 @@
 
     #nav_spacer {
         width: 15%;
-        background-color:  blue; 
+        /* background-color:  blue;  */
     }
 
-nav ul {
-    background-color:rgb(199, 24, 24);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    width: 20%;
-    text-decoration: none;
-    list-style-type: none;
-}
+    nav ul {
+        /* background-color:rgb(199, 24, 24); */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        width: 20%;
+        text-decoration: none;
+        list-style-type: none;
+    }
 
     #vidsection {
         position: absolute;
