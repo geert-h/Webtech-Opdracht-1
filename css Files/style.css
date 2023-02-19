@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     * {
         padding: 0;
         margin: 0;
@@ -8,6 +8,10 @@
     @font-face {
         font-family: "Teko Bold";
         src: url("../Resources/Fonts/Teko Font/Teko-Bold.ttf");
+    }
+    @font-face {
+        font-family: "Teko Regular";
+        src: url("../Resources/Fonts/Teko Font/Teko-Regular.ttf");
     }
     #huts a {
         color: rgb(17, 0, 255);      
@@ -38,7 +42,7 @@
 
     nav ul {
         display: none;
-    };
+    }
 
     #nav_spacer {
         display: none;
@@ -51,17 +55,38 @@
     }
 
     h1 {
-        font-size: 1rem;
+        align-items: center;
+        font-size: 5rem;
         font-family: "Teko Bold", sans-serif;
     }
 
-    .plotDiv {
-        font-size: 1rem;
+    .plot-content {
+        height: fit-content;
+        background-color: slategrey;
+    }
+    
+    .plot-content__header1 {
+        align-items: center;
+        text-align: center;
+        font-size: 6rem;
         font-family: "Teko Bold", sans-serif;
+    }
+
+    .plot-content__introduction-div {
+        /* display: grid; */
+        /* grid-template-columns: 1fr 1fr; */
+        align-items: center;
+        font-size: 4rem;
+        font-family: "Teko Regular", sans-serif;
+    }
+
+    .plot-content__introduction-div__img {
+        width: 100%;
+        height: auto;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
     * {
         padding: 0;
         margin: 0;
@@ -78,19 +103,55 @@
         src: url("../Resources/Fonts/Teko Font/Teko-Regular.ttf");
     }
 
-    #plot {
-        height: 90vh;
-        background-color: blue;
-    }
-
-    #plot h1 {
-        font-size: 10rem;
+    h1 {
+        align-items: center;
+        text-align: center;
+        font-size: 6rem;
         font-family: "Teko Bold", sans-serif;
     }
-    
-    #plot .plotDiv {
-        font-size: 8rem;
+
+    .plot-content {
+        height: fit-content;
+        background-color: slategrey;
+        font-family: "Teko Regular";
+        font-size: 5rem;
+        padding-left: 1%;
+    }
+
+    .plot-content__header1 {
+        align-items: center;
+        text-align: center;
+        font-size: 6rem;
+        font-family: "Teko Bold", sans-serif;
+    }
+
+    .plot-content__introduction-div {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        font-size: 5rem;
         font-family: "Teko Regular", sans-serif;
+        /* background-color: cornflowerblue; */
+        height: fit-content;
+        width: 100vw;
+    }
+
+    .plot-content__introduction-div__text {
+        padding-right: 3%;
+    }
+
+    .plot-content__introduction-div__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .plot-content__unordered-list {
+        list-style-type: disc;
+        padding-left: 2%;
+    }
+
+    .plot-content__unordered-list__item {
+        font-size: 3rem;
     }
 
     a {
@@ -163,6 +224,7 @@
         justify-content: center;
         color: rgb(199, 24, 24);
     }
+
     #huts a {
         color: rgb(199, 24, 24);
         
