@@ -37,10 +37,7 @@
         display: flex;
         z-index: 777;
         position: sticky;
-        width: 100vw;
         height: 10vh;
-        top: 0;
-        left: 0;
         align-items: center;
         justify-content: center;
     }
@@ -48,13 +45,18 @@
         height: 50%;
         position: absolute;
         left: 0;
-        margin-left: 5rem;
+        margin-left: 5%;
     }
     #nav_logo_link {
-        height: 70%;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+    }    
     #nav_logo {
         height: 100%;
+        padding: 5% 0rem;
     }
 
     nav ul {
@@ -196,9 +198,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-    section, nav, footer {
-        padding: 0rem 0rem;
-    }
+
+    /* GENERAL */
+
+    /* section, nav, footer {
+        padding: 0rem 10rem;
+    } */
 
     h1 {
         align-items: center;
@@ -206,9 +211,54 @@
         font-size: 6rem;
         font-family: "Teko Bold", sans-serif;
     }
-    mobile-nav-links {
+
+    a {
+        color: white;
+        font-family: "Teko Bold", sans-serif;
+        font-weight: 900;
+        font-size: 5rem;
+        text-decoration: none;
+    }
+    ul, li {
+        list-style-type: none;
+    }
+
+
+    /* NAV */
+
+    #mobile-nav-links {
         display: none;
     }
+    #menu_icon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        background-color: #25272f;
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+        width: 60%;
+    }
+    #nav_logo_link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5rem;
+    }
+    #nav_logo {
+        width: 20rem;
+    }
+
+
+
 
     .plot-content {
         height: fit-content;
@@ -263,44 +313,8 @@
     .plot-content__mission-div__unordered-list__item {
         font-size: 3rem;
     }
-
-    a {
-        color: aliceblue;
-        font-family: "Teko Bold", sans-serif;
-        font-weight: 900;
-        font-size: 5rem;
-        text-decoration: none;
-    }
-    nav {
-        justify-content: center;
-        display: flex;
-        background-color: rgb(0, 0, 0);
-        z-index: 777;
-        position: sticky;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
     
-    nav img {
-        display: none;
-    }
 
-    #nav_spacer {
-        width: 15%;
-        /* background-color:  blue;  */
-    }
-
-    nav ul {
-        /* background-color:rgb(199, 24, 24); */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10vh;
-        width: 20%;
-        text-decoration: none;
-        list-style-type: none;
-    }
 
     #vidsection {
         position: absolute;
@@ -319,6 +333,55 @@
         width: 100vw;
         filter: brightness(40%);
         z-index: 0;
+        display: none;
+    }
+    .index-content__plot-section {
+        height: auto;
+        display: flex;
+        background-color: #25272f;
+    }
+    .index-content__poster-div {
+        height: 40vh;
+        width: 25%;
+    }
+    .index-content__poster-div__img {
+        height: 80%;
+        width: auto;
+        margin-left: 15%;
+        margin-top: 10%;        
+    }
+    .index-content__plot-information-div__text {
+        height: auto;
+        width: 50%;
+        margin-top: 3rem;
+        margin-right: 2rem;
+    }
+    .index-content__plot-information-div__text p, h2 {
+        color: white;
+    }
+    .index-content__plot-information-div__text h2 {
+        font-size: 4rem;
+    }
+    .index-content__plot-information-div__text p, p a {
+        font-size: 2rem;
+    }
+    .index-content__general-information-div__text {
+        display: flex;
+        width: 25%;
+        height: auto;
+        margin-top: 3rem;
+        margin-left: ;
+    }
+    .index-content__general-information-div__text h2 {
+        font-size: 3rem;
+    }
+    .index-content__general-information-div__text p {
+        color: white;
+        font-size: 2rem;
+    }
+    .index-content__general-information-box__text {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     .index-content__plot-section {
         height: auto;
@@ -387,5 +450,8 @@
     #huts a {
         color: rgb(199, 24, 24);
         
+    }
+    #huts {
+        display: none;
     }
 }
