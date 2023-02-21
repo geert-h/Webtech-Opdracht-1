@@ -5,27 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css-files/style.css">
+    <link rel=icon href="./Resources//jet.svg">
     <title>TOP GUN: Maverick</title>
 </head>
 <body>
     <nav class="nav-content">
-        <img class="nav-content__menu-icon" src="/resources/menu-icon.svg" alt="menu icon">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <a class="nav-content__logo-link" href="./index.html"><img class="nav-content__logo-link__image" src="/resources/logo-white.png" alt="top gun logo"></a>
         <ul class="nav-content__unordered-list">
-            <li class="nav-content__unordered-list__item"><a href="./plot.html">PLOT</a></li>
-            <li class="nav-content__unordered-list__item"><a href="./cast.html">CAST</a></li>
-            <li class="nav-content__unordered-list__item"><a href="./trivia.html">TRIVIA</a></li>
-            <li class="nav-content__unordered-list__item"><a href="./reviews.html">REVIEWS</a></li>
+            <li class="nav-content__unordered-list__item"><a class="nav-item" href="./plot.html">PLOT</a></li>
+            <li class="nav-content__unordered-list__item"><a class="nav-item" href="./cast.html">CAST</a></li>
+            <li class="nav-content__unordered-list__item"><a class="nav-item" href="./trivia.html">TRIVIA</a></li>
+            <li class="nav-content__unordered-list__item"><a class="nav-item" href="./reviews.html">REVIEWS</a></li>
         </ul>
     </nav>
-    <section id="mobile-nav-links">
-        <ul>
-            <li><a href="./plot.html">PLOT</a></li>
-            <li><a href="./cast.html">CAST</a></li>
-            <li><a href="./trivia.html">TRIVIA</a></li>
-            <li><a href="./reviews.html">REVIEWS</a></li>
-        </ul>
-    </section>
     <section id="vidsection">
         <!-- <a href="/index.html"><img id="logo" src="./Resources/TopGun.png" alt="top gun logo"></a> -->
         <video autoplay muted loop id="video">
@@ -56,13 +53,48 @@
                     <p>May 27th 2022 <br> <br></p>
                     <h2>Directed by</h2>
                     <p>Joseph Kosinski</p>
-                </div>
+            </div>
                 <div class="index-content__general-information-box__text">
                     <h2>Budget</h2>
-                    <p>$170 milion <br> <br></p>
+                    <p>$170 million <br> <br></p>
                     <h2>Box office</h2>
-                    <p>$1.489 bilion <br> <br></p>
+                    <p>$1.489 billion <br> <br></p>
                 </div>
+            </div>
+        </div>
+        <div class="index-content__cast-div">
+            <h2 class="index-content__cast-div__header">Cast</h2>
+            <div class="index-content__cast-div__members-div">
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/tom-cruise.png" alt="Tom Cruise head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Tom Cruise</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Capt. Pete 'Maverick' Mitchell</p>
+                </a>
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/jennifer-connelly.png" alt="Jennifer Connelly head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Jennifer Connelly</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Penny Benjamin</p>
+                </a>
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/miles-teller.png" alt="Miles Teller head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Miles Teller</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Lt. Bradley 'Rooster' Bradshaw</p>
+                </a>
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/glen-powell.png" alt="Glen Powell head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Glen Powell</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Lt. Jake 'Hangman' Seresin</p>
+                </a>
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/val-kilmer.png" alt="Val Kilmer head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Val Kilmer</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Adm. Tom 'Iceman' Kazansky</p>
+                </a>`
+                <a href="/cast.html" class="index-content__cast-div__actor-div">
+                    <img src="/resources/actors/jon-hamm.png" alt="Jon Hamm head shot" class="index-content__cast-div__actor-div__img">
+                    <h3 class="index-content__cast-dive__actor-div__text-head">Jon Hamm</h3>
+                    <p class="index-content__cast-dive__actor-div__text-p">Adm. Beau 'Cyclone' Simpson</p>
+                </a>
             </div>
         </div>
     </section>
@@ -70,5 +102,6 @@
         <h1><a href="https://www.youtube.com/watch?v=giXco2jaZ_4">HUTS</a></h1>
         <iframe width="720" height="480" src="https://www.youtube.com/embed/giXco2jaZ_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </footer>
+    <script src="./js-files/code.js"></script>
 </body>
 </html>
