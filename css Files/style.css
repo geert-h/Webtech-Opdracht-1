@@ -392,6 +392,7 @@
         height: auto;
         display: flex;
         background-color: #25272f;
+        margin-bottom: 5vh;
     }
     .index-content__poster-div {
         height: 40vh;
