@@ -226,6 +226,7 @@
         font-size: 5rem;
         text-decoration: none;
     }
+    
     nav {
         justify-content: center;
         display: flex;
@@ -241,18 +242,19 @@
         display: none;
     }
 
-    #nav_spacer {
+    /* #nav_spacer {
         width: 15%;
-        /* background-color:  blue;  */
-    }
+        background-color:  blue; 
+    } */
 
     nav ul {
-        /* background-color:rgb(199, 24, 24); */
+        background-color:rgb(199, 24, 24);
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 10vh;
-        width: 20%;
+        /* width: 50%; */
+        width:100%;
         text-decoration: none;
         list-style-type: none;
     }
