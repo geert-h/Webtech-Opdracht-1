@@ -113,8 +113,8 @@
     }
 
     .plot-content__introduction-div {
-        /* display: grid; */
-        /* grid-template-columns: 1fr 1fr; */
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
         align-items: center;
         font-size: 3rem;
         font-family: "Teko Regular", sans-serif;
