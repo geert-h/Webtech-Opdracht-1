@@ -200,7 +200,12 @@
         justify-content: space-around;
         align-items: center;
         margin-left: auto;
-        width: 60%;
+        width: fit-content;
+        background-color: #3b425c;
+    }
+
+    .TEst {
+        padding: 0rem 4rem;
     }
     #nav_logo_link{
         display: flex;
