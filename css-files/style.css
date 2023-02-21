@@ -17,25 +17,32 @@
     font-family: "Teko SemiBold";
     src: url("../resources/fonts/teko-font/Teko-SemiBold.ttf");
 }
-.hamburger {
-    display: none;
-    cursor: pointer;
- }
- 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
-}
 
 @font-face {
     font-family: "Teko Light";
     src: url("../resources/fonts/teko-font/Teko-Light.ttf");
 }
+
+.nav-content__hamburger {
+    position: absolute;
+    left: -3vh;
+    top: -1.6vh;
+    cursor: pointer;
+    height: 8vh;
+    width: 8vh;
+}
+ 
+.nav-content__hamburger__bar {
+    display: block;
+    width: 100%;
+    height: 15%;
+    margin: 25% 0%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
 
 .in-text-reference {
     font-family: "Teko SemiBold";
@@ -56,13 +63,6 @@
         justify-content: center;
     }
 
-    .nav-content__menu-icon {
-        height: 50%;
-        position: absolute;
-        left: 0;
-        margin-left: 5%;
-    }
-
     .nav-content__logo-link {
         display: flex;
         align-items: center;
@@ -76,36 +76,27 @@
         padding: 5% 0rem;
     }
 
-    .nav-content__unordered-list {
-        /* display: none; */
-    }
-
-    .nav-content__unordered-list__item {
-        /* display: none; */
-    }
-    .nav-content__logo-link {
-        /* display: none; */
-    }
-
     /* HAMBURGER MOMENT */
-    .hamburger {
+    .nav-content__hamburger {
         display: block;
         z-index: 880;
         margin-right: auto;
         margin-left: 10%;
-     }
+    }
   
-     .hamburger.active .bar:nth-child(2) {
+    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(2) {
         opacity: 0;
-     }
-     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-     }
-     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-     }
+    }
 
-     .nav-content__unordered-list {
+    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(1) {
+        transform: translateY(1.6vw) rotate(45deg);
+    }
+
+    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(3) {
+        transform: translateY(-1.6vw) rotate(-45deg);
+    }
+
+    .nav-content__unordered-list {
         position: fixed;
         right: 200%;
         top: 0;
@@ -119,22 +110,23 @@
         text-align: center;
         transition: 0.3s;
         z-index: 2;
-     }
+        list-style-type: none;
+    }
   
-     .nav-content__unordered-list__item {
-        margin: 16px 0;
+    .nav-content__unordered-list__item {
+        margin: 1vh 0;
         z-index: 3;
-     }
+    }
   
-     .nav-content__unordered-list.active {
+    .nav-content__unordered-list.active {
         display: flex;
         right: 0;
-     }
+    }
 
-     html.active, body.active { 
+    html.active, body.active { 
         height: 100%;
         overflow: hidden;
-     }
+    }
 
 
     #vidsection {
@@ -390,12 +382,10 @@
         margin: auto;
         height: fit-content;
         width: 90vw;
-        /* background-color: rgb(23, 21, 27); */
         font-family: "Teko Light";
-        font-size: 5rem;
-        /* padding-left: 1%;
-        padding-right: 1%; */
+        font-size: 6rem;
         color: white;
+        background-color: #25272f;
     }
 
     .plot-scrn__content__header1 {
@@ -403,33 +393,24 @@
         text-align: center;
         font-size: 6rem;
         font-family: "Teko Bold", sans-serif;
+        background-color: rgb(23, 21, 27);
     }
 
     .plot-scrn__content__introduction-div {
-        align-items: center;
         display: flex;
         font-size: 5rem;
-        background-color: #25272f;
-        width: 100%;
         padding: 1%;
     }
 
-    .plot-scrn__content__introduction-div__text {
+    .plot-scrn__content__introduction-div__padded-text {
         padding-right: 1%;
-        /* background-color: green; */
     }
-
-    /* .plot-scrn__content__introduction-div__figure {
-        background-color: greenyellow;
-    } */
 
     .plot-scrn__content__introduction-div__img {
         width: 40rem;
-        height: auto;
     }
 
     .plot-scrn__content__mission-div {
-        background-color: #25272f;
         font-size: 5rem;
         width: 100%;
         padding: 1%;
@@ -448,7 +429,6 @@
         align-items: center;
         display: flex;
         font-size: 5rem;
-        background-color: #25272f;
         width: 100%;
         padding: 1%;
     }
