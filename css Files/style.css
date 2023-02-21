@@ -98,6 +98,11 @@
         flex-direction: column;
         text-align: center;
     }
+
+    #mobile-nav-links ul a {
+        font-size: clamp(2rem, 10rem, 20rem);
+    }
+
     .plot-content {
         height: fit-content;
         background-color: slategrey;
