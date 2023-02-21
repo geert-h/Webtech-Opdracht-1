@@ -7,15 +7,15 @@
 
 @font-face {
     font-family: "Teko Bold";
-    src: url("../Resources/Fonts/Teko Font/Teko-Bold.ttf");
+    src: url("../resources/fonts/teko-font/Teko-Bold.ttf");
 }
 @font-face {
     font-family: "Teko Regular";
-    src: url("../Resources/Fonts/Teko Font/Teko-Regular.ttf");
+    src: url("../resources/fonts/teko-font/Teko-Regular.ttf");
 }
 @font-face {
     font-family: "Teko SemiBold";
-    src: url("../Resources/Fonts/Teko Font/Teko-SemiBold.ttf");
+    src: url("../resources/fonts/teko-font/Teko-SemiBold.ttf");
 }
 
 .in-text-reference {
@@ -25,14 +25,9 @@
     font-size: 100%;
 }
 
-@media screen and (max-width: 1024px) {
-    a {
-        color: rgb(17, 0, 255);      
-    }
-    #logo {
-        display: none;
-    }
-    nav {
+@media screen and (max-width: 1023px) {
+
+    .nav-content {
         background-color: #25272f;
         display: flex;
         z-index: 777;
@@ -41,31 +36,38 @@
         align-items: center;
         justify-content: center;
     }
-    #menu_icon {
+
+    .nav-content__menu-icon {
         height: 50%;
         position: absolute;
         left: 0;
         margin-left: 5%;
     }
-    #nav_logo_link {
+
+    .nav-content__logo-link {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
         margin: 0;
-    }    
-    #nav_logo {
+    }
+
+    .nav-content__logo-link__image {
         height: 100%;
         padding: 5% 0rem;
     }
 
-    nav ul {
+    .nav-content__unordered-list {
         display: none;
     }
 
-    #nav_spacer {
+    .nav-content__unordered-list__item {
         display: none;
     }
+
+    /* #nav_spacer {
+        display: none;
+    } */
     #vidsection {
         display: none;
     }
@@ -165,7 +167,7 @@
         width: 90%;
     }
     .index-content__poster-div__img {
-        content: url("/Resources/Poster_mobile.png");
+        content: url("/resources/poster_mobile.png");
         width: 100%;
         margin: 5%;     
     }
@@ -206,10 +208,6 @@
 
     /* GENERAL */
 
-    /* section, nav, footer {
-        padding: 0rem 10rem;
-    } */
-
     h1 {
         align-items: center;
         text-align: center;
@@ -224,45 +222,48 @@
         font-size: 5rem;
         text-decoration: none;
     }
-    ul, li {
-        list-style-type: none;
-    }
-
 
     /* NAV */
 
     #mobile-nav-links {
         display: none;
     }
-    #menu_icon {
-        display: none;
-    }
 
-    nav {
+    .nav-content {
         display: flex;
         align-items: center;
         flex-direction: row;
         background-color: #25272f;
         width: 100%;
     }
-    nav ul {
+
+    .nav-content__unordered-list {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin-left: auto;
-        width: 60%;
+        width: fit-content;
     }
-    #nav_logo_link{
+
+    .nav-content__unordered-list__item {
+        padding: 0rem 4rem;
+        list-style-type: none;
+    }
+
+    .nav-content__menu-icon {
+        display: none;
+    }
+
+    .nav-content__logo-link {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-left: 5rem;
     }
-    #nav_logo {
+
+    .nav-content__logo-link__image {
         width: 20rem;
     }
-
-
 
 
     .plot-content {
@@ -318,8 +319,6 @@
     .plot-content__mission-div__unordered-list__item {
         font-size: 3rem;
     }
-    
-
 
     #vidsection {
         position: absolute;
