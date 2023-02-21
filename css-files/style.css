@@ -18,9 +18,14 @@
     src: url("../resources/fonts/teko-font/Teko-SemiBold.ttf");
 }
 
+@font-face {
+    font-family: "Teko Light";
+    src: url("../resources/fonts/teko-font/Teko-Light.ttf");
+}
+
 .in-text-reference {
     font-family: "Teko SemiBold";
-    color: blue;
+    color: rgb(0, 0, 255);
     text-decoration: none;
     font-size: 100%;
 }
@@ -105,56 +110,60 @@
         font-size: clamp(2rem, 10rem, 20rem);
     }
 
-    .plot-content {
+    .plot-scrn {
+        background-color:rgb(23, 21, 27);
+        color: white;
+    }
+
+    .plot-scrn__content {
         height: fit-content;
-        background-color: slategrey;
-        font-family: "Teko Regular";
+        font-family: "Teko Light";
         font-size: 3rem;
         padding-left: 1%;
         padding-right: 1%;
     }
     
-    .plot-content__header1 {
+    .plot-scrn__content__header1 {
         align-items: center;
         text-align: center;
         font-size: 4rem;
         font-family: "Teko Bold", sans-serif;
     }
 
-    .plot-content__introduction-div {
+    .plot-scrn__content__introduction-div {
         /* display: grid;
         grid-template-columns: 1fr 1fr; */
         align-items: center;
         font-size: 3rem;
         font-family: "Teko Regular", sans-serif;
-        background-color: rgb(221, 219, 219);
+        background-color:#25272f;
     }
     
-    .plot-content__introduction-div__img {
+    .plot-scrn__content__introduction-div__img {
         width: 100%;
         height: auto;
     }
-    .plot-content__additionaltext {
+    .plot-scrn__content__additionaltext {
         font-size: 4rem;
         font-family: "Teko Regular", sans-serif;
     }
-    .plot-content__unordered-list__item {
+    .plot-scrn__content__unordered-list__item {
         font-size: 4rem;
         font-family: "Teko Regular", sans-serif;
     }
-    .plot-content__mission-div {
-        background-color: rgb(221, 219, 219);
+    .plot-scrn__content__mission-div {
+        background-color: #25272f;
         font-size: 3rem;
         width: 100%;
         padding: 1%;
     }
 
-    .plot-content__mission-div__unordered-list {
+    .plot-scrn__content__mission-div__unordered-list {
         list-style-type: disc;
         padding-left: 5%;
     }
 
-    .plot-content__mission-div__unordered-list__item {
+    .plot-scrn__content__mission-div__unordered-list__item {
         font-size: 2rem;
     }
 
@@ -167,7 +176,7 @@
         width: 90%;
     }
     .index-content__poster-div__img {
-        content: url("/resources/poster_mobile.png");
+        content: url("/resources/poster-mobile.png");
         width: 100%;
         margin: 5%;     
     }
@@ -265,59 +274,77 @@
         width: 20rem;
     }
 
-
-    .plot-content {
-        height: fit-content;
+    .plot-scrn {
         width: 100%;
-        background-color: slategrey;
-        font-family: "Teko Regular";
-        font-size: 5rem;
-        padding-left: 1%;
-        padding-right: 1%;
+        height: max-content;
+        background-color:rgb(23, 21, 27);
     }
 
-    .plot-content__header1 {
+    .plot-scrn__content {
+        margin: auto;
+        height: fit-content;
+        width: 90vw;
+        /* background-color: rgb(23, 21, 27); */
+        font-family: "Teko Light";
+        font-size: 5rem;
+        /* padding-left: 1%;
+        padding-right: 1%; */
+        color: white;
+    }
+
+    .plot-scrn__content__header1 {
         align-items: center;
         text-align: center;
         font-size: 6rem;
         font-family: "Teko Bold", sans-serif;
     }
 
-    .plot-content__introduction-div {
+    .plot-scrn__content__introduction-div {
         align-items: center;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        display: flex;
         font-size: 5rem;
-        font-family: "Teko Regular", sans-serif;
-        background-color: rgb(221, 219, 219);
-        height: fit-content;
+        background-color: #25272f;
         width: 100%;
         padding: 1%;
     }
 
-    .plot-content__introduction-div__text {
-        padding-right: 3%;
+    .plot-scrn__content__introduction-div__text {
+        padding-right: 1%;
+        /* background-color: green; */
     }
 
-    .plot-content__introduction-div__img {
-        width: 100%;
+    /* .plot-scrn__content__introduction-div__figure {
+        background-color: greenyellow;
+    } */
+
+    .plot-scrn__content__introduction-div__img {
+        width: 40rem;
         height: auto;
     }
 
-    .plot-content__mission-div {
-        background-color: rgb(221, 219, 219);
+    .plot-scrn__content__mission-div {
+        background-color: #25272f;
         font-size: 5rem;
         width: 100%;
         padding: 1%;
     }
 
-    .plot-content__mission-div__unordered-list {
+    .plot-scrn__content__mission-div__unordered-list {
         list-style-type: disc;
         padding-left: 2%;
     }
 
-    .plot-content__mission-div__unordered-list__item {
+    .plot-scrn__content__mission-div__unordered-list__item {
         font-size: 3rem;
+    }
+
+    .plot-scrn__content__training-div {
+        align-items: center;
+        display: flex;
+        font-size: 5rem;
+        background-color: #25272f;
+        width: 100%;
+        padding: 1%;
     }
 
     #vidsection {
@@ -374,56 +401,6 @@
         width: 25%;
         height: auto;
         margin-top: 3rem;
-        margin-left: ;
-    }
-    .index-content__general-information-div__text h2 {
-        font-size: 3rem;
-    }
-    .index-content__general-information-div__text p {
-        color: white;
-        font-size: 2rem;
-    }
-    .index-content__general-information-box__text {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-    .index-content__plot-section {
-        height: auto;
-        display: flex;
-        background-color: #25272f;
-        margin-bottom: 5vh;
-    }
-    .index-content__poster-div {
-        height: 40vh;
-        width: 25%;
-    }
-    .index-content__poster-div__img {
-        height: 80%;
-        width: auto;
-        margin-left: 15%;
-        margin-top: 10%;        
-    }
-    .index-content__plot-information-div__text {
-        height: auto;
-        width: 50%;
-        margin-top: 3rem;
-        margin-right: 2rem;
-    }
-    .index-content__plot-information-div__text p, h2 {
-        color: white;
-    }
-    .index-content__plot-information-div__text h2 {
-        font-size: 4rem;
-    }
-    .index-content__plot-information-div__text p, p a {
-        font-size: 2rem;
-    }
-    .index-content__general-information-div__text {
-        display: flex;
-        width: 25%;
-        height: auto;
-        margin-top: 3rem;
-        margin-left: ;
     }
     .index-content__general-information-div__text h2 {
         font-size: 3rem;
