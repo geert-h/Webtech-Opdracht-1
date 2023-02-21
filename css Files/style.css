@@ -98,6 +98,11 @@
         flex-direction: column;
         text-align: center;
     }
+
+    #mobile-nav-links ul a {
+        font-size: clamp(2rem, 10rem, 20rem);
+    }
+
     .plot-content {
         height: fit-content;
         background-color: slategrey;
@@ -149,6 +154,51 @@
 
     .plot-content__mission-div__unordered-list__item {
         font-size: 2rem;
+    }
+
+    .index-content__plot-section {
+        height: auto;
+        background-color: #25272f;
+    }
+    .index-content__poster-div {
+        height: auto;
+        width: 90%;
+    }
+    .index-content__poster-div__img {
+        content: url("/Resources/Poster_mobile.png");
+        width: 100%;
+        margin: 5%;     
+    }
+    .index-content__plot-information-div__text {
+        height: auto;
+        width: auto;
+        margin: 5%
+    }
+    .index-content__plot-information-div__text p, h2 {
+        color: white;
+    }
+    .index-content__plot-information-div__text h2 {
+        font-size: 4rem;
+    }
+    .index-content__plot-information-div__text p, p a {
+        font-size: 2rem;
+    }
+    .index-content__general-information-div__text {
+        display: flex;
+        width: auto;
+        height: auto;
+        margin-top: 3rem;
+    }
+    .index-content__general-information-div__text h2 {
+        font-size: 3rem;
+    }
+    .index-content__general-information-div__text p {
+        color: white;
+        font-size: 2rem;
+    }
+    .index-content__general-information-box__text {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 
@@ -295,9 +345,106 @@
         z-index: 0;
         display: none;
     }
+    .index-content__plot-section {
+        height: auto;
+        display: flex;
+        background-color: #25272f;
+    }
+    .index-content__poster-div {
+        height: 40vh;
+        width: 25%;
+    }
+    .index-content__poster-div__img {
+        height: 80%;
+        width: auto;
+        margin-left: 15%;
+        margin-top: 10%;        
+    }
+    .index-content__plot-information-div__text {
+        height: auto;
+        width: 50%;
+        margin-top: 3rem;
+        margin-right: 2rem;
+    }
+    .index-content__plot-information-div__text p, h2 {
+        color: white;
+    }
+    .index-content__plot-information-div__text h2 {
+        font-size: 4rem;
+    }
+    .index-content__plot-information-div__text p, p a {
+        font-size: 2rem;
+    }
+    .index-content__general-information-div__text {
+        display: flex;
+        width: 25%;
+        height: auto;
+        margin-top: 3rem;
+        margin-left: ;
+    }
+    .index-content__general-information-div__text h2 {
+        font-size: 3rem;
+    }
+    .index-content__general-information-div__text p {
+        color: white;
+        font-size: 2rem;
+    }
+    .index-content__general-information-box__text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .index-content__plot-section {
+        height: auto;
+        display: flex;
+        background-color: #25272f;
+    }
+    .index-content__poster-div {
+        height: 40vh;
+        width: 25%;
+    }
+    .index-content__poster-div__img {
+        height: 80%;
+        width: auto;
+        margin-left: 15%;
+        margin-top: 10%;        
+    }
+    .index-content__plot-information-div__text {
+        height: auto;
+        width: 50%;
+        margin-top: 3rem;
+        margin-right: 2rem;
+    }
+    .index-content__plot-information-div__text p, h2 {
+        color: white;
+    }
+    .index-content__plot-information-div__text h2 {
+        font-size: 4rem;
+    }
+    .index-content__plot-information-div__text p, p a {
+        font-size: 2rem;
+    }
+    .index-content__general-information-div__text {
+        display: flex;
+        width: 25%;
+        height: auto;
+        margin-top: 3rem;
+        margin-left: ;
+    }
+    .index-content__general-information-div__text h2 {
+        font-size: 3rem;
+    }
+    .index-content__general-information-div__text p {
+        color: white;
+        font-size: 2rem;
+    }
+    .index-content__general-information-box__text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
     .blankDiv {
-        width: 100vw;
-        height: 106vh;
+        max-width: 100vw;
+        height: 80vh;
+        background-color:rgb(23, 21, 27);
     }
 
     #huts {
