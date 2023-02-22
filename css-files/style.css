@@ -175,6 +175,47 @@ body {
     color: rgb(188, 183, 183);
 }
 
+.cast-content__container {
+    width: 80%;
+    min-height: 80vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    /* background-color: aqua; */
+    margin-top: 10rem;
+}
+.cast-content__container__item {
+    margin: auto 0;
+    background-color: #25272f;
+    min-height: 20rem;
+    min-width: 10px;
+    border-radius: 2rem;
+    display: flex;
+}
+.cast-content__container__item__pic {
+    /* background-color: coral; */
+    width: 50%;
+}
+.cast-content__container__item img {
+    width: 100%;
+    padding: 5rem;
+    /* height: 100%; */
+    border-radius: 50%;
+}
+.cast-content__container__item__text {
+    margin: auto 0;
+    font-size: 10rem;
+    width: 50%;
+    font-family: "Teko Bold";
+    color: white;
+    padding-right: 5rem;
+}
+.cast-content__container__item__text p{
+    font-size: 3rem;
+    font-family: "Teko Regular";
+}
+
 @media screen and (orientation:landscape) {
     .nav-content__unordered-list {
         flex-direction: row;
@@ -326,6 +367,9 @@ html.active, body.active {
     .index-content__general-information-box__text {
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+    .cast-content__container {
+        grid-template-columns: 1fr;
     }
 }
 
