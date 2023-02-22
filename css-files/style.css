@@ -256,7 +256,6 @@ html.active, body.active {
 }
 
 .plot-scrn__content__training-div {
-    align-items: center;
     display: flex;
     font-size: 3rem;
     padding: 1%;
