@@ -176,6 +176,12 @@ html.active, body.active {
     font-size: 2rem;
 }
 
+.plot-scrn__content__training-div {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+}
+
 @media screen and (max-width: 1023px) {
     
     #vidsection {
@@ -386,7 +392,7 @@ html.active, body.active {
     }
 
     .plot-scrn__content__mission-div__unordered-list {
-        padding-left: 5%;
+        padding-left: 2%;
     }
 
     .plot-scrn__content__mission-div__unordered-list__item {
@@ -394,11 +400,7 @@ html.active, body.active {
     }
 
     .plot-scrn__content__training-div {
-        align-items: center;
-        display: flex;
         font-size: 5rem;
-        width: 100%;
-        padding: 1%;
     }
 
     #vidsection {
