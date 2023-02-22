@@ -109,6 +109,13 @@
     z-index: 2;
     list-style-type: none;
 }
+@media screen and (orientation:landscape) {
+    .nav-content__unordered-list {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
 
 .nav-content__unordered-list__item {
     margin: 0.5vh 0;
