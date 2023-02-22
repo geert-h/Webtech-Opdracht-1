@@ -119,6 +119,77 @@ body {
     z-index: 3;
 }
 
+@media screen and (orientation:landscape) {
+    .nav-content__unordered-list {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-content__unordered-list__item {
+        margin: 0 2vh;
+    }
+}
+
+.nav-content__unordered-list__item__ref {
+    color: aliceblue;
+    font-family: "Teko SemiBold";
+    font-size: 11vh;
+    height: auto;
+    text-decoration: none;
+}
+
+.nav-content__unordered-list.active {
+    display: flex;
+    right: 0;
+}
+
+html.active, body.active { 
+    height: 100%;
+    overflow: hidden;
+}
+
+.index-content__cast-div {
+    background-color:rgb(23, 21, 27);
+    display: grid;
+    width: 100vw;
+    height: auto;
+    padding: 5% 10%;
+}
+.index-content__cast-div__header {
+    font-size: 4rem;
+    margin-left: 3rem;
+}
+.index-content__cast-div__members-div {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: auto;
+}
+.index-content__cast-div__actor-div {
+    width: 20rem;
+    margin-right: 5rem;
+    height: auto;
+    text-align: center;
+
+}
+.index-content__cast-div__actor-div__img {
+    margin-top: 5%;
+    height: 15rem;
+    width: auto;
+    border-radius: 50%;
+}
+.index-content__cast-dive__actor-div__text-head {
+    font-size: 2rem;
+    text-decoration: none;
+}
+.index-content__cast-dive__actor-div__text-p {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: rgb(188, 183, 183);
+}
+
 .trivia-content {
     text-align: center;
 }
@@ -182,46 +253,6 @@ body {
     margin-left: 3rem;
 }
 
-.index-content__cast-div {
-    background-color:rgb(23, 21, 27);
-    display: grid;
-    width: 100vw;
-    height: auto;
-    padding: 5% 10%;
-}
-.index-content__cast-div__header {
-    font-size: 4rem;
-    margin-left: 3rem;
-}
-.index-content__cast-div__members-div {
-    display: flex;
-    overflow-x: scroll;
-    width: 100%;
-    height: auto;
-}
-.index-content__cast-div__actor-div {
-    width: 20rem;
-    margin-right: 5rem;
-    height: auto;
-    text-align: center;
-
-}
-.index-content__cast-div__actor-div__img {
-    margin-top: 5%;
-    height: 15rem;
-    width: auto;
-    border-radius: 50%;
-}
-.index-content__cast-dive__actor-div__text-head {
-    font-size: 2rem;
-    text-decoration: none;
-}
-.index-content__cast-dive__actor-div__text-p {
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: rgb(188, 183, 183);
-}
-
 .cast-content__container {
     width: 80%;
     min-height: 80vh;
@@ -261,37 +292,6 @@ body {
 .cast-content__container__item__text p{
     font-size: 3rem;
     font-family: "Teko Regular";
-}
-
-@media screen and (orientation:landscape) {
-    .nav-content__unordered-list {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .nav-content__unordered-list__item {
-        margin: 0 2vh;
-    }
-}
-
-.nav-content__unordered-list__item__ref {
-    color: aliceblue;
-    font-family: "Teko SemiBold";
-    font-size: 11vh;
-    height: auto;
-    text-decoration: none;
-}
-
-.nav-content__unordered-list.active {
-    display: flex;
-    right: 0;
-}
-
-html.active, body.active { 
-    height: 100%;
-    overflow: hidden;
 }
 
 .plot-scrn {
