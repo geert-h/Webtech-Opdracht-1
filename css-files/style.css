@@ -526,8 +526,9 @@ html.active, body.active {
     .index-content__cast-div {
         background-color:#25272f;
         display: grid;
-        padding: 5% 10%;
+        /* padding: 5% 10%; */
         margin: 2%;
+        max-width: 96%;
     }
     .index-content__cast-div__header {
         font-size: 4rem;
