@@ -42,13 +42,31 @@
     background-color: white;
 }
 
-
+body {
+    background-color: rgb(23, 21, 27);
+}
 
 .in-text-reference {
     font-family: "Teko SemiBold";
     color: rgb(0, 0, 255);
     text-decoration: none;
     font-size: 100%;
+}
+
+.trivia-content__header {
+    color: white;
+}
+
+.trivia-content__text-div    {
+    background-color: #25272f;
+    width: 90vw;
+    height: auto;
+    margin: 0% 5%
+}
+
+.trivia-content__text-div__actor-div {
+    font-size: 5rem;
+    color: white;
 }
 
 @media screen and (max-width: 1023px) {
@@ -502,7 +520,7 @@
     .index-content__cast-div {
         background-color:rgb(23, 21, 27);
         display: grid;
-        width: 100%;
+        width: 100vw;
         height: auto;
         padding: 5% 10%;
     }
@@ -512,17 +530,21 @@
     }
     .index-content__cast-div__members-div {
         display: flex;
-        width: 90%;
-        height: 30vh;
+        overflow-x: scroll;
+        width: 100%;
+        height: auto;
     }
     .index-content__cast-div__actor-div {
-        width: 15vw;
-        height: 100%;
+        width: 20rem;
+        margin-right: 5rem;
+        height: auto;
         text-align: center;
+
     }
     .index-content__cast-div__actor-div__img {
         margin-top: 5%;
-        height: 60%;
+        height: 15rem;
+        width: auto;
         border-radius: 50%;
     }
     .index-content__cast-dive__actor-div__text-head {
