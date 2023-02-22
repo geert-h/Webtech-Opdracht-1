@@ -23,20 +23,46 @@
     src: url("../resources/fonts/teko-font/Teko-Light.ttf");
 }
 
+.in-text-reference {
+    font-family: "Teko SemiBold";
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    background-color: #25272f;
+    width: 100%;
+    position: sticky;
+    justify-content: center;
+    z-index: 777;
+    /* height: 10vh; */
+
+    /* background- color: blue; */
+}
+
 .nav-content__hamburger {
     position: absolute;
-    left: -3vh;
-    top: -1.6vh;
+    display:none;
     cursor: pointer;
     height: 8vh;
     width: 8vh;
+    display: block;
+    left: -0.5vh;
+    top: 1vh;
+    z-index: 880;
+    margin-right: auto;
+    /* margin-top: 0vh; */
+    margin-left: 3vh;
 }
  
 .nav-content__hamburger__bar {
     display: block;
-    width: 100%;
-    height: 15%;
-    margin: 25% 0%;
+    width: 50px;
+    height: 6px;
+    margin: 10px 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
@@ -46,11 +72,16 @@ body {
     background-color: rgb(23, 21, 27);
 }
 
-.in-text-reference {
-    font-family: "Teko SemiBold";
-    color: rgb(0, 0, 255);
-    text-decoration: none;
-    font-size: 100%;
+.nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+}
+
+.nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
 }
 
 .trivia-content__header {
@@ -69,84 +100,124 @@ body {
     color: white;
 }
 
-@media screen and (max-width: 1023px) {
+.nav-content__logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width:fit-content;
+    margin: 2vh 0;
+}
 
-    .nav-content {
-        background-color: #25272f;
-        display: flex;
-        z-index: 777;
-        position: sticky;
-        height: 10vh;
-        align-items: center;
-        justify-content: center;
-    }
+.nav-content__logo-link__image {
+    height: 100%;
+    padding: 1% ;
+}
 
-    .nav-content__logo-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        margin: 0;
-    }
-
-    .nav-content__logo-link__image {
-        height: 100%;
-        padding: 5% 0rem;
-    }
-
-    /* HAMBURGER MOMENT */
-    .nav-content__hamburger {
-        display: block;
-        z-index: 880;
-        margin-right: auto;
-        margin-left: 10%;
-    }
-  
-    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(1) {
-        transform: translateY(1.6vw) rotate(45deg);
-    }
-
-    .nav-content__hamburger.active .nav-content__hamburger__bar:nth-child(3) {
-        transform: translateY(-1.6vw) rotate(-45deg);
-    }
-
+.nav-content__unordered-list {
+    position: fixed;
+    right: 200%;
+    top: 0;
+    flex-direction: column;
+    padding-top: 11vh;
+    padding-left: 4vh;
+    align-items:flex-start;
+    background-color: #25272f;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 2;
+    list-style-type: none;
+}
+@media screen and (orientation:landscape) {
     .nav-content__unordered-list {
-        position: fixed;
-        right: 200%;
-        top: 0;
-        flex-direction: column;
-        padding-top: 2rem;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        background-color: #25272f;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 2;
-        list-style-type: none;
     }
-  
-    .nav-content__unordered-list__item {
-        margin: 1vh 0;
-        z-index: 3;
-    }
-  
-    .nav-content__unordered-list.active {
-        display: flex;
-        right: 0;
-    }
+}
 
-    html.active, body.active { 
-        height: 100%;
-        overflow: hidden;
-    }
+.nav-content__unordered-list__item {
+    margin: 0.5vh 0;
+    z-index: 3;
+    /* background-color: green; */
+}
 
+.nav-content__unordered-list__item__ref {
+    color: aliceblue;
+    font-family: "Teko SemiBold";
+    font-size: 11vh;
+    height: auto;
+    text-decoration: none;
+}
 
+.nav-content__unordered-list.active {
+    display: flex;
+    right: 0;
+}
+
+html.active, body.active { 
+    height: 100%;
+    overflow: hidden;
+}
+
+.plot-scrn {
+    background-color:rgb(23, 21, 27);
+    color: white;
+    height: max-content;
+    width: 100%;
+    font-family: "Teko Light";
+}
+
+.plot-scrn__content {
+    height: fit-content;
+    font-size: 3rem;
+    margin: auto;
+    width: 95vw;
+    background-color: #25272f;
+}
+
+.plot-scrn__content__header1 {
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Teko Bold", sans-serif;
+    background-color: rgb(23, 21, 27);
+}
+
+.plot-scrn__content__introduction-div {
+    align-items: center;
+    font-size: 3rem;
+    padding: 1%;
+}
+
+.plot-scrn__content__introduction-div__img {
+    width: 95%;
+}
+
+.plot-scrn__content__mission-div {
+    font-size: 3rem;
+    width: 100%;
+    padding: 1%;
+}
+
+.plot-scrn__content__mission-div__unordered-list {
+    list-style-type: disc;
+    padding-left: 5%;
+}
+
+.plot-scrn__content__mission-div__unordered-list__item {
+    font-size: 2rem;
+}
+
+.plot-scrn__content__training-div {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1023px) {
+    
     #vidsection {
         display: none;
     }
@@ -159,13 +230,7 @@ body {
         font-size: 5rem;
         font-family: "Teko Bold", sans-serif;
     }
-    a {
-        color: aliceblue;
-        font-family: "Teko Bold", sans-serif;
-        font-weight: 900;
-        font-size: 14rem;
-        text-decoration: none;
-    }
+
     #mobile-nav-links {
         height: 90vh;
         background-color: #3b425c;
@@ -183,62 +248,10 @@ body {
     #mobile-nav-links ul a {
         font-size: clamp(2rem, 10rem, 20rem);
     }
-
-    .plot-scrn {
-        background-color:rgb(23, 21, 27);
-        color: white;
-    }
-
-    .plot-scrn__content {
-        height: fit-content;
-        font-family: "Teko Light";
-        font-size: 3rem;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
     
-    .plot-scrn__content__header1 {
-        align-items: center;
-        text-align: center;
-        font-size: 4rem;
-        font-family: "Teko Bold", sans-serif;
-    }
-
-    .plot-scrn__content__introduction-div {
-        /* display: grid;
-        grid-template-columns: 1fr 1fr; */
-        align-items: center;
-        font-size: 3rem;
-        font-family: "Teko Regular", sans-serif;
-        background-color:#25272f;
-    }
-    
-    .plot-scrn__content__introduction-div__img {
-        width: 100%;
-        height: auto;
-    }
-    .plot-scrn__content__additionaltext {
-        font-size: 4rem;
-        font-family: "Teko Regular", sans-serif;
-    }
     .plot-scrn__content__unordered-list__item {
         font-size: 4rem;
         font-family: "Teko Regular", sans-serif;
-    }
-    .plot-scrn__content__mission-div {
-        background-color: #25272f;
-        font-size: 3rem;
-        width: 100%;
-        padding: 1%;
-    }
-
-    .plot-scrn__content__mission-div__unordered-list {
-        list-style-type: disc;
-        padding-left: 5%;
-    }
-
-    .plot-scrn__content__mission-div__unordered-list__item {
-        font-size: 2rem;
     }
 
     .index-content__plot-section {
@@ -331,93 +344,54 @@ body {
 
 @media screen and (min-width: 1024px) {
 
-    /* GENERAL */
-
-    h1 {
-        align-items: center;
-        text-align: center;
-        font-size: 6rem;
-        font-family: "Teko Bold", sans-serif;
+    .nav-content {
+        height: auto;   
     }
 
-    a {
-        color: white;
-        font-family: "Teko Bold", sans-serif;
-        font-weight: 900;
-        font-size: 5rem;
-        text-decoration: none;
+    .nav-content__hamburger {
+        display: none;
     }
 
-    /* NAV */
+    .nav-content__logo-link {
+        margin-left: 2rem;
+    }
 
     #mobile-nav-links {
         display: none;
     }
 
-    .nav-content {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        background-color: #25272f;
-        width: 100%;
-    }
-
     .nav-content__unordered-list {
+        position: relative;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         margin-left: auto;
         width: fit-content;
+        right: auto;
+        transition: none;
+        height: auto;
+        flex-direction: row;
+        padding-top: 0;
     }
 
     .nav-content__unordered-list__item {
+        margin: 0 0;
         padding: 0rem 4rem;
-        list-style-type: none;
     }
 
-    .nav-content__menu-icon {
-        display: none;
-    }
-
-    .nav-content__logo-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5rem;
-    }
-
-    .nav-content__logo-link__image {
-        width: 20rem;
-    }
-
-    .plot-scrn {
-        width: 100%;
-        height: max-content;
-        background-color:rgb(23, 21, 27);
+    .nav-content__unordered-list__item__ref {
+        font-size: 5rem;
     }
 
     .plot-scrn__content {
-        margin: auto;
-        height: fit-content;
-        width: 90vw;
-        font-family: "Teko Light";
         font-size: 6rem;
-        color: white;
-        background-color: #25272f;
     }
 
     .plot-scrn__content__header1 {
-        align-items: center;
-        text-align: center;
         font-size: 6rem;
-        font-family: "Teko Bold", sans-serif;
-        background-color: rgb(23, 21, 27);
     }
 
     .plot-scrn__content__introduction-div {
         display: flex;
         font-size: 5rem;
-        padding: 1%;
     }
 
     .plot-scrn__content__introduction-div__padded-text {
@@ -430,12 +404,9 @@ body {
 
     .plot-scrn__content__mission-div {
         font-size: 5rem;
-        width: 100%;
-        padding: 1%;
     }
 
     .plot-scrn__content__mission-div__unordered-list {
-        list-style-type: disc;
         padding-left: 2%;
     }
 
@@ -444,11 +415,7 @@ body {
     }
 
     .plot-scrn__content__training-div {
-        align-items: center;
-        display: flex;
         font-size: 5rem;
-        width: 100%;
-        padding: 1%;
     }
 
     #vidsection {
