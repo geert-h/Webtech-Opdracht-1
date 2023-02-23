@@ -30,8 +30,7 @@ a:hover {
 }
 
 body {
-	/* background-color: rgb(23, 21, 27); */
-	background-image: url("../Resources/sergey.png");
+	background-color: rgb(23, 21, 27);
 }
 
 .in-text-reference {
