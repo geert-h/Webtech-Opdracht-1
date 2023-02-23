@@ -4,12 +4,6 @@
 	box-sizing: border-box;
 	font-size: 62.5%;
 }
-a {
-	transition: color 0.3s ease-in-out;
-}
-a:hover {
-	color: rgb(255, 0, 153);
-}
 
 @font-face {
 	font-family: "Teko Bold";
@@ -123,6 +117,12 @@ body {
 .nav-content__unordered-list__item {
 	margin: 0.5vh 0;
 	z-index: 3;
+}
+.nav-content__unordered-list__item__ref {
+	transition: color 0.3s ease-in-out;
+}
+.nav-content__unordered-list__item__ref:hover {
+	color: #ff00c3;
 }
 
 @media screen and (orientation: landscape) {
