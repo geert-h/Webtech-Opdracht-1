@@ -231,9 +231,9 @@ body.active {
 }
 
 .trivia-content__text-div__actor-div__text {
-	text-align: left;
-
-	width: 60%;
+    text-align: left;
+    
+    width: 100%;
 }
 .trivia-content__text-div__actor-div__figure {
 	float: right;
