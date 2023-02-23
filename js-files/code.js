@@ -28,3 +28,39 @@ window.addEventListener('resize', function(event){
         body.classList.remove("active");
     }
 });
+
+const clickableDivs = document.querySelectorAll('.cast-content__container__item');
+const additionalDivs = document.querySelectorAll('.TOMTEST');
+const closeBtns = document.querySelectorAll('.close-btn');
+
+let currentAdditional = null;
+
+for (let i = 0; i < clickableDivs.length; i++) {
+  const clickable = clickableDivs[i];
+  const additional = additionalDivs[i];
+  const closeBtn = closeBtns[i];
+
+  clickable.addEventListener('click', function() {
+    if (currentAdditional !== null) {
+      currentAdditional.classList.remove('show');
+      currentAdditional.classList.add('hide');
+      setTimeout(function() {
+        currentAdditional.style.display = 'none';
+        currentAdditional.classList.remove('hide');
+      }, 300);
+    }
+    additional.classList.add('show');
+    additional.classList.remove('hide');
+    currentAdditional = additional;
+  });
+
+  closeBtn.addEventListener('click', function() {
+    additional.classList.remove('show');
+    additional.classList.add('hide');
+    setTimeout(function() {
+      additional.style.display = 'none';
+      additional.classList.remove('hide');
+    }, 300);
+    currentAdditional = null;
+  });
+}

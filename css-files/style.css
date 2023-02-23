@@ -215,6 +215,76 @@ body {
     font-size: 3rem;
     font-family: "Teko Regular";
 }
+.TOMTEST {
+    position: fixed;
+    width: 80vw;
+    height: 80vh;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(61, 61, 136);
+    color: antiquewhite;
+    padding: 10rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 4rem;
+    font-family: 'Teko Regular';
+    display: flex;
+}
+.TOMTEST.show {
+    display: flex;
+    animation: growAndFade 0.2s ease-in forwards;
+    opacity: 1;
+}
+.TOMTEST.hide {
+    animation: fadeOut 1s ease-in forwards;
+    opacity: 0;
+}
+.close-btn {
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    font-size: 5rem;
+    cursor: pointer;
+}
+/* Animation Styles */
+@keyframes growAndFade {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.cast-content__container__item {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.cast-content__container__item:hover {
+    background-color: #66729e;
+}
 
 @media screen and (orientation:landscape) {
     .nav-content__unordered-list {
@@ -485,7 +555,7 @@ html.active, body.active {
         width: 100vw;
         filter: brightness(40%);
         z-index: 0;
-        display: none;
+        /* display: none; */
     }
     .index-content__plot-section {
         height: auto;
