@@ -707,7 +707,7 @@ body.active {
 	}
 
 	#vidsection {
-		position: absolute;
+		/* position: absolute; */
 		top: 0;
 		left: 0;
 	}
@@ -721,7 +721,7 @@ body.active {
 	}
 
 	#video {
-		/* width: 100vw; */
+		width: 100vw;
 		filter: brightness(40%);
 		z-index: 0;
 		/* display: none; */
@@ -828,6 +828,7 @@ body.active {
 		/* max-width: 100vw; */
 		height: 80vh;
 		background-color: rgb(23, 21, 27);
+        display: none;
 	}
 
 	#huts {
