@@ -425,8 +425,11 @@ html.active, body.active {
     height: fit-content;
     font-size: 3rem;
     margin: auto;
-    width: 95vw;
+    width: 150rem;
     background-color: #25272f;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .plot-scrn__content__header1 {
