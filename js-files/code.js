@@ -44,23 +44,32 @@ for (let i = 0; i < clickableDivs.length; i++) {
     if (currentAdditional !== null) {
       currentAdditional.classList.remove('show');
       currentAdditional.classList.add('hide');
-      setTimeout(function() {
-        currentAdditional.style.display = 'none';
+      document.querySelectorAll('.is-open').forEach(function(clickable) {
+        clickable.classList.remove('is-open');
+      });
+      currentAdditional.addEventListener('animationend', function() {
         currentAdditional.classList.remove('hide');
-      }, 300);
+        currentAdditional.classList.remove('active');
+      }, {once: true});
     }
-    additional.classList.add('show');
-    additional.classList.remove('hide');
+    additional.classList.add('show', 'active');
     currentAdditional = additional;
+    document.querySelectorAll('.cast-content__container__item:not(.show)').forEach(function(clickable) {
+      clickable.classList.add('is-open');
+    });
   });
 
   closeBtn.addEventListener('click', function() {
-    additional.classList.remove('show');
     additional.classList.add('hide');
-    setTimeout(function() {
-      additional.style.display = 'none';
+
+    document.querySelectorAll('.is-open').forEach(function(clickable) {
+      clickable.classList.remove('is-open');
+    });
+    additional.addEventListener('animationend', function() {
+      additional.classList.remove('show');
       additional.classList.remove('hide');
-    }, 300);
+      additional.classList.remove('active');
+    }, {once: true});
     currentAdditional = null;
   });
 }
