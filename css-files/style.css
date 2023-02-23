@@ -29,7 +29,7 @@ body {
 
 .in-text-reference {
     font-family: "Teko SemiBold";
-    color: rgb(0, 0, 255);
+    color: rgb(75, 75, 255);
     text-decoration: none;
     font-size: 100%;
 }
@@ -428,6 +428,17 @@ html.active, body.active {
     flex-direction: column;
 }
 
+.plot-scrn__content__mission-operation-div {
+    font-size: 3rem;
+    padding: 1%;
+}
+
+.plot-scrn__content__ending-div{
+    font-size: 3rem;
+    padding: 1%;
+}
+
+
 @media screen and (max-width: 1023px) {
     
     #vidsection {
@@ -584,6 +595,14 @@ html.active, body.active {
     }
 
     .plot-scrn__content__training-div {
+        font-size: 5rem;
+    }
+
+    .plot-scrn__content__mission-operation-div {
+        font-size: 5rem;
+    }
+
+    .plot-scrn__content__ending-div{
         font-size: 5rem;
     }
 
