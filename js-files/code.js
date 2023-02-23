@@ -28,3 +28,48 @@ window.addEventListener('resize', function(event){
         body.classList.remove("active");
     }
 });
+
+const clickableDivs = document.querySelectorAll('.cast-content__container__item');
+const additionalDivs = document.querySelectorAll('.TOMTEST');
+const closeBtns = document.querySelectorAll('.close-btn');
+
+let currentAdditional = null;
+
+for (let i = 0; i < clickableDivs.length; i++) {
+  const clickable = clickableDivs[i];
+  const additional = additionalDivs[i];
+  const closeBtn = closeBtns[i];
+
+  clickable.addEventListener('click', function() {
+    if (currentAdditional !== null) {
+      currentAdditional.classList.remove('show');
+      currentAdditional.classList.add('hide');
+      document.querySelectorAll('.is-open').forEach(function(clickable) {
+        clickable.classList.remove('is-open');
+      });
+      currentAdditional.addEventListener('animationend', function() {
+        currentAdditional.classList.remove('hide');
+        currentAdditional.classList.remove('active');
+      }, {once: true});
+    }
+    additional.classList.add('show', 'active');
+    currentAdditional = additional;
+    document.querySelectorAll('.cast-content__container__item:not(.show)').forEach(function(clickable) {
+      clickable.classList.add('is-open');
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    additional.classList.add('hide');
+
+    document.querySelectorAll('.is-open').forEach(function(clickable) {
+      clickable.classList.remove('is-open');
+    });
+    additional.addEventListener('animationend', function() {
+      additional.classList.remove('show');
+      additional.classList.remove('hide');
+      additional.classList.remove('active');
+    }, {once: true});
+    currentAdditional = null;
+  });
+}
