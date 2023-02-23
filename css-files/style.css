@@ -367,6 +367,9 @@ body.active {
 .cast-popup.hide {
 	animation: fadeOut 0.3s ease-in forwards;
 }
+.cast-popup img {
+	width: 10%;
+}
 
 .cast-popup__close-btn {
 	position: absolute;
