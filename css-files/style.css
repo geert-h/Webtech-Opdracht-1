@@ -48,6 +48,7 @@ body {
 	justify-content: center;
 	z-index: 777;
 	top: 0;
+	box-shadow: 0 10px 8px rgb(23, 21, 27);
 	/* height: 10vh; */
 
 	/* background- color: blue; */
