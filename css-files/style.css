@@ -204,14 +204,19 @@ body.active {
 	width: auto;
 	border-radius: 50%;
 }
-.index-content__cast-dive__actor-div__text-head {
+.index-content__cast-div__actor-div__text-head {
 	font-size: 2rem;
 	text-decoration: none;
 }
-.index-content__cast-dive__actor-div__text-p {
+.index-content__cast-div__actor-div__text-p {
 	font-size: 1.8rem;
 	text-decoration: none;
 	color: rgb(188, 183, 183);
+}
+
+.index-content__trivia-div {
+	background-color: #25272f;
+	margin: 2%;
 }
 
 .trivia-content {
