@@ -129,7 +129,7 @@ body {
 	transition: color 0.3s ease-in-out;
 }
 .nav-content__unordered-list__item__ref:hover {
-	color: #ff00c3;
+	color: slategray;
 }
 
 @media screen and (orientation: landscape) {
@@ -185,7 +185,7 @@ body.active {
 
 .index-content__cast-div__members-div__blur-div {
 	position: absolute;
-	box-shadow: inset 3px 0 3px green;
+	/* box-shadow: inset 3px 0 3px green; */
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -433,7 +433,7 @@ body.active {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(234, 0, 255);
+	background-color: #7f8f83;
 	border-radius: 8vh;
 	color: antiquewhite;
 	padding: 10rem;
@@ -569,6 +569,94 @@ body.active {
 	font-size: 3rem;
 	padding: 1%;
 }
+
+.reviews-scrn {
+	background-color: rgb(23, 21, 27);
+	max-width: 100vw;
+	padding: 0 3vw;
+}
+
+.content {
+	margin: auto;
+	max-width: 150rem;
+	height: fit-content;
+	background-color: rgb(23, 21, 27);
+	margin-top: 3rem;
+	color: white;
+	font-size: 3rem;
+}
+
+.content-reviews {
+	height: fit-content;
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.content-reviews__review {
+	width: 95%;
+	height: fit-content;
+	background-color: #25272f;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	border-radius: 1.8rem;
+}
+
+.content-reviews__left {
+	/* background-color: green; */
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-reviews__score {
+	border-radius: 1.8rem;
+	width: 6rem;
+	height: 6rem;
+	background-color: slategray;
+	display: flex;
+	justify-content: center;
+	padding: 0.9rem 0;
+}
+
+.content-reviews__score--text {
+	font-family: "Topgun";
+	font-size: 3rem;
+}
+
+.content-reviews__date {
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	font-size: 3rem;
+}
+
+.content-reviews__date--title {
+	font-family: "Catamaran Bold";
+}
+
+.content-reviews__date--text {
+	font-family: "Catamaran SemiBold";
+}
+
+.content-reviews__mid {
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.9rem;
+	font-family: "Catamaran Regular";
+	font-size: 2rem;
+}
+
+.content-reviews__source {
+	display:flex;
+	flex-direction: row;
+}
+
+.content-reviews__source--reviewer {
+	font-size: 4rem;
+}
+
 
 @media screen and (max-width: 1023px) {
 	#vidsection {
@@ -715,7 +803,7 @@ body.active {
     border-bottom: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1600px) {
 	.nav-content {
 		height: auto;
 	}
