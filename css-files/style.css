@@ -6,21 +6,26 @@
 }
 
 @font-face {
-	font-family: "Teko Bold";
-	src: url("../resources/fonts/teko-font/Teko-Bold.ttf");
+	font-family: "catamaran Bold";
+	src: url("../resources/fonts/catamaran-font/catamaran-Bold.ttf");
 }
 @font-face {
-	font-family: "Teko Regular";
-	src: url("../resources/fonts/teko-font/Teko-Regular.ttf");
+	font-family: "catamaran Regular";
+	src: url("../resources/fonts/catamaran-font/catamaran-Regular.ttf");
 }
 @font-face {
-	font-family: "Teko SemiBold";
-	src: url("../resources/fonts/teko-font/Teko-SemiBold.ttf");
+	font-family: "catamaran SemiBold";
+	src: url("../resources/fonts/catamaran-font/catamaran-SemiBold.ttf");
 }
 
 @font-face {
-	font-family: "Teko Light";
-	src: url("../resources/fonts/teko-font/Teko-Light.ttf");
+	font-family: "catamaran Light";
+	src: url("../resources/fonts/catamaran-font/catamaran-Light.ttf");
+}
+
+@font-face {
+	font-family: "Topgun";
+	src: url("../resources/fonts/topgun.ttf");
 }
 
 body {
@@ -28,7 +33,7 @@ body {
 }
 
 .in-text-reference {
-	font-family: "Teko SemiBold";
+	font-family: "catamaran SemiBold";
 	color: rgb(75, 75, 255);
 	text-decoration: none;
 	font-size: 100%;
@@ -42,6 +47,8 @@ body {
 	position: sticky;
 	justify-content: center;
 	z-index: 777;
+	top: 0;
+	box-shadow: 0 10px 8px rgb(23, 21, 27);
 	/* height: 10vh; */
 
 	/* background- color: blue; */
@@ -140,8 +147,9 @@ body {
 
 .nav-content__unordered-list__item__ref {
 	color: aliceblue;
-	font-family: "Teko SemiBold";
-	font-size: 11vh;
+	font-family: "Topgun";
+	letter-spacing: 4px;
+	font-size: 9vh;
 	height: auto;
 	text-decoration: none;
 }
@@ -204,14 +212,19 @@ body.active {
 	width: auto;
 	border-radius: 50%;
 }
-.index-content__cast-dive__actor-div__text-head {
+.index-content__cast-div__actor-div__text-head {
 	font-size: 2rem;
 	text-decoration: none;
 }
-.index-content__cast-dive__actor-div__text-p {
+.index-content__cast-div__actor-div__text-p {
 	font-size: 1.8rem;
 	text-decoration: none;
 	color: rgb(188, 183, 183);
+}
+
+.index-content__trivia-div {
+	background-color: #25272f;
+	margin: 2%;
 }
 
 .trivia-content {
@@ -390,13 +403,13 @@ body.active {
 	margin: auto 0;
 	font-size: 10rem;
 	width: 50%;
-	font-family: "Teko Bold";
+	font-family: "catamaran Bold";
 	color: white;
 	padding-right: 5rem;
 }
 .cast-content__container__item__text p {
 	font-size: 3rem;
-	font-family: "Teko Regular";
+	font-family: "catamaran Regular";
 }
 .cast-popup {
 	position: fixed;
@@ -417,7 +430,7 @@ body.active {
 	padding: 10rem;
 	opacity: 0;
 	font-size: 4rem;
-	font-family: "Teko Regular";
+	font-family: "catamaran Regular";
 	display: none;
 }
 .cast-popup.show {
@@ -484,22 +497,25 @@ body.active {
 	color: white;
 	height: max-content;
 	width: 100%;
-	font-family: "Teko Light";
+	font-family: "catamaran Light";
 }
 
 .plot-scrn__content {
 	height: fit-content;
 	font-size: 3rem;
 	margin: auto;
-	width: 95vw;
+	width: 90vw;
 	background-color: #25272f;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .plot-scrn__content__header1 {
 	align-items: center;
 	text-align: center;
 	font-size: 4rem;
-	font-family: "Teko Bold", sans-serif;
+	font-family: "catamaran Bold", sans-serif;
 	background-color: rgb(23, 21, 27);
 }
 
@@ -556,12 +572,12 @@ body.active {
 	h1 {
 		align-items: center;
 		font-size: 5rem;
-		font-family: "Teko Bold", sans-serif;
+		font-family: "catamaran Bold", sans-serif;
 	}
 
 	.plot-scrn__content__unordered-list__item {
 		font-size: 4rem;
-		font-family: "Teko Regular", sans-serif;
+		font-family: "catamaran Regular", sans-serif;
 	}
 
 	.index-content__plot-section {
@@ -672,14 +688,16 @@ body.active {
 
 	.nav-content__unordered-list__item {
 		margin: 0 0;
+		margin-top: 2rem;
 		padding: 0rem 4rem;
 	}
 
 	.nav-content__unordered-list__item__ref {
-		font-size: 5rem;
+		font-size: 3.5rem;
 	}
 
 	.plot-scrn__content {
+		max-width: 150rem;
 		font-size: 6rem;
 	}
 
