@@ -32,10 +32,7 @@ window.addEventListener("resize", function (event) {
 	}
 });
 
-const TOMTEST = document.querySelector('.TOMTEST');
-const clickableDivs = document.querySelectorAll(
-	".cast-content__container__item"
-);
+const clickableDivs = document.querySelectorAll(".cast-content__container__item");
 const additionalDivs = document.querySelectorAll(".cast-popup");
 const closeBtns = document.querySelectorAll(".cast-popup__close-btn");
 
