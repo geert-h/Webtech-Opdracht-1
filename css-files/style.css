@@ -183,6 +183,15 @@ body.active {
 	height: auto;
 }
 
+.index-content__cast-div__members-div__blur-div {
+	position: absolute;
+	box-shadow: inset 3px 0 3px green;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /* Chrome, Edge, Safari */
 .index-content__cast-div__members-div::-webkit-scrollbar {
 	background: #1d1f26;
