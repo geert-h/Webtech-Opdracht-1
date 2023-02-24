@@ -668,9 +668,9 @@ body.active {
 .styled-table {
     border-collapse: collapse;
     margin: 2.5rem auto;
-    font-size: 6rem;
-    font-family: sans-serif;
-    min-width: 40rem;
+    font-size: 10rem;
+	font-family: "catamaran Light";
+    min-width: 90rem;
 }
 
 .tableding {
@@ -686,6 +686,10 @@ body.active {
     color: #ffffff;
     text-align: left;
     border-bottom: 0.2rem solid #dddddd;
+}
+.styled-table td:first-child {
+	background-color: #403c46;
+    color: whitesmoke;  
 }
 
 .styled-table th,
