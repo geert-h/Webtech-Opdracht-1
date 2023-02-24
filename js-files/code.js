@@ -32,6 +32,7 @@ window.addEventListener("resize", function (event) {
 	}
 });
 
+const TOMTEST = document.querySelector('.TOMTEST');
 const clickableDivs = document.querySelectorAll(
 	".cast-content__container__item"
 );
