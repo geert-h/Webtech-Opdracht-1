@@ -665,6 +665,51 @@ body.active {
         margin-top: 2rem;
     }
 }
+.styled-table {
+    border-collapse: collapse;
+    margin: 2.5rem auto;
+    font-size: 6rem;
+    font-family: sans-serif;
+    min-width: 40rem;
+}
+
+.tableding {
+	/* width: 80vw; */
+	max-width: 150rem;
+	background-color: hsl(228, 12%, 16%);
+	margin: 5rem auto;
+	padding: 5rem 0;
+}
+
+.styled-table thead tr {
+    background-color: #454aad;
+    color: #ffffff;
+    text-align: left;
+    border-bottom: 0.2rem solid #dddddd;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 1.2rem 1.5rem;
+}
+
+.styled-table tbody tr {
+    border-bottom: 0.2rem solid #dddddd;
+    background-color: #6b5b6d;
+    color: whitesmoke;  
+}
+
+.styled-table th + th {
+    border-left: 0.2rem solid #dddddd; 
+}
+
+.styled-table td + td {
+    border-left: 0.2rem solid #dddddd; 
+}
+
+.styled-table tbody tr:last-child {
+    border-bottom: none;
+}
 
 @media screen and (min-width: 1024px) {
 	.nav-content {
