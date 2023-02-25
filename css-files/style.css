@@ -39,6 +39,8 @@ body {
 	font-size: 100%;
 }
 
+
+/* NAVIGATION BAR */
 .nav-content {
 	display: flex;
 	align-items: center;
@@ -160,6 +162,22 @@ html.active,
 body.active {
 	height: 100%;
 	overflow: hidden;
+}
+
+.content {
+	margin: auto;
+	max-width: 150rem;
+	height: fit-content;
+	background-color: rgb(23, 21, 27);
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	color: white;
+	font-size: 3rem;
+}
+
+.index-scrn {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
 }
 
 .index-content__cast-div {
@@ -571,17 +589,6 @@ body.active {
 .reviews-scrn {
 	background-color: rgb(23, 21, 27);
 	padding: 0 3vw;
-}
-
-.content {
-	margin: auto;
-	max-width: 150rem;
-	height: fit-content;
-	background-color: rgb(23, 21, 27);
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	color: white;
-	font-size: 3rem;
 }
 
 .general-rating {
