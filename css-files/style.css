@@ -180,6 +180,76 @@ body.active {
 	padding: 0 3vw;
 }
 
+.content__trailer-background {
+	width: 100%;
+	height: max-content;
+	/* background-color: green; */
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.content__trailer-background--logo {
+	z-index: 100;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 10%;
+	grid-row-start: 1;
+	grid-column-start: 1;
+}
+
+.content__trailer-background--video {
+	width: 100%;
+	filter: brightness(40%);
+	z-index: 0;
+	grid-row-start: 1;
+	grid-column-start: 1;
+	border-radius: 1.8rem;
+}
+
+.plot-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
+	margin-top: 3rem;
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	height: fit-content;
+}
+
+.plot-section__body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.plot-section__header {
+	font-size: 4rem;
+	margin: 0 auto;
+}
+
+.plot-section__poster {
+	padding: 1rem;
+	width: 20rem;
+	max-width: 100%;
+	height: 100%;
+	border-radius: 1.8rem;
+}
+
+.plot-section__info {
+	padding: 1rem;
+	display: flex;
+	max-width: 100%;
+	flex-direction: column;
+	font-size: 2rem;
+	width: 60rem;
+}
+
+.plot-section__text-block {
+	margin: 0.5rem;
+	font-size: inherit;
+}
+
 .index-content__cast-div {
 	background-color: rgb(23, 21, 27);
 	display: grid;
@@ -738,13 +808,6 @@ body.active {
 
 
 @media screen and (max-width: 1023px) {
-	#vidsection {
-		display: none;
-	}
-	#huts {
-		display: none;
-	}
-
 	h1 {
 		align-items: center;
 		font-size: 5rem;
@@ -967,31 +1030,11 @@ body.active {
 		font-size: 5rem;
 	}
 
-	#vidsection {
-		/* position: absolute; */
-		top: 0;
-		left: 0;
-	}
-
-	#logo {
-		width: 50vw;
-		position: absolute;
-		top: 15vw;
-		left: 50vh;
-		z-index: 50;
-	}
-
-	#video {
-		width: 100%;
-		filter: brightness(40%);
-		z-index: 0;
-		/* display: none; */
-	}
-
 	.index-content {
 		background-color: rgb(23, 21, 27);
 		padding: 1%;
 	}
+
 
 	.index-content__plot-section {
 		/* height: auto; */
