@@ -268,6 +268,7 @@ body.active {
 .trivia-content__text-div__actor-div__text {
 
 }
+
 .trivia-content__text-div__actor-div__figure {
 	float: right;
 	width: 60%;
@@ -572,7 +573,6 @@ body.active {
 
 .reviews-scrn {
 	background-color: rgb(23, 21, 27);
-	max-width: 100vw;
 	padding: 0 3vw;
 }
 
@@ -582,18 +582,72 @@ body.active {
 	height: fit-content;
 	background-color: rgb(23, 21, 27);
 	margin-top: 3rem;
+	margin-bottom: 3rem;
 	color: white;
 	font-size: 3rem;
 }
 
-.content-reviews {
-	height: fit-content;
+.general-rating {
+	background-color:#25272f;
+	height: max-content;
 	width: 100%;
-	padding: 1rem 0;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
 }
 
-.content-reviews__review {
-	width: 95%;
+.general-rating__score {
+	border-radius: 1.8rem;
+	min-width: 12rem;
+	height: 12rem;
+	background-color: rgb(0, 105, 0);
+	display: flex;
+	justify-content: center;
+	padding: 1.8rem 0;
+}
+
+.general-rating__score--text {
+	font-family: "Topgun";
+	font-size: 6rem;
+}
+
+.general-rating__info {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1rem;
+}
+
+.general-rating__header {
+	font-size: 5rem;
+	font-family: "Teko Bold";
+	margin: auto;
+}
+
+.general-rating__description {
+	font-size: 3rem;
+	font-family: "Catamaran SemiBold";
+}
+
+.general-rating__description--out {
+	color: slategray;
+	font-family: "Catamaran SemiBold";
+	transition: 0.3s;
+	font-size: 2rem;
+}
+
+.general-rating__description--out:hover {
+	color: black;
+	transition: 0.3s;
+}
+
+.reviews {
+	height: fit-content;
+	width: 100%;
+}
+
+.reviews__review {
+	width: fit;
 	height: fit-content;
 	background-color: #25272f;
 	margin: auto;
@@ -601,46 +655,46 @@ body.active {
 	flex-direction: row;
 	padding: 1rem;
 	border-radius: 1.8rem;
+	margin-top: 3rem;
 }
 
-.content-reviews__left {
-	/* background-color: green; */
+.reviews__left {
 	width: max-content;
 	display: flex;
 	flex-direction: column;
 }
 
-.content-reviews__score {
+.reviews__score {
 	border-radius: 1.8rem;
 	width: 6rem;
 	height: 6rem;
-	background-color: slategray;
+	background-color: rgb(0, 105, 0);
 	display: flex;
 	justify-content: center;
 	padding: 0.9rem 0;
 }
 
-.content-reviews__score--text {
+.reviews__score--text {
 	font-family: "Topgun";
 	font-size: 3rem;
 }
 
-.content-reviews__date {
+.reviews__date {
 	margin-top: 10%;
 	display: flex;
 	flex-direction: column;
 	font-size: 3rem;
 }
 
-.content-reviews__date--title {
+.reviews__date--title {
 	font-family: "Catamaran Bold";
 }
 
-.content-reviews__date--text {
+.reviews__date--text {
 	font-family: "Catamaran SemiBold";
 }
 
-.content-reviews__mid {
+.reviews__mid {
 	display: flex;
 	flex-direction: column;
 	margin-left: 0.9rem;
@@ -648,14 +702,35 @@ body.active {
 	font-size: 2rem;
 }
 
-.content-reviews__source {
+.reviews__source {
 	display:flex;
 	flex-direction: row;
 }
 
-.content-reviews__source--reviewer {
+.reviews__source--reviewer {
 	font-size: 4rem;
 }
+
+.reviews__source--ref-text {
+	color: inherit;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.reviews__source--out-text {
+	color: inherit;
+	font-size: 2rem;
+	font-family: "Catamaran SemiBold";
+	color: slategray;
+	width: max-content;
+	transition: 0.3s;
+}
+
+.reviews__source--out-text:hover {
+	color: black;
+	transition: 0.3s;
+}
+
 
 
 @media screen and (max-width: 1023px) {
