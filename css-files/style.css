@@ -57,8 +57,8 @@ body {
 	position: absolute;
 	display: none;
 	cursor: pointer;
-	height: 8vh;
-	width: 8vh;
+	height: 5rem;
+	width: 5rem;
 	display: block;
 	left: -0.5vh;
 	top: 1vh;
@@ -412,14 +412,26 @@ body.active {
 
 .plot-figure2 {
 	float: left;
-	font-size: 3rem;
-	padding: 1rem;
+}
+
+.plot-figure3 {
+	/* float: left; */
 }
 
 .plot-figure2__image {
-	border-radius: 1.8rem;
 	width: 60rem;
-	max-width: 100%;
+}
+
+.plot-figure3__image {
+	width: 70rem;
+}
+
+.plot-figure4__image {
+	width: 60rem;
+}
+
+.plot-figure4 {
+	float:left;
 }
 
 .plot__unordered-list {
