@@ -321,7 +321,6 @@ body.active {
 	padding-bottom: 1rem;
 
 	/* Firefox scrollbar */
-	scrollbar-width: 10px;
 	scrollbar-color: #3d3f47 #25272f;
 }
 
@@ -450,9 +449,6 @@ body.active {
 	transition: 0.3s;
 	color: black;
 }
-
-
-
 
 /* PLOT SCREEN */
 
@@ -951,8 +947,6 @@ body.active {
 	align-items: center;
 	font-family: "Catamaran SemiBold";
 	overflow: hidden;
-	/* flex-wrap: wrap; */
-	/* display: none; */
 }
 .container {
 	width: 60%;
@@ -964,7 +958,6 @@ body.active {
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-align: center;
-	/* flex-direction: column; */
 	margin: auto;
 }
 .container2 {
