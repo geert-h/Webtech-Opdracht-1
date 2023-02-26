@@ -223,9 +223,10 @@ body.active {
 	flex-wrap: wrap;
 }
 
-.plot-section__header {
-	font-size: 4rem;
+.section-header {
+	font-size: 6rem;
 	margin: 0 auto;
+	/* margin-left: 1rem; */
 }
 
 .plot-section__poster {
@@ -234,6 +235,7 @@ body.active {
 	max-width: 100%;
 	height: 100%;
 	border-radius: 1.8rem;
+	float: left;
 }
 
 .plot-section__info {
@@ -248,7 +250,118 @@ body.active {
 .plot-section__text-block {
 	margin: 0.5rem;
 	font-size: inherit;
+	text-decoration: none;
+	color: white;
 }
+
+.plot-section__text-block--ref{
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	margin: 0.5rem;
+	text-decoration: inherit;
+}
+
+.plot-section__text-block--ref:hover{
+	transition: 0.3s;
+	color: black;
+}
+
+.plot-section__summary {
+	padding: 1rem;
+	width: 70rem;
+}
+
+.plot-section__summarized-items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.summarized-item {
+	width: fit-content;
+	height: fit-content;
+	background-color: rgb(70, 96, 121);
+	border-radius: 1.8rem;
+	font-size: 2rem;
+	padding: 0.8rem;
+	margin: 1rem;
+}
+
+.summarized-item__header {
+	font-size: 4rem;
+}
+
+.summarized-item__body {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.cast-section {
+	margin-top: 3rem;
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.cast-section__members {
+	display: flex;
+	flex-direction: row;
+	border-radius: 1.8rem;;
+	overflow-x: scroll;
+
+	padding-bottom: 1rem;
+
+	/* Firefox scrollbar */
+	scrollbar-width: 10px;
+	scrollbar-color: #3d3f47 #25272f;
+}
+
+/* Chrome, Edge, Safari */
+.cast-section__members::-webkit-scrollbar {
+	background: #1d1f26;
+	height: 12px;
+}
+
+.cast-section__members::-webkit-scrollbar-thumb {
+	background-color: #3d3f47;
+	border-radius: 20px;
+}
+
+.actor-preview {
+	display: flex;
+	flex-direction: column;
+	background-color: slategray;
+	text-decoration: none;
+	color: white;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	width: 25rem;
+	transition: 0.3s;
+	margin: 0 0.8rem;
+}
+
+.actor-preview:hover {
+	filter:brightness(80%);
+	transition:0.3s;
+	padding: 2rem;
+}
+
+.actor-preview__image {
+	border-radius: 50%;
+}
+
+.actor-preview__name-body {
+	font-size: 4rem;
+}
+
+.actor-preview__role-name-body {
+	font-size: 3rem;
+}
+
+
 
 .index-content__cast-div {
 	background-color: rgb(23, 21, 27);
@@ -266,15 +379,6 @@ body.active {
 	overflow-x: scroll;
 	width: 100%;
 	height: auto;
-}
-
-.index-content__cast-div__members-div__blur-div {
-	position: absolute;
-	/* box-shadow: inset 3px 0 3px green; */
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
 
 /* Chrome, Edge, Safari */
