@@ -57,8 +57,8 @@ body {
 	position: absolute;
 	display: none;
 	cursor: pointer;
-	height: 8vh;
-	width: 8vh;
+	height: 5rem;
+	width: 5rem;
 	display: block;
 	left: -0.5vh;
 	top: 1vh;
@@ -194,7 +194,6 @@ body.active {
 .content__trailer-background {
 	width: 100%;
 	height: max-content;
-	/* background-color: green; */
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -235,28 +234,28 @@ body.active {
 	font-size: 6rem;
 	margin: 0.5rem auto;
 	margin-top: 1.5rem;
+	overflow: hidden;
 }
 
 .plot-section__poster {
+	float: left;
 	padding: 1rem;
 	width: 20rem;
 	max-width: 100%;
-	height: 100%;
+	height: auto;
 	border-radius: 1.8rem;
-	float: left;
 }
 
 .plot-section__info {
 	padding: 1rem;
 	display: flex;
 	max-width: 100%;
-	flex-direction: column;
 	font-size: 2rem;
-	width: 60rem;
 }
 
 .plot-section__text-block {
 	margin: 0.5rem;
+	width: 100%;
 	font-size: inherit;
 	text-decoration: none;
 	color: white;
@@ -264,7 +263,7 @@ body.active {
 
 .plot-section__text-block--ref{
 	transition: 0.3s;
-	color: slategray;
+	color: rgb(68, 76, 85);
 	font-size: inherit;
 	margin: 0.5rem;
 	text-decoration: inherit;
@@ -277,7 +276,7 @@ body.active {
 
 .plot-section__summary {
 	padding: 1rem;
-	width: 70rem;
+	max-width: 100%;
 }
 
 .plot-section__summarized-items {
@@ -450,12 +449,26 @@ body.active {
 
 .plot-figure2 {
 	float: left;
-	font-size: 3rem;
-	padding: 1rem;
+}
+
+.plot-figure2__image {
+	width: 60rem;
+}
+
+.plot-figure3__image {
+	width: 70rem;
+}
+
+.plot-figure4__image {
+	width: 60rem;
+}
+
+.plot-figure4 {
+	float: left;
 }
 
 .plot__unordered-list {
-	margin-top: 2.1rem;
+	margin-top: 3.4rem;
 	padding-bottom: 0.5rem;
 	padding-left: 3.5rem;
 	display: flex;
@@ -751,9 +764,7 @@ body.active {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	/* grid-auto-rows: 1fr; */
 	grid-gap: 1.5rem;
-	/* background-color: aqua; */
 	margin-top: 10rem;
 }
 .cast-content__container__item {
@@ -765,13 +776,11 @@ body.active {
 	display: flex;
 }
 .cast-content__container__item__pic {
-	/* background-color: coral; */
 	width: 50%;
 }
 .cast-content__container__item img {
 	width: 100%;
 	padding: 5rem;
-	/* height: 100%; */
 	border-radius: 50%;
 }
 .cast-content__container__item__text {
@@ -789,7 +798,6 @@ body.active {
 .cast-popup {
 	position: fixed;
 	max-width: 120rem;
-	/* height: 80vh; */
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -804,10 +812,26 @@ body.active {
 	color: antiquewhite;
 	padding: 10rem;
 	opacity: 0;
-	font-size: 4rem;
+	font-size: 10rem;
 	font-family: "catamaran Regular";
 	display: none;
 }
+.cast-popup .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 6rem;
+}
+.cast-popup .container .left {
+	width: 50%;
+	padding-right: 5rem;
+}
+.cast-popup .container .right {
+	width: 50%;
+}
+
+
+
 .cast-popup.show {
 	display: flex;
 	animation: fadeInAndGrow 0.2s ease-in forwards;
@@ -867,81 +891,56 @@ body.active {
 	pointer-events: none;
 }
 
-.plot-scrn {
-	background-color: rgb(23, 21, 27);
-	color: white;
-	height: max-content;
-	width: 100%;
-	font-family: "catamaran Light";
+.footer {
+	background-color:#25272f;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Catamaran SemiBold";
+	overflow: hidden;
 }
-
-.plot-scrn__content {
-	height: fit-content;
-	font-size: 3rem;
+.container {
+	width: 60rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
 	margin: auto;
-	width: 90vw;
-	background-color: #25272f;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+}
+.container2 {
+	padding-bottom: 1rem;
+	flex-direction: column;
+}
+.container__logos--out {
+	color: #ffffff;
+	text-decoration: none;
 }
 
-.plot-scrn__content__header1 {
-	align-items: center;
-	text-align: center;
-	font-size: 4rem;
-	font-family: "catamaran Bold", sans-serif;
-	background-color: rgb(23, 21, 27);
-}
-
-.plot-scrn__content__introduction-div {
-	align-items: center;
-	font-size: 3rem;
-	padding: 1%;
-}
-
-.plot-scrn__content__introduction-div__img {
-	width: 95%;
-}
-
-.plot-scrn__content__mission-div {
-	font-size: 3rem;
-	width: 100%;
-	padding: 1%;
-}
-
-.plot-scrn__content__mission-div__unordered-list {
-	list-style-type: disc;
-	padding-left: 5%;
-}
-
-.plot-scrn__content__mission-div__unordered-list__item {
+.container__item {
 	font-size: 2rem;
 }
 
-.plot-scrn__content__training-div {
+.container__image {
+	height: 5rem;
+	transition: all 0.3s ease-in-out;
+	padding: 0.2rem;
+}
+
+.container__image:hover {
+	filter: brightness(80%);
+	padding: 0;
+}
+
+.container__logos {
+	width: 60%;
 	display: flex;
-	font-size: 3rem;
-	padding: 1%;
-	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
-
-.plot-scrn__content__mission-operation-div {
-	font-size: 3rem;
-	padding: 1%;
-}
-
-.plot-scrn__content__ending-div {
-	font-size: 3rem;
-	padding: 1%;
-}
-
 
 @media screen and (max-width: 1023px) {
-	.plot-scrn__content__unordered-list__item {
-		font-size: 4rem;
-		font-family: "catamaran Regular", sans-serif;
-	}
 
 	.cast-content__container {
 		grid-template-columns: 1fr;
@@ -1034,51 +1033,5 @@ body.active {
 
 	.nav-content__item--ref {
 		font-size: 3.5rem;
-	}
-
-	.plot-scrn__content {
-		max-width: 150rem;
-		font-size: 6rem;
-	}
-
-	.plot-scrn__content__header1 {
-		font-size: 6rem;
-	}
-
-	.plot-scrn__content__introduction-div {
-		display: flex;
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__introduction-div__padded-text {
-		padding-right: 1%;
-	}
-
-	.plot-scrn__content__introduction-div__img {
-		width: 40rem;
-	}
-
-	.plot-scrn__content__mission-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__mission-div__unordered-list {
-		padding-left: 2%;
-	}
-
-	.plot-scrn__content__mission-div__unordered-list__item {
-		font-size: 3rem;
-	}
-
-	.plot-scrn__content__training-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__mission-operation-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__ending-div {
-		font-size: 5rem;
 	}
 }
