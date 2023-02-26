@@ -857,40 +857,50 @@ body.active {
 .footer {
 	background-color:#25272f;
 	color: #ffffff;
-	width: 100%;
-	/* height: ; */
-	/* margin: auto 0; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: "Catamaran SemiBold";
+	overflow: hidden;
 }
-.footer .container {
-	width: 80%;
-	/* background-color: #454aad; */
+.container {
+	width: 60rem;
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: row;
+	margin: auto;
+}
+.container2 {
+	padding-bottom: 1rem;
 	flex-direction: column;
 }
-.footer .container a {
+.container__logos--out {
 	color: #ffffff;
 	text-decoration: none;
 }
-.footer .container h3 {
+
+.container__item {
 	font-size: 2rem;
-	padding-bottom: 1rem;
 }
-.footer .container img {
+
+.container__image {
 	height: 5rem;
+	transition: all 0.3s ease-in-out;
+	padding: 0.2rem;
 }
-.footer .container .logos {
+
+.container__image:hover {
+	filter: brightness(80%);
+	padding: 0;
+}
+
+.container__logos {
 	width: 60%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	/* background-color: #6b5b6d; */
 }
 
 @media screen and (max-width: 1023px) {
