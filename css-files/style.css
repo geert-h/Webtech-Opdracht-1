@@ -64,6 +64,7 @@ body {
 	top: 1vh;
 	z-index: 880;
 	margin-right: auto;
+	/* margin-top: 0vh; */
 	margin-left: 3vh;
 }
 
@@ -193,7 +194,6 @@ body.active {
 .content__trailer-background {
 	width: 100%;
 	height: max-content;
-	/* background-color: green; */
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -414,10 +414,6 @@ body.active {
 	float: left;
 }
 
-.plot-figure3 {
-	/* float: left; */
-}
-
 .plot-figure2__image {
 	width: 60rem;
 }
@@ -431,7 +427,7 @@ body.active {
 }
 
 .plot-figure4 {
-	float:left;
+	float: left;
 }
 
 .plot__unordered-list {
@@ -651,7 +647,7 @@ body.active {
 	transition: 0.3s;
 }
 
-.trivia-content {
+.trivia-screen {
 	display: flex;
     justify-content: center;
     flex-direction: column;
@@ -664,95 +660,65 @@ body.active {
     margin: 1rem;
 }
 
-.trivia-content__text-div {
-	background-color: #25272f;
-	max-width: 150rem;
-	height: auto;
-	margin: 0% 5%;
-	font-size: 8rem;
-	color: white;
+.trivia {
 	padding: 1% 2%;
 }
 
-.trivia-content__text-div__actor-div {
-	justify-content: center;
-	padding-top: 5rem;
-    font-size: 8rem;
+.trivia__body {
+	max-width: 150rem;
+	height: auto;
+	background-color: hsl(228, 12%, 16%);
+	margin-bottom: 3rem;
+	padding: 2rem;
+	font-size: 3rem;
+	color: white;
+	border-radius: 1.8rem;
 }
 
-.trivia-content__text-div__actor-div__text {
+.trivia__ref {
+	font-size: 3rem;
+	text-decoration: underline;
+	color: slategray;
+} 
 
+.trivia-figures {
+	height: auto;
 }
 
-.trivia-content__text-div__actor-div__figure {
+.trivia-figure1 {
 	float: right;
 	width: 60%;
-	height: auto;
 	padding-left: 4rem;
 }
-.trivia-content__text-div__actor-div__figure__img {
-	width: 100%;
-	height: auto;
+
+.trivia-figure2 {
+	float: left;
+    width: 40%;
+    padding-right: 4rem;
 }
 
-.trivia-content__text-div__actor-div__figure__figcaption {
+.trivia-figure3 {
+    float: right;
+    width: 40%;
+    padding-left: 4rem;
+}
+
+.trivia-figure__image {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
+.trivia-figure__figcaption {
 	font-size: 2rem;
 	color: rgb(196, 189, 189);
     text-align: center;
 }
 
-.trivia-content__text-div__bar-scene-div {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.trivia-content__text-div__bar-scene-div__text {  
-
-}
-
-.trivia-content__text-div__bar-scene-div__figure {
-    float: left;
-    width: 50%;
-    height: auto;
-    padding-right: 4rem;
-}
-
-.trivia-content__text-div__bar-scene-div__figure__img {
-    width: 100%;
-}
-
-.trivia-content__text-div__military-div {
-    margin-bottom: 3rem;
-    font-size: 8rem;
-}
-
-.trivia-content__text-div__military-div__text {
-    text-align: left;
-}
-
-.trivia-content__text-div__aircraft-div {
-    font-size: 8rem;
-}
-
-.trivia-content__text-div__aircraft-div__text {
-    text-align: left;
-}
-
-.trivia-content__text-div__aircraft-div__figure {
-    float: right;
-    width: 50%;
-    padding-left: 4rem;
-}
-
-.trivia-content__text-div__aircraft-div__figure__img {
-    width: 100%;
-    height: auto;
-}
-
-.trivia-content__text-div ul {
-	font-size: 5rem;
-	margin-top: 1rem;
-	margin-left: 3rem;
+@media screen and (min-width: 1250px) {
+	.trivia__body-adjusted {
+		min-height: 40rem;
+	}
 }
 
 .cast-content__container {
@@ -773,13 +739,11 @@ body.active {
 	display: flex;
 }
 .cast-content__container__item__pic {
-	/* background-color: coral; */
 	width: 50%;
 }
 .cast-content__container__item img {
 	width: 100%;
 	padding: 5rem;
-	/* height: 100%; */
 	border-radius: 50%;
 }
 .cast-content__container__item__text {
@@ -797,7 +761,6 @@ body.active {
 .cast-popup {
 	position: fixed;
 	max-width: 120rem;
-	/* height: 80vh; */
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -875,38 +838,21 @@ body.active {
 	pointer-events: none;
 }
 
+
 @media screen and (max-width: 1023px) {
 
 	.cast-content__container {
 		grid-template-columns: 1fr;
 	}
 
-	.trivia-content__text-div__actor-div__text {
-		width: 100%;
-		height: auto;
-	}
-	.trivia-content__text-div__actor-div__figure {
+	.trivia-figures {
 		float: none;
         width: 100%;
-        padding-left: 0%;
-        margin-top: 2rem;
+        padding: 0%;
+        margin-bottom: 2rem;
 	}
-
-    .trivia-content__text-div__bar-scene-div__figure {
-        float: none;
-        width: 100%;
-        padding-right: 0%;
-        margin-top: 2rem;
-    }
-
-    .trivia-content__text-div__aircraft-div__figure {
-        float: none;
-        width: 100%;
-        padding-left: 0%;
-        margin-top: 2rem;
-    }
 }
-.styled-table {
+.trivia__table {
     border-collapse: collapse;
     margin: 2.5rem auto;
     font-size: 10rem;
@@ -914,44 +860,37 @@ body.active {
     max-width: 145rem;
 }
 
-.tableding {
-	max-width: 150rem;
-	background-color: hsl(228, 12%, 16%);
-	margin: 5rem auto;
-	padding: 5rem 2rem;
-}
-
-.styled-table thead tr {
+.trivia__table thead tr {
     background-color: #454aad;
     color: #ffffff;
     text-align: left;
     border-bottom: 0.2rem solid #dddddd;
 }
-.styled-table td:first-child {
+.trivia__table td:first-child {
 	background-color: #403c46;
     color: whitesmoke;  
 }
 
-.styled-table th,
-.styled-table td {
+.trivia__table th,
+.trivia__table td {
     padding: 1.2rem 1.5rem;
 }
 
-.styled-table tbody tr {
+.trivia__table tbody tr {
     border-bottom: 0.2rem solid #dddddd;
     background-color: #6b5b6d;
     color: whitesmoke;  
 }
 
-.styled-table th + th {
+.trivia__table th + th {
     border-left: 0.2rem solid #dddddd; 
 }
 
-.styled-table td + td {
+.trivia__table td + td {
     border-left: 0.2rem solid #dddddd; 
 }
 
-.styled-table tbody tr:last-child {
+.trivia__table tbody tr:last-child {
     border-bottom: none;
 }
 
