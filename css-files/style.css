@@ -286,8 +286,6 @@ body.active {
 }
 
 .summarized-item {
-	width: fit-content;
-	height: fit-content;
 	background-color: rgb(70, 96, 121);
 	border-radius: 1.8rem;
 	font-size: 2rem;
