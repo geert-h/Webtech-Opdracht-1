@@ -377,7 +377,8 @@ body.active {
 }
 
 .trivia-section__image {
-	width: 30%;
+	width: 40rem;
+	max-width: 90%;
 	height: max-content;
 	border-radius: 1rem;
 	margin: inherit;
@@ -414,24 +415,23 @@ body.active {
 	border-radius: 1.8rem;
 	padding: 1rem;
 	padding-left: 2rem;
-	display: flex;
-	flex-direction: row;
 }
 
 .reviews-section__score {
 	border-radius: 1.8rem;
 	background-color: rgb(54, 73, 129);
-	width:min-content;
-	height: min-content;
+	height: 20rem;
+	width: 20rem;
+	padding: 3rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
 	display: flex;
+	float: left;
+	justify-content: center;
 }
 
 .reviews-section__score--text {
-	height: 20rem;
-	width: 20rem;
 	font-size: 12rem;
-	display: flex;
-	justify-content: center;
 }
 
 .reviews-section__body {
@@ -947,18 +947,23 @@ body.active {
 	background-color:#25272f;
 	color: #ffffff;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-family: "Catamaran SemiBold";
 	overflow: hidden;
+	/* flex-wrap: wrap; */
+	/* display: none; */
 }
 .container {
-	width: 60rem;
+	max-width: 60rem;
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
+	flex-wrap: wrap;
+	/* flex-direction: column; */
 	margin: auto;
 }
 .container2 {
@@ -1003,11 +1008,6 @@ body.active {
         width: 100%;
         padding: 0%;
         margin-bottom: 2rem;
-	}
-
-	.trivia-section__image {
-		width: 40rem;
-		padding-left: 1rem;
 	}
 }
 .trivia__table {
