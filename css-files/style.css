@@ -899,14 +899,14 @@ body.active {
     margin: 2.5rem auto;
     font-size: 10rem;
 	font-family: "catamaran Light";
-    min-width: 90rem;
+    max-width: 145rem;
 }
 
 .tableding {
 	max-width: 150rem;
 	background-color: hsl(228, 12%, 16%);
 	margin: 5rem auto;
-	padding: 5rem 0;
+	padding: 5rem 2rem;
 }
 
 .styled-table thead tr {
