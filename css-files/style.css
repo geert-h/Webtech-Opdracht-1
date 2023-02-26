@@ -183,6 +183,8 @@ body.active {
 	letter-spacing: 0.6rem;
 }
 
+/* INDEX SCREEN */
+
 .index-screen {
 	background-color: rgb(23, 21, 27);
 	padding: 0 3vw;
@@ -316,6 +318,7 @@ body.active {
 	border-radius: 1.8rem;;
 	overflow-x: scroll;
 	padding-bottom: 1rem;
+
 	/* Firefox scrollbar */
 	scrollbar-width: 10px;
 	scrollbar-color: #3d3f47 #25272f;
@@ -362,6 +365,8 @@ body.active {
 .actor-preview__role-name-body {
 	font-size: 3rem;
 }
+
+/* PLOT SCREEN */
 
 .plot-screen {
 	background-color: rgb(23, 21, 27);
@@ -430,7 +435,61 @@ body.active {
 	font-size: inherit;
 }
 
+/* CAST SCREEN */
 
+.cast-screen {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
+}
+
+.cast {
+	height: max-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.actor-container {
+	background-color: #25272f;
+	width: 45rem;
+	height: 25rem;
+	max-width: 100%;
+	display:flex;
+	padding: 2rem;
+	border-radius: 1.8rem;
+	transition: 0.3s;
+	margin: 1rem;
+}
+
+.actor-container:hover {
+	padding: 3rem;
+	transition: 0.3s;
+	filter:brightness(80%);
+}
+
+.actor-container__image {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;;
+}
+
+.actor-container__text {
+	font-size: 2rem;
+	padding-left: 2rem;
+	width: 100%;
+	overflow-x:hidden;
+}
+
+.actor-container__header {
+	font-size: 3rem;
+}
+
+.actor-container__body {
+	font-size: inherit;
+}
+
+/* REVIEW SCREEN */
 
 .reviews-screen {
 	background-color: rgb(23, 21, 27);
@@ -440,7 +499,6 @@ body.active {
 .general-rating {
 	background-color:#25272f;
 	height: max-content;
-	width: 100%;
 	border-radius: 1.8rem;
 	padding: 1rem;
 	display: flex;
