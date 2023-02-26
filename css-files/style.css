@@ -403,6 +403,11 @@ body.active {
 	text-decoration: none;
 }
 
+.trivia-section--ref:hover {
+	transition: 0.3s;
+	color: black;
+}
+
 /* PLOT SCREEN */
 
 .plot-screen {
