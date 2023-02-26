@@ -800,10 +800,26 @@ body.active {
 	color: antiquewhite;
 	padding: 10rem;
 	opacity: 0;
-	font-size: 4rem;
+	font-size: 10rem;
 	font-family: "catamaran Regular";
 	display: none;
 }
+.cast-popup .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 6rem;
+}
+.cast-popup .container .left {
+	width: 50%;
+	padding-right: 5rem;
+}
+.cast-popup .container .right {
+	width: 50%;
+}
+
+
+
 .cast-popup.show {
 	display: flex;
 	animation: fadeInAndGrow 0.2s ease-in forwards;
@@ -861,6 +877,45 @@ body.active {
 }
 .cast-content__container__item.is-open {
 	pointer-events: none;
+}
+
+.footer {
+	background-color:#25272f;
+	color: #ffffff;
+	width: 100%;
+	/* height: ; */
+	/* margin: auto 0; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Catamaran SemiBold";
+}
+.footer .container {
+	width: 80%;
+	/* background-color: #454aad; */
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+.footer .container a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.footer .container h3 {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+}
+.footer .container img {
+	height: 5rem;
+}
+.footer .container .logos {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: #6b5b6d; */
 }
 
 @media screen and (max-width: 1023px) {
