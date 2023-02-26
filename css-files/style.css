@@ -234,28 +234,28 @@ body.active {
 	font-size: 6rem;
 	margin: 0.5rem auto;
 	margin-top: 1.5rem;
+	overflow: hidden;
 }
 
 .plot-section__poster {
+	float: left;
 	padding: 1rem;
 	width: 20rem;
 	max-width: 100%;
-	height: 100%;
+	height: auto;
 	border-radius: 1.8rem;
-	float: left;
 }
 
 .plot-section__info {
 	padding: 1rem;
 	display: flex;
 	max-width: 100%;
-	flex-direction: column;
 	font-size: 2rem;
-	width: 60rem;
 }
 
 .plot-section__text-block {
 	margin: 0.5rem;
+	width: 100%;
 	font-size: inherit;
 	text-decoration: none;
 	color: white;
@@ -263,7 +263,7 @@ body.active {
 
 .plot-section__text-block--ref{
 	transition: 0.3s;
-	color: slategray;
+	color: rgb(68, 76, 85);
 	font-size: inherit;
 	margin: 0.5rem;
 	text-decoration: inherit;
@@ -276,7 +276,7 @@ body.active {
 
 .plot-section__summary {
 	padding: 1rem;
-	width: 70rem;
+	max-width: 100%;
 }
 
 .plot-section__summarized-items {
@@ -286,8 +286,6 @@ body.active {
 }
 
 .summarized-item {
-	width: fit-content;
-	height: fit-content;
 	background-color: rgb(70, 96, 121);
 	border-radius: 1.8rem;
 	font-size: 2rem;
@@ -364,6 +362,48 @@ body.active {
 
 .actor-preview__role-name-body {
 	font-size: 3rem;
+}
+
+.trivia-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+}
+
+.trivia-section__body {
+	margin: 1rem;
+}
+
+.trivia-section__image {
+	width: 30%;
+	height: max-content;
+	border-radius: 1rem;
+	margin: inherit;
+	float: left;
+}
+
+.trivia-section__info {
+	max-width: 120rem;
+	font-size: 2rem;
+	padding: 0 2rem;
+	margin: inherit;
+}
+
+.trivia-section__text-block {
+	font-size: inherit;
+	color: white;
+	text-decoration: none;
+}
+
+.trivia-section--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.trivia-section--ref:hover {
+	transition: 0.3s;
+	color: black;
 }
 
 /* PLOT SCREEN */
@@ -914,6 +954,11 @@ body.active {
         width: 100%;
         padding: 0%;
         margin-bottom: 2rem;
+	}
+
+	.trivia-section__image {
+		width: 40rem;
+		padding-left: 1rem;
 	}
 }
 .trivia__table {
