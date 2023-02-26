@@ -367,6 +367,43 @@ body.active {
 	font-size: 3rem;
 }
 
+.trivia-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+}
+
+.trivia-section__body {
+	margin: 1rem;
+}
+
+.trivia-section__image {
+	width: 30%;
+	height: max-content;
+	border-radius: 1rem;
+	margin: inherit;
+	float: left;
+}
+
+.trivia-section__info {
+	max-width: 120rem;
+	font-size: 2rem;
+	padding: 0 2rem;
+	margin: inherit;
+}
+
+.trivia-section__text-block {
+	font-size: inherit;
+	color: white;
+	text-decoration: none;
+}
+
+.trivia-section--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
 /* PLOT SCREEN */
 
 .plot-screen {
@@ -915,6 +952,11 @@ body.active {
         width: 100%;
         padding: 0%;
         margin-bottom: 2rem;
+	}
+
+	.trivia-section__image {
+		width: 40rem;
+		padding-left: 1rem;
 	}
 }
 .trivia__table {
