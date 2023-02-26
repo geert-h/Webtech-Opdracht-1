@@ -64,7 +64,6 @@ body {
 	top: 1vh;
 	z-index: 880;
 	margin-right: auto;
-	/* margin-top: 0vh; */
 	margin-left: 3vh;
 }
 
@@ -412,8 +411,14 @@ body.active {
 	padding: 1rem;
 }
 
+.plot-figure2__image {
+	border-radius: 1.8rem;
+	width: 60rem;
+	max-width: 100%;
+}
+
 .plot__unordered-list {
-	margin-top: 2.1rem;
+	margin-top: 3.4rem;
 	padding-bottom: 0.5rem;
 	padding-left: 3.5rem;
 	display: flex;
@@ -686,9 +691,7 @@ body.active {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	/* grid-auto-rows: 1fr; */
 	grid-gap: 1.5rem;
-	/* background-color: aqua; */
 	margin-top: 10rem;
 }
 .cast-content__container__item {
@@ -802,81 +805,7 @@ body.active {
 	pointer-events: none;
 }
 
-.plot-scrn {
-	background-color: rgb(23, 21, 27);
-	color: white;
-	height: max-content;
-	width: 100%;
-	font-family: "catamaran Light";
-}
-
-.plot-scrn__content {
-	height: fit-content;
-	font-size: 3rem;
-	margin: auto;
-	width: 90vw;
-	background-color: #25272f;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.plot-scrn__content__header1 {
-	align-items: center;
-	text-align: center;
-	font-size: 4rem;
-	font-family: "catamaran Bold", sans-serif;
-	background-color: rgb(23, 21, 27);
-}
-
-.plot-scrn__content__introduction-div {
-	align-items: center;
-	font-size: 3rem;
-	padding: 1%;
-}
-
-.plot-scrn__content__introduction-div__img {
-	width: 95%;
-}
-
-.plot-scrn__content__mission-div {
-	font-size: 3rem;
-	width: 100%;
-	padding: 1%;
-}
-
-.plot-scrn__content__mission-div__unordered-list {
-	list-style-type: disc;
-	padding-left: 5%;
-}
-
-.plot-scrn__content__mission-div__unordered-list__item {
-	font-size: 2rem;
-}
-
-.plot-scrn__content__training-div {
-	display: flex;
-	font-size: 3rem;
-	padding: 1%;
-	flex-direction: column;
-}
-
-.plot-scrn__content__mission-operation-div {
-	font-size: 3rem;
-	padding: 1%;
-}
-
-.plot-scrn__content__ending-div {
-	font-size: 3rem;
-	padding: 1%;
-}
-
-
 @media screen and (max-width: 1023px) {
-	.plot-scrn__content__unordered-list__item {
-		font-size: 4rem;
-		font-family: "catamaran Regular", sans-serif;
-	}
 
 	.cast-content__container {
 		grid-template-columns: 1fr;
@@ -989,51 +918,5 @@ body.active {
 
 	.nav-content__item--ref {
 		font-size: 3.5rem;
-	}
-
-	.plot-scrn__content {
-		max-width: 150rem;
-		font-size: 6rem;
-	}
-
-	.plot-scrn__content__header1 {
-		font-size: 6rem;
-	}
-
-	.plot-scrn__content__introduction-div {
-		display: flex;
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__introduction-div__padded-text {
-		padding-right: 1%;
-	}
-
-	.plot-scrn__content__introduction-div__img {
-		width: 40rem;
-	}
-
-	.plot-scrn__content__mission-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__mission-div__unordered-list {
-		padding-left: 2%;
-	}
-
-	.plot-scrn__content__mission-div__unordered-list__item {
-		font-size: 3rem;
-	}
-
-	.plot-scrn__content__training-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__mission-operation-div {
-		font-size: 5rem;
-	}
-
-	.plot-scrn__content__ending-div {
-		font-size: 5rem;
 	}
 }
