@@ -779,17 +779,17 @@ body.active {
 	font-family: "catamaran Regular";
 	display: none;
 }
-.cast-popup .container {
+.cast-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 6rem;
 }
-.cast-popup .container .left {
+.cast-container__left {
 	width: 50%;
 	padding-right: 5rem;
 }
-.cast-popup .container .right {
+.cast-container__right {
 	width: 50%;
 }
 
