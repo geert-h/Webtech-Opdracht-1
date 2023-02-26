@@ -165,6 +165,8 @@ body.active {
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
 	margin: auto;
 	max-width: 150rem;
 	height: fit-content;
@@ -175,7 +177,14 @@ body.active {
 	font-size: 3rem;
 }
 
-.index-scrn {
+.content__header {
+	font-size: 6rem;
+	font-family: "Topgun";
+	margin: auto;
+	letter-spacing: 0.6rem;
+}
+
+.index-screen {
 	background-color: rgb(23, 21, 27);
 	padding: 0 3vw;
 }
@@ -207,11 +216,8 @@ body.active {
 }
 
 .plot-section {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
-	/* flex-wrap: wrap; */
-	margin-top: 3rem;
 	background-color: #25272f;
 	border-radius: 1.8rem;
 	height: fit-content;
@@ -225,8 +231,8 @@ body.active {
 
 .section-header {
 	font-size: 6rem;
-	margin: 0 auto;
-	/* margin-left: 1rem; */
+	margin: 0.5rem auto;
+	margin-top: 1.5rem;
 }
 
 .plot-section__poster {
@@ -298,7 +304,6 @@ body.active {
 }
 
 .cast-section {
-	margin-top: 3rem;
 	background-color: #25272f;
 	border-radius: 1.8rem;
 	padding: 1rem;
@@ -311,9 +316,7 @@ body.active {
 	flex-direction: row;
 	border-radius: 1.8rem;;
 	overflow-x: scroll;
-
 	padding-bottom: 1rem;
-
 	/* Firefox scrollbar */
 	scrollbar-width: 10px;
 	scrollbar-color: #3d3f47 #25272f;
@@ -359,6 +362,218 @@ body.active {
 
 .actor-preview__role-name-body {
 	font-size: 3rem;
+}
+
+.plot-screen {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
+}
+
+.plot {
+	display: flex;
+	flex-direction: column;
+}
+
+.plot__body {
+	font-size: 3rem;
+	padding-bottom: 3rem;
+	background-color:#25272f;
+	border-radius: 1.8rem;
+	padding: 2rem;
+	margin-bottom: 3rem;
+}
+
+.plot__ref {
+	color: slategray;
+	font-size: inherit;
+	transition: 0.3s;
+}
+
+.plot__ref:hover {
+	color: black;
+	transition: 0.3s;
+}
+
+.plot-figure {
+	float: right;
+	font-size: 3rem;
+	padding: 1rem;
+}
+
+.plot-figure__image {
+	border-radius: 1.8rem;
+	width: 50rem;
+	max-width: 100%;
+}
+
+.plot-figure2 {
+	float: left;
+	font-size: 3rem;
+	padding: 1rem;
+}
+
+.plot__unordered-list {
+	margin-top: 2.1rem;
+	padding-bottom: 0.5rem;
+	padding-left: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	font-size: inherit;
+}
+
+.plot__unordered-list--item {
+	font-size: inherit;
+}
+
+
+
+.reviews-screen {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
+}
+
+.general-rating {
+	background-color:#25272f;
+	height: max-content;
+	width: 100%;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.general-rating__score {
+	border-radius: 1.8rem;
+	min-width: 12rem;
+	height: 12rem;
+	background-color: rgb(54, 73, 129);
+	display: flex;
+	justify-content: center;
+	padding: 1.8rem 0;
+}
+
+.general-rating__score--text {
+	font-family: "Topgun";
+	font-size: 6rem;
+}
+
+.general-rating__info {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1rem;
+}
+
+.general-rating__header {
+	font-size: 5rem;
+	font-family: "Teko Bold";
+	margin: auto;
+}
+
+.general-rating__description {
+	font-size: 3rem;
+	font-family: "Catamaran SemiBold";
+}
+
+.general-rating__description--out {
+	color: slategray;
+	font-family: "Catamaran SemiBold";
+	transition: 0.3s;
+	font-size: 2rem;
+}
+
+.general-rating__description--out:hover {
+	color: black;
+	transition: 0.3s;
+}
+
+.reviews {
+	height: fit-content;
+	width: 100%;
+}
+
+.reviews__review {
+	width: fit;
+	height: fit-content;
+	background-color: #25272f;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	border-radius: 1.8rem;
+	margin-top: 3rem;
+}
+
+.reviews__left {
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+}
+
+.reviews__score {
+	border-radius: 1.8rem;
+	width: 6rem;
+	height: 6rem;
+	background-color: rgb(54, 73, 129);
+	display: flex;
+	justify-content: center;
+	padding: 0.9rem 0;
+}
+
+.reviews__score--text {
+	font-family: "Topgun";
+	font-size: 3rem;
+}
+
+.reviews__date {
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	font-size: 3rem;
+}
+
+.reviews__date--title {
+	font-family: "Catamaran Bold";
+}
+
+.reviews__date--text {
+	font-family: "Catamaran SemiBold";
+}
+
+.reviews__mid {
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.9rem;
+	font-family: "Catamaran Regular";
+	font-size: 2rem;
+}
+
+.reviews__source {
+	display:flex;
+	flex-direction: row;
+}
+
+.reviews__source--reviewer {
+	font-size: 4rem;
+}
+
+.reviews__source--ref-text {
+	color: inherit;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.reviews__source--out-text {
+	color: inherit;
+	font-size: 2rem;
+	font-family: "Catamaran SemiBold";
+	color: slategray;
+	width: max-content;
+	transition: 0.3s;
+}
+
+.reviews__source--out-text:hover {
+	color: black;
+	transition: 0.3s;
 }
 
 .trivia-content {
@@ -656,216 +871,13 @@ body.active {
 	padding: 1%;
 }
 
-.reviews-scrn {
-	background-color: rgb(23, 21, 27);
-	padding: 0 3vw;
-}
-
-.general-rating {
-	background-color:#25272f;
-	height: max-content;
-	width: 100%;
-	border-radius: 1.8rem;
-	padding: 1rem;
-	display: flex;
-	flex-direction: row;
-}
-
-.general-rating__score {
-	border-radius: 1.8rem;
-	min-width: 12rem;
-	height: 12rem;
-	background-color: rgb(0, 105, 0);
-	display: flex;
-	justify-content: center;
-	padding: 1.8rem 0;
-}
-
-.general-rating__score--text {
-	font-family: "Topgun";
-	font-size: 6rem;
-}
-
-.general-rating__info {
-	display: flex;
-	flex-direction: column;
-	padding-left: 1rem;
-}
-
-.general-rating__header {
-	font-size: 5rem;
-	font-family: "Teko Bold";
-	margin: auto;
-}
-
-.general-rating__description {
-	font-size: 3rem;
-	font-family: "Catamaran SemiBold";
-}
-
-.general-rating__description--out {
-	color: slategray;
-	font-family: "Catamaran SemiBold";
-	transition: 0.3s;
-	font-size: 2rem;
-}
-
-.general-rating__description--out:hover {
-	color: black;
-	transition: 0.3s;
-}
-
-.reviews {
-	height: fit-content;
-	width: 100%;
-}
-
-.reviews__review {
-	width: fit;
-	height: fit-content;
-	background-color: #25272f;
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	padding: 1rem;
-	border-radius: 1.8rem;
-	margin-top: 3rem;
-}
-
-.reviews__left {
-	width: max-content;
-	display: flex;
-	flex-direction: column;
-}
-
-.reviews__score {
-	border-radius: 1.8rem;
-	width: 6rem;
-	height: 6rem;
-	background-color: rgb(0, 105, 0);
-	display: flex;
-	justify-content: center;
-	padding: 0.9rem 0;
-}
-
-.reviews__score--text {
-	font-family: "Topgun";
-	font-size: 3rem;
-}
-
-.reviews__date {
-	margin-top: 10%;
-	display: flex;
-	flex-direction: column;
-	font-size: 3rem;
-}
-
-.reviews__date--title {
-	font-family: "Catamaran Bold";
-}
-
-.reviews__date--text {
-	font-family: "Catamaran SemiBold";
-}
-
-.reviews__mid {
-	display: flex;
-	flex-direction: column;
-	margin-left: 0.9rem;
-	font-family: "Catamaran Regular";
-	font-size: 2rem;
-}
-
-.reviews__source {
-	display:flex;
-	flex-direction: row;
-}
-
-.reviews__source--reviewer {
-	font-size: 4rem;
-}
-
-.reviews__source--ref-text {
-	color: inherit;
-	font-size: 2rem;
-	text-decoration: none;
-}
-
-.reviews__source--out-text {
-	color: inherit;
-	font-size: 2rem;
-	font-family: "Catamaran SemiBold";
-	color: slategray;
-	width: max-content;
-	transition: 0.3s;
-}
-
-.reviews__source--out-text:hover {
-	color: black;
-	transition: 0.3s;
-}
-
-
 
 @media screen and (max-width: 1023px) {
-	/* h1 {
-		align-items: center;
-		font-size: 5rem;
-		font-family: "catamaran Bold", sans-serif;
-	} */
-
 	.plot-scrn__content__unordered-list__item {
 		font-size: 4rem;
 		font-family: "catamaran Regular", sans-serif;
 	}
 
-	/* .index-content__plot-section {
-		height: auto;
-		background-color: #25272f;
-		padding-bottom: 10vh;
-	}
-	.index-content__poster-div {
-		height: auto;
-		width: 90%;
-	}
-	.index-content__poster-div__img {
-		content: url("/resources/poster-mobile.png");
-		width: 100%;
-		margin: 5%;
-	}
-	.index-content__plot-information-div__text {
-		height: auto;
-		width: auto;
-		margin: 5%;
-	}
-	.index-content__plot-information-div__text p,
-	h2 {
-		color: white;
-	}
-	.index-content__plot-information-div__text h2 {
-		font-size: 4rem;
-	}
-	.index-content__plot-information-div__text p,
-	p a {
-		font-size: 2rem;
-	}
-	.index-content__general-information-div__text {
-		display: flex;
-		width: auto;
-		height: auto;
-		margin-top: 3rem;
-	}
-	.index-content__general-information-div__text h2 {
-		font-size: 3rem;
-	}
-	.index-content__general-information-div__text p {
-		color: white;
-		font-size: 2rem;
-	}
-	.index-content__general-information-box__text {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	} */
 	.cast-content__container {
 		grid-template-columns: 1fr;
 	}
@@ -904,7 +916,6 @@ body.active {
 }
 
 .tableding {
-	/* width: 80vw; */
 	max-width: 150rem;
 	background-color: hsl(228, 12%, 16%);
 	margin: 5rem auto;
