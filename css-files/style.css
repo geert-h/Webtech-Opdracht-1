@@ -191,6 +191,16 @@ body.active {
 	padding: 0 3vw;
 }
 
+.section-header {
+	font-size: 6rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-bottom: -2rem;
+	overflow: hidden;
+	font-family: "Topgun";
+	letter-spacing: 8px;
+}
+
 .content__trailer-background {
 	width: 100%;
 	height: max-content;
@@ -228,13 +238,6 @@ body.active {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-}
-
-.section-header {
-	font-size: 6rem;
-	margin: 0.5rem auto;
-	margin-top: 1.5rem;
-	overflow: hidden;
 }
 
 .plot-section__poster {
@@ -406,6 +409,51 @@ body.active {
 	color: black;
 }
 
+.reviews-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	padding-left: 2rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.reviews-section__score {
+	border-radius: 1.8rem;
+	background-color: rgb(54, 73, 129);
+	width:min-content;
+	height: min-content;
+	display: flex;
+}
+
+.reviews-section__score--text {
+	height: 20rem;
+	width: 20rem;
+	font-size: 12rem;
+	display: flex;
+	justify-content: center;
+}
+
+.reviews-section__body {
+	font-size: 2rem;
+	padding-left: 2rem;
+}
+
+.reviews-section__body--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.reviews-section__body--ref:hover {
+	transition: 0.3s;
+	color: black;
+}
+
+
+
+
 /* PLOT SCREEN */
 
 .plot-screen {
@@ -537,7 +585,7 @@ body.active {
 	font-size: inherit;
 }
 
-/* REVIEW SCREEN */
+/* REVIEWS SCREEN */
 
 .reviews-screen {
 	background-color: rgb(23, 21, 27);
@@ -686,6 +734,8 @@ body.active {
 	color: black;
 	transition: 0.3s;
 }
+
+/* TRIVIA SCREEN */
 
 .trivia-screen {
 	display: flex;
