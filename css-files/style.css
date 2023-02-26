@@ -651,7 +651,6 @@ body.active {
 }
 
 .reviews__review {
-	width: fit;
 	height: fit-content;
 	background-color: #25272f;
 	margin: auto;
