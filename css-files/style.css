@@ -793,13 +793,13 @@ body.active {
     padding-left: 4rem;
 }
 
-.trivia-figure__image {
+.trivia-figures__image {
 	width: 100%;
 	height: auto;
 	border-radius: 1rem;
 }
 
-.trivia-figure__figcaption {
+.trivia-figures__figcaption {
 	font-size: 2rem;
 	color: rgb(196, 189, 189);
     text-align: center;
@@ -1020,7 +1020,7 @@ body.active {
 }
 
 .trivia__table thead tr {
-    background-color: #454aad;
+    background-color: slategray;
     color: #ffffff;
     text-align: left;
     border-bottom: 0.2rem solid #dddddd;
