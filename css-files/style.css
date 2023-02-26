@@ -793,13 +793,13 @@ body.active {
     padding-left: 4rem;
 }
 
-.trivia-figure__image {
+.trivia-figures__image {
 	width: 100%;
 	height: auto;
 	border-radius: 1rem;
 }
 
-.trivia-figure__figcaption {
+.trivia-figures__figcaption {
 	font-size: 2rem;
 	color: rgb(196, 189, 189);
     text-align: center;
@@ -850,7 +850,10 @@ body.active {
 }
 .cast-popup {
 	position: fixed;
-	max-width: 120rem;
+	width: 60vw;
+	height: max-content;
+	margin: 0 3vw;
+	max-width: 100%;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -860,12 +863,11 @@ body.active {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #7f8f83;
-	border-radius: 8vh;
-	color: antiquewhite;
-	padding: 10rem;
-	opacity: 0;
-	font-size: 10rem;
+	background-color: slategray;
+	border-radius: 1.8vh;
+	color: white;
+	padding: 2vw;
+	font-size: 4vh;
 	font-family: "catamaran Regular";
 	display: none;
 }
@@ -873,17 +875,15 @@ body.active {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 6rem;
+	font-size: 4vw;
 }
 .cast-container__left {
 	width: 50%;
-	padding-right: 5rem;
+	padding-right: 5vw;
 }
 .cast-container__right {
 	width: 50%;
 }
-
-
 
 .cast-popup.show {
 	display: flex;
@@ -898,12 +898,12 @@ body.active {
 
 .cast-popup__close-btn {
 	position: absolute;
-	top: 5rem;
-	right: 5rem;
+	top: 1vw;
+	right: 2vw;
 	color: aliceblue;
 	background-color: transparent;
 	border: transparent;
-	font-size: 5rem;
+	font-size: 3vw;
 	cursor: pointer;
 }
 
@@ -987,7 +987,7 @@ body.active {
 }
 
 .container__logos {
-	width: 60%;
+	width: 80%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -1015,7 +1015,7 @@ body.active {
 }
 
 .trivia__table thead tr {
-    background-color: #454aad;
+    background-color: slategray;
     color: #ffffff;
     text-align: left;
     border-bottom: 0.2rem solid #dddddd;
