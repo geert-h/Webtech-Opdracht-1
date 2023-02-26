@@ -409,6 +409,49 @@ body.active {
 	color: black;
 }
 
+.reviews-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	padding-left: 2rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.reviews-section__score {
+	border-radius: 1.8rem;
+	background-color: rgb(54, 73, 129);
+	width:min-content;
+	height: min-content;
+	display: flex;
+}
+
+.reviews-section__score--text {
+	height: 20rem;
+	width: 20rem;
+	font-size: 12rem;
+	display: flex;
+	justify-content: center;
+}
+
+.reviews-section__body {
+	font-size: 2rem;
+	padding-left: 2rem;
+}
+
+.reviews-section__body--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.reviews-section__body--ref:hover {
+	transition: 0.3s;
+	color: black;
+}
+
+
 
 
 /* PLOT SCREEN */
