@@ -57,13 +57,14 @@ body {
 	position: absolute;
 	display: none;
 	cursor: pointer;
-	height: 8vh;
-	width: 8vh;
+	height: 5rem;
+	width: 5rem;
 	display: block;
 	left: -0.5vh;
 	top: 1vh;
 	z-index: 880;
 	margin-right: auto;
+	/* margin-top: 0vh; */
 	margin-left: 3vh;
 }
 
@@ -183,15 +184,26 @@ body.active {
 	letter-spacing: 0.6rem;
 }
 
+/* INDEX SCREEN */
+
 .index-screen {
 	background-color: rgb(23, 21, 27);
 	padding: 0 3vw;
 }
 
+.section-header {
+	font-size: 6rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-bottom: -2rem;
+	overflow: hidden;
+	font-family: "Topgun";
+	letter-spacing: 8px;
+}
+
 .content__trailer-background {
 	width: 100%;
 	height: max-content;
-	/* background-color: green; */
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -228,32 +240,25 @@ body.active {
 	flex-wrap: wrap;
 }
 
-.section-header {
-	font-size: 6rem;
-	margin: 0.5rem auto;
-	margin-top: 1.5rem;
-}
-
 .plot-section__poster {
+	float: left;
 	padding: 1rem;
 	width: 20rem;
 	max-width: 100%;
-	height: 100%;
+	height: auto;
 	border-radius: 1.8rem;
-	float: left;
 }
 
 .plot-section__info {
 	padding: 1rem;
 	display: flex;
 	max-width: 100%;
-	flex-direction: column;
 	font-size: 2rem;
-	width: 60rem;
 }
 
 .plot-section__text-block {
 	margin: 0.5rem;
+	width: 100%;
 	font-size: inherit;
 	text-decoration: none;
 	color: white;
@@ -261,7 +266,7 @@ body.active {
 
 .plot-section__text-block--ref{
 	transition: 0.3s;
-	color: slategray;
+	color: rgb(68, 76, 85);
 	font-size: inherit;
 	margin: 0.5rem;
 	text-decoration: inherit;
@@ -274,7 +279,7 @@ body.active {
 
 .plot-section__summary {
 	padding: 1rem;
-	width: 70rem;
+	max-width: 100%;
 }
 
 .plot-section__summarized-items {
@@ -284,8 +289,6 @@ body.active {
 }
 
 .summarized-item {
-	width: fit-content;
-	height: fit-content;
 	background-color: rgb(70, 96, 121);
 	border-radius: 1.8rem;
 	font-size: 2rem;
@@ -316,8 +319,8 @@ body.active {
 	border-radius: 1.8rem;;
 	overflow-x: scroll;
 	padding-bottom: 1rem;
+
 	/* Firefox scrollbar */
-	scrollbar-width: 10px;
 	scrollbar-color: #3d3f47 #25272f;
 }
 
@@ -363,6 +366,92 @@ body.active {
 	font-size: 3rem;
 }
 
+.trivia-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+}
+
+.trivia-section__body {
+	margin: 1rem;
+}
+
+.trivia-section__image {
+	width: 40rem;
+	max-width: 90%;
+	height: max-content;
+	border-radius: 1rem;
+	margin: inherit;
+	float: left;
+}
+
+.trivia-section__info {
+	max-width: 120rem;
+	font-size: 2rem;
+	padding: 0 2rem;
+	margin: inherit;
+}
+
+.trivia-section__text-block {
+	font-size: inherit;
+	color: white;
+	text-decoration: none;
+}
+
+.trivia-section--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.trivia-section--ref:hover {
+	transition: 0.3s;
+	color: black;
+}
+
+.reviews-section {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	padding: 1rem;
+	padding-left: 2rem;
+}
+
+.reviews-section__score {
+	border-radius: 1.8rem;
+	background-color: rgb(54, 73, 129);
+	height: 20rem;
+	width: 20rem;
+	padding: 3rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	float: left;
+	justify-content: center;
+}
+
+.reviews-section__score--text {
+	font-size: 12rem;
+}
+
+.reviews-section__body {
+	font-size: 2rem;
+	padding-left: 2rem;
+}
+
+.reviews-section__body--ref {
+	transition: 0.3s;
+	color: slategray;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.reviews-section__body--ref:hover {
+	transition: 0.3s;
+	color: black;
+}
+
+/* PLOT SCREEN */
+
 .plot-screen {
 	background-color: rgb(23, 21, 27);
 	padding: 0 3vw;
@@ -407,14 +496,22 @@ body.active {
 
 .plot-figure2 {
 	float: left;
-	font-size: 3rem;
-	padding: 1rem;
 }
 
 .plot-figure2__image {
-	border-radius: 1.8rem;
 	width: 60rem;
-	max-width: 100%;
+}
+
+.plot-figure3__image {
+	width: 70rem;
+}
+
+.plot-figure4__image {
+	width: 60rem;
+}
+
+.plot-figure4 {
+	float: left;
 }
 
 .plot__unordered-list {
@@ -430,7 +527,61 @@ body.active {
 	font-size: inherit;
 }
 
+/* CAST SCREEN */
 
+.cast-screen {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
+}
+
+.cast {
+	height: max-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.actor-container {
+	background-color: #25272f;
+	width: 45rem;
+	height: 25rem;
+	max-width: 100%;
+	display:flex;
+	padding: 2rem;
+	border-radius: 1.8rem;
+	transition: 0.3s;
+	margin: 1rem;
+}
+
+.actor-container:hover {
+	padding: 3rem;
+	transition: 0.3s;
+	filter:brightness(80%);
+}
+
+.actor-container__image {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;;
+}
+
+.actor-container__text {
+	font-size: 2rem;
+	padding-left: 2rem;
+	width: 100%;
+	overflow-x:hidden;
+}
+
+.actor-container__header {
+	font-size: 3rem;
+}
+
+.actor-container__body {
+	font-size: inherit;
+}
+
+/* REVIEWS SCREEN */
 
 .reviews-screen {
 	background-color: rgb(23, 21, 27);
@@ -440,7 +591,6 @@ body.active {
 .general-rating {
 	background-color:#25272f;
 	height: max-content;
-	width: 100%;
 	border-radius: 1.8rem;
 	padding: 1rem;
 	display: flex;
@@ -470,7 +620,6 @@ body.active {
 
 .general-rating__header {
 	font-size: 5rem;
-	font-family: "Teko Bold";
 	margin: auto;
 }
 
@@ -497,7 +646,6 @@ body.active {
 }
 
 .reviews__review {
-	width: fit;
 	height: fit-content;
 	background-color: #25272f;
 	margin: auto;
@@ -581,7 +729,9 @@ body.active {
 	transition: 0.3s;
 }
 
-.trivia-content {
+/* TRIVIA SCREEN */
+
+.trivia-screen {
 	display: flex;
     justify-content: center;
     flex-direction: column;
@@ -594,95 +744,65 @@ body.active {
     margin: 1rem;
 }
 
-.trivia-content__text-div {
-	background-color: #25272f;
-	max-width: 150rem;
-	height: auto;
-	margin: 0% 5%;
-	font-size: 8rem;
-	color: white;
+.trivia {
 	padding: 1% 2%;
 }
 
-.trivia-content__text-div__actor-div {
-	justify-content: center;
-	padding-top: 5rem;
-    font-size: 8rem;
+.trivia__body {
+	max-width: 150rem;
+	height: auto;
+	background-color: hsl(228, 12%, 16%);
+	margin-bottom: 3rem;
+	padding: 2rem;
+	font-size: 3rem;
+	color: white;
+	border-radius: 1.8rem;
 }
 
-.trivia-content__text-div__actor-div__text {
+.trivia__ref {
+	font-size: 3rem;
+	text-decoration: underline;
+	color: slategray;
+} 
 
+.trivia-figures {
+	height: auto;
 }
 
-.trivia-content__text-div__actor-div__figure {
+.trivia-figure1 {
 	float: right;
 	width: 60%;
-	height: auto;
 	padding-left: 4rem;
 }
-.trivia-content__text-div__actor-div__figure__img {
-	width: 100%;
-	height: auto;
+
+.trivia-figure2 {
+	float: left;
+    width: 40%;
+    padding-right: 4rem;
 }
 
-.trivia-content__text-div__actor-div__figure__figcaption {
+.trivia-figure3 {
+    float: right;
+    width: 40%;
+    padding-left: 4rem;
+}
+
+.trivia-figures__image {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
+.trivia-figures__figcaption {
 	font-size: 2rem;
 	color: rgb(196, 189, 189);
     text-align: center;
 }
 
-.trivia-content__text-div__bar-scene-div {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.trivia-content__text-div__bar-scene-div__text {  
-
-}
-
-.trivia-content__text-div__bar-scene-div__figure {
-    float: left;
-    width: 50%;
-    height: auto;
-    padding-right: 4rem;
-}
-
-.trivia-content__text-div__bar-scene-div__figure__img {
-    width: 100%;
-}
-
-.trivia-content__text-div__military-div {
-    margin-bottom: 3rem;
-    font-size: 8rem;
-}
-
-.trivia-content__text-div__military-div__text {
-    text-align: left;
-}
-
-.trivia-content__text-div__aircraft-div {
-    font-size: 8rem;
-}
-
-.trivia-content__text-div__aircraft-div__text {
-    text-align: left;
-}
-
-.trivia-content__text-div__aircraft-div__figure {
-    float: right;
-    width: 50%;
-    padding-left: 4rem;
-}
-
-.trivia-content__text-div__aircraft-div__figure__img {
-    width: 100%;
-    height: auto;
-}
-
-.trivia-content__text-div ul {
-	font-size: 5rem;
-	margin-top: 1rem;
-	margin-left: 3rem;
+@media screen and (min-width: 1250px) {
+	.trivia__body-adjusted {
+		min-height: 40rem;
+	}
 }
 
 .cast-content__container {
@@ -703,13 +823,11 @@ body.active {
 	display: flex;
 }
 .cast-content__container__item__pic {
-	/* background-color: coral; */
 	width: 50%;
 }
 .cast-content__container__item img {
 	width: 100%;
 	padding: 5rem;
-	/* height: 100%; */
 	border-radius: 50%;
 }
 .cast-content__container__item__text {
@@ -726,8 +844,10 @@ body.active {
 }
 .cast-popup {
 	position: fixed;
-	max-width: 120rem;
-	/* height: 80vh; */
+	width: 60vw;
+	height: max-content;
+	margin: 0 3vw;
+	max-width: 100%;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -737,15 +857,28 @@ body.active {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #7f8f83;
-	border-radius: 8vh;
-	color: antiquewhite;
-	padding: 10rem;
-	opacity: 0;
-	font-size: 4rem;
+	background-color: slategray;
+	border-radius: 1.8vh;
+	color: white;
+	padding: 2vw;
+	font-size: 4vh;
 	font-family: "catamaran Regular";
 	display: none;
 }
+.cast-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vw;
+}
+.cast-container__left {
+	width: 50%;
+	padding-right: 5vw;
+}
+.cast-container__right {
+	width: 50%;
+}
+
 .cast-popup.show {
 	display: flex;
 	animation: fadeInAndGrow 0.2s ease-in forwards;
@@ -759,12 +892,12 @@ body.active {
 
 .cast-popup__close-btn {
 	position: absolute;
-	top: 5rem;
-	right: 5rem;
+	top: 1vw;
+	right: 2vw;
 	color: aliceblue;
 	background-color: transparent;
 	border: transparent;
-	font-size: 5rem;
+	font-size: 3vw;
 	cursor: pointer;
 }
 
@@ -805,38 +938,74 @@ body.active {
 	pointer-events: none;
 }
 
+.footer {
+	background-color:#25272f;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Catamaran SemiBold";
+	overflow: hidden;
+}
+.container {
+	width: 60%;
+	max-width: 60rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	margin: auto;
+}
+.container2 {
+	width: 100%;
+	padding-bottom: 1rem;
+	flex-direction: column;
+}
+.container__logos--out {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.container__item {
+	font-size: 2rem;
+}
+
+.container__image {
+	height: 5rem;
+	transition: all 0.3s ease-in-out;
+	padding: 0.2rem;
+}
+
+.container__image:hover {
+	filter: brightness(80%);
+	padding: 0;
+}
+
+.container__logos {
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 @media screen and (max-width: 1023px) {
 
 	.cast-content__container {
 		grid-template-columns: 1fr;
 	}
 
-	.trivia-content__text-div__actor-div__text {
-		width: 100%;
-		height: auto;
-	}
-	.trivia-content__text-div__actor-div__figure {
+	.trivia-figures {
 		float: none;
         width: 100%;
-        padding-left: 0%;
-        margin-top: 2rem;
+        padding: 0%;
+        margin-bottom: 2rem;
 	}
-
-    .trivia-content__text-div__bar-scene-div__figure {
-        float: none;
-        width: 100%;
-        padding-right: 0%;
-        margin-top: 2rem;
-    }
-
-    .trivia-content__text-div__aircraft-div__figure {
-        float: none;
-        width: 100%;
-        padding-left: 0%;
-        margin-top: 2rem;
-    }
 }
-.styled-table {
+.trivia__table {
     border-collapse: collapse;
     margin: 2.5rem auto;
     font-size: 10rem;
@@ -844,44 +1013,37 @@ body.active {
     max-width: 145rem;
 }
 
-.tableding {
-	max-width: 150rem;
-	background-color: hsl(228, 12%, 16%);
-	margin: 5rem auto;
-	padding: 5rem 2rem;
-}
-
-.styled-table thead tr {
-    background-color: #454aad;
+.trivia__table thead tr {
+    background-color: slategray;
     color: #ffffff;
     text-align: left;
     border-bottom: 0.2rem solid #dddddd;
 }
-.styled-table td:first-child {
+.trivia__table td:first-child {
 	background-color: #403c46;
     color: whitesmoke;  
 }
 
-.styled-table th,
-.styled-table td {
+.trivia__table th,
+.trivia__table td {
     padding: 1.2rem 1.5rem;
 }
 
-.styled-table tbody tr {
+.trivia__table tbody tr {
     border-bottom: 0.2rem solid #dddddd;
     background-color: #6b5b6d;
     color: whitesmoke;  
 }
 
-.styled-table th + th {
+.trivia__table th + th {
     border-left: 0.2rem solid #dddddd; 
 }
 
-.styled-table td + td {
+.trivia__table td + td {
     border-left: 0.2rem solid #dddddd; 
 }
 
-.styled-table tbody tr:last-child {
+.trivia__table tbody tr:last-child {
     border-bottom: none;
 }
 
