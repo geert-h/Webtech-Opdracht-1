@@ -763,7 +763,13 @@ body.active {
 	font-size: 3rem;
 	text-decoration: underline;
 	color: slategray;
+	transition: 0.3s;
 } 
+
+.trivia__ref:hover {
+	color: black;
+	transition: 0.3s;
+}
 
 .trivia-figures {
 	height: auto;
