@@ -194,3 +194,36 @@ for (let i = 0; i < clickablePreview.length; i++) {
 	});
 }
 
+class Movie {
+	constructor(){
+    }
+}
+class Artist {
+	constructor(name, birthDate) {
+		this.name = name;
+		this.birthDate = birthDate;
+	}
+}
+class Director extends Artist {
+	constructor(name, birthDate, movies) {
+	}
+}
+class Writer extends Artist {
+	constructor(name, birthDate, books){
+	}
+}
+class Actor extends Artist {
+	constructor(name, birthDate, movies, photo){
+	}
+}
+
+
+title = "Top Gun: Maverick";
+genre = "Action/Drama";
+year = 2022;
+director = "Joseph Kosinski";
+// writer =
+// stars 
+poster = "Resources/Poster.png"
+trailer = "Resources/trailer.mp4"
+plot = "hutsman"
