@@ -807,7 +807,10 @@ body.active {
 }
 
 .trivia-figures {
-	height: auto;
+	float: none;
+	width: 100%;
+	padding: 0%;
+	margin-bottom: 2rem;
 }
 
 .trivia-figure1 {
@@ -1087,12 +1090,6 @@ body.active {
 		grid-template-columns: 1fr;
 	}
 
-	.trivia-figures {
-		float: none;
-        width: 100%;
-        padding: 0%;
-        margin-bottom: 2rem;
-	}
 	.nav-content {
 		height: auto;
 	}
