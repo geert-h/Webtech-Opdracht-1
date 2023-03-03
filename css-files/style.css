@@ -30,6 +30,7 @@
 
 body {
 	background-color: rgb(23, 21, 27);
+	overflow-x: hidden;
 }
 
 .in-text-reference {
@@ -998,19 +999,6 @@ body.active {
 	align-items: center;
 }
 
-@media screen and (max-width: 1023px) {
-
-	.cast-content__container {
-		grid-template-columns: 1fr;
-	}
-
-	.trivia-figures {
-		float: none;
-        width: 100%;
-        padding: 0%;
-        margin-bottom: 2rem;
-	}
-}
 .trivia__table {
     border-collapse: collapse;
     margin: 2.5rem auto;
@@ -1053,7 +1041,24 @@ body.active {
     border-bottom: none;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 460px) {
+	.trivia__table {
+		font-size: 5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+
+	.cast-content__container {
+		grid-template-columns: 1fr;
+	}
+
+	.trivia-figures {
+		float: none;
+        width: 100%;
+        padding: 0%;
+        margin-bottom: 2rem;
+	}
 	.nav-content {
 		height: auto;
 	}
