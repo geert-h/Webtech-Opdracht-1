@@ -40,21 +40,23 @@
 } */
 
 @font-face {
-	font-family: "catamaran Bold";
-	src: url("../resources/fonts/catamaran-font/catamaran-Bold.ttf");
-}
-@font-face {
-	font-family: "catamaran Regular";
-	src: url("../resources/fonts/catamaran-font/catamaran-Regular.ttf");
-}
-@font-face {
-	font-family: "catamaran SemiBold";
-	src: url("../resources/fonts/catamaran-font/catamaran-SemiBold.ttf");
+	font-family: "Catamaran Bold";
+	src: url("../resources/fonts/catamaran-font/Catamaran-Bold.ttf");
 }
 
 @font-face {
-	font-family: "catamaran Light";
-	src: url("../resources/fonts/catamaran-font/catamaran-Light.ttf");
+	font-family: "Catamaran Regular";
+	src: url("../resources/fonts/catamaran-font/Catamaran-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Catamaran SemiBold";
+	src: url("../resources/fonts/catamaran-font/Catamaran-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Catamaran Light";
+	src: url("../resources/fonts/catamaran-font/Catamaran-Light.ttf");
 }
 
 @font-face {
@@ -1086,10 +1088,6 @@ body.active {
 
 @media screen and (min-width: 1024px) {
 
-	.cast-content__container {
-		grid-template-columns: 1fr;
-	}
-
 	.nav-content {
 		height: auto;
 	}
@@ -1122,5 +1120,9 @@ body.active {
 
 	.nav-content__item--ref {
 		font-size: 3.5rem;
+	}
+	
+	.cast-content__container {
+		grid-template-columns: 1fr;
 	}
 }

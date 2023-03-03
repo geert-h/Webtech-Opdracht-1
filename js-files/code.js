@@ -1,13 +1,12 @@
 // document.getElementById("testp").textContent = "TESTING";
 // document.getElementById("testp").innerHTML = "Hello World";
 
-var myLink = document.createElement('a');
-var myText = document.createTextNode('Click');
-myLink.setAttribute('href'
-, 'http://example.org');
-myLink.appendChild(myText);
-var p = document.getElementById('testp');
-p.appendChild( myLink );
+// var myLink = document.createElement('a');
+// var myText = document.createTextNode('Click');
+// myLink.setAttribute('href', 'http://example.org');
+// myLink.appendChild(myText);
+// var p = document.getElementById('testp');
+// p.appendChild( myLink );
 
 const hamburger = document.querySelector(".nav-content__hamburger");
 const navMenu = document.querySelector(".nav-content__unordered-list");
