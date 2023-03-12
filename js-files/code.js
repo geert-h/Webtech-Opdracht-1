@@ -218,12 +218,16 @@ class Actor extends Artist {
 }
 
 
-title = "Top Gun: Maverick";
-genre = "Action/Drama";
-year = 2022;
-director = "Joseph Kosinski";
-// writer =
-// stars 
-poster = "Resources/Poster.png"
-trailer = "Resources/trailer.mp4"
-plot = "hutsman"
+class infoPageData {
+	static title = "Top Gun: Maverick";
+	static genre = "Action/Drama";
+	static year = 2022;
+	static director = "Joseph Kosinski"; // most likely not needed
+	// writer =
+	// stars 
+	static poster = "Resources/Poster.png"
+	static trailer = "Resources/trailer.mp4" //youtube link more logical: https://www.youtube.com/watch?v=giXco2jaZ_4&ab_channel=ParamountPictures
+	plot = "hutsman"
+
+	title  = "Test";
+}
