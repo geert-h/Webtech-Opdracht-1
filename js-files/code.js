@@ -258,31 +258,40 @@ class Artist {
 }
 class Director extends Artist {
 	constructor(name, birthDate, movies) {
+		super(name, birthDate)
+		this.movies = movies;
 	}
 }
 class Writer extends Artist {
-	constructor(name, birthDate, books){
+	constructor(name, birthDate, books) {
+		super(name,birthDate)
+		this.books = books;
 	}
 }
 class Actor extends Artist {
-	constructor(name, birthDate, movies, photo){
+	constructor(name, birthDate, movies, photo) {
+		super(name, birthDate)
+		this.movies = movies;
+		this.photo = photo; //ref to actors headshots?
 	}
 }
+
+const Dir = new Director("Joseph Kosinski", "1974-05-3", "Top Gun: Maverick, Oblivion, Tron: Legacy, Spiderhead, Only the Brave");
 
 
 const writers = [new Writer("Writerman", "geboorte", "boekenboeken"), new Writer("Writerman", "geboorte", "boekenboeken"), new Writer("Writerman", "geboorte", "boekenboeken")];
 const actors = [new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje"), new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje"), new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje")];
 
 class infoPageData {
+
 	static title = "Top Gun: Maverick";
 	static genre = "Action/Drama";
 	static year = 2022;
 	static director = "Joseph Kosinski"; // most likely not needed
 	
 	// stars 
-	static poster = "Resources/Poster.png"
-	static trailer = "Resources/trailer.mp4" //youtube link more logical: https://www.youtube.com/watch?v=giXco2jaZ_4&ab_channel=ParamountPictures
-	plot = "hutsman"
+	static poster = "Resources/Poster.png";
+	static trailer = "Resources/trailer.mp4"; //youtube link more logical: https://www.youtube.com/watch?v=giXco2jaZ_4&ab_channel=ParamountPictures
+	plot = " "
 
-	title  = "Test";
 }
