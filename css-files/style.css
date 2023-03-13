@@ -6,14 +6,65 @@
 	/* cursor: none; */
 }
 
+.directorDiv {
+	background-color: rgb(29, 156, 61);
+	color: #2416a0;
+	margin: 10rem 5rem;
+	font-size: 10rem;
+}
+
 .actorDiv {
 	background-color: rgb(29, 38, 78);
+	color: #bd18a1;
 	margin: 10rem 5rem;
+	font-size: 10rem;
+}
+.actorDiv img {
+	width: 10rem;
 }
 .writerDiv {
 	background-color: rgb(100, 141, 25);
+	color: #bd182e;
 	margin: 10rem 5rem;
+	font-size: 10rem;
 }
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1rem dotted rgb(0, 86, 245);
+}
+
+.tooltip .tooltip_text {
+	visibility: hidden;
+	background-color: rgb(0, 151, 156);
+	color: #fff;
+	text-align: center;
+	border-radius: 0.6rem;
+	padding: 3rem 1rem;
+	position: absolute;
+	z-index: 1;
+	/* bottom: 100%; */
+	left: 50%;
+	margin-left: -6rem;
+	font-size: 6rem;
+}
+
+.tooltip .tooltip_text::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -0.5rem;
+	border-width: 0.5rem;
+	border-style: solid;
+	border-color: rgb(0, 151, 156) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip_text {
+	visibility: visible;
+}
+
 
 
 /* .cursor {
