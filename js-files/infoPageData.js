@@ -151,7 +151,7 @@ class Director extends Artist {
 		this.movies = movies;
 		
 		const directorDiv = document.createElement("div");
-		directorDiv.innerText = name + ": "+ birthDate;
+		directorDiv.innerText = name + ": " + birthDate;
 		directorDiv.classList.add("artist");
 		directorContainer.appendChild(directorDiv);
 		MakeToolTip(directorDiv, movies, "Directed movies:");
