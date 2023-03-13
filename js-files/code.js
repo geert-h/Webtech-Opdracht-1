@@ -1,12 +1,45 @@
-// document.getElementById("testp").textContent = "TESTING";
-// document.getElementById("testp").innerHTML = "Hello World";
+// CREATING NAV MOMENT
+const nav = document.getElementsByTagName("nav")[0];
+nav.classList.add("nav-content");
+const hamburgerDiv = document.createElement("div");
+hamburgerDiv.classList.add("nav-content__hamburger");
+nav.appendChild(hamburgerDiv);
+for(let i = 0; i < 3; i++){
+	const spanItem = document.createElement("span");
+	spanItem.classList.add("nav-content__hamburger--bar");
+	hamburgerDiv.appendChild(spanItem);
+}
+const logoImg = document.createElement("img");
+logoImg.classList.add("nav-content__logo-link--image");
+logoImg.src = "./resources/logo-white.png";
+logoImg.alt = "top gun logo";
+const logoA = document.createElement("a");
+logoA.classList.add("nav-content__logo-link");
+logoA.href = "./index.html";
+logoA.appendChild(logoImg);
+nav.appendChild(logoA);
 
-// var myLink = document.createElement('a');
-// var myText = document.createTextNode('Click');
-// myLink.setAttribute('href', 'http://example.org');
-// myLink.appendChild(myText);
-// var p = document.getElementById('testp');
-// p.appendChild( myLink );
+const navUl = document.createElement("ul");
+navUl.classList.add("nav-content__unordered-list");
+nav.appendChild(navUl);
+for(let i = 0; i < 5; i++){
+	const liA = document.createElement("a");
+	liA.classList.add("nav-content__item--ref");
+	const liItem = document.createElement("li");
+	liItem.classList.add("nav-content__item");
+	liItem.appendChild(liA);
+	navUl.appendChild(liItem);
+}
+document.querySelectorAll(".nav-content__item--ref")[0].href = "./plot.html";
+document.querySelectorAll(".nav-content__item--ref")[0].textContent = "PLOT";
+document.querySelectorAll(".nav-content__item--ref")[1].href = "./cast.html";
+document.querySelectorAll(".nav-content__item--ref")[1].textContent = "CAST";
+document.querySelectorAll(".nav-content__item--ref")[2].href = "./trivia.html";
+document.querySelectorAll(".nav-content__item--ref")[2].textContent = "TRIVIA";
+document.querySelectorAll(".nav-content__item--ref")[3].href = "./reviews.html";
+document.querySelectorAll(".nav-content__item--ref")[3].textContent = "REVIEWS";
+document.querySelectorAll(".nav-content__item--ref")[4].href = "./info.html";
+document.querySelectorAll(".nav-content__item--ref")[4].textContent = "INFO";
 
 const hamburger = document.querySelector(".nav-content__hamburger");
 const navMenu = document.querySelector(".nav-content__unordered-list");
@@ -41,6 +74,7 @@ window.addEventListener("resize", function (event) {
 		body.classList.remove("active");
 	}
 });
+
 
 // var cursor = document.querySelector('.cursor');
 // var cursorinner = document.querySelector('.cursor2');
@@ -144,6 +178,17 @@ for (let i = 0; i < clickableDivs.length; i++) {
 	});
 }
 
+let colorPicker = document.getElementById(color_picker);
+colorPicker.addEventListener("change", watchColorPicker, false);
+
+
+function watchColorPicker(event) {
+	alert("HALLO");
+  document.querySelectorAll("p").forEach((p) => {
+    p.style.color = event.target.value;
+  });
+}
+
 for (let i = 0; i < clickablePreview.length; i++) {
 	const clickable = clickablePreview[i];
 	const additional = additionalDivs[i];
@@ -194,6 +239,13 @@ for (let i = 0; i < clickablePreview.length; i++) {
 	});
 }
 
+
+
+
+
+
+
+
 class Movie {
 	constructor(){
     }
@@ -218,12 +270,15 @@ class Actor extends Artist {
 }
 
 
+const writers = [new Writer("Writerman", "geboorte", "boekenboeken"), new Writer("Writerman", "geboorte", "boekenboeken"), new Writer("Writerman", "geboorte", "boekenboeken")];
+const actors = [new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje"), new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje"), new Actor("Acteurman", "geboorte", "moviemoviemovie", "plaatje")];
+
 class infoPageData {
 	static title = "Top Gun: Maverick";
 	static genre = "Action/Drama";
 	static year = 2022;
 	static director = "Joseph Kosinski"; // most likely not needed
-	// writer =
+	
 	// stars 
 	static poster = "Resources/Poster.png"
 	static trailer = "Resources/trailer.mp4" //youtube link more logical: https://www.youtube.com/watch?v=giXco2jaZ_4&ab_channel=ParamountPictures
