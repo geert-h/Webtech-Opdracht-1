@@ -55,8 +55,7 @@
 	content: "";
 	position: absolute;
 	top: 100%;
-	left: 12%;
-	right: 88%;
+	left: 50px;
 	margin-left: -0.5rem;
 	border-width: 2rem;
 	border-style: solid;
