@@ -5,28 +5,50 @@
 	font-size: 62.5%;
 	/* cursor: none; */
 }
+/* .directorContainer, .actorContainer, .writerContainer {
 
-.directorDiv {
-	background-color: rgb(29, 156, 61);
-	color: #2416a0;
-	margin: 10rem 5rem;
-	font-size: 10rem;
+} */
+
+.artist-container {
+	background-color: #25272f;
+	border-radius: 1.8rem;
+	font-family: 'Catamaran Regular';
+	padding: 3rem;
+}
+.artist-container:not(:last-child){
+	margin-bottom: 10rem;
 }
 
-.actorDiv {
-	background-color: rgb(29, 38, 78);
-	color: #bd18a1;
-	margin: 10rem 5rem;
+.artist-container h1 {
+	font-family: 'Catamaran Bold';
 	font-size: 10rem;
 }
-.actorDiv img {
-	width: 10rem;
+.artist-container p {
+	font-family: 'Catamaran Regular';
+	font-size: 4rem;
 }
-.writerDiv {
-	background-color: rgb(100, 141, 25);
-	color: #bd182e;
-	margin: 10rem 5rem;
-	font-size: 10rem;
+.artist-container img {
+	width: 8rem;
+}
+
+.titleContainer, .genreContainer, .yearContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.posterContainer {
+	display: flex;
+	justify-content: center;
+}
+.posterContainer img {
+	width: 30rem;
+}
+.trailerContainer video {
+	width: 100%;
+}
+
+.tooltip {
+	font-size: 4rem;
 }
 
 .tooltip {
