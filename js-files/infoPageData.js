@@ -30,6 +30,7 @@ plotContainer.classList.add("plotContainer");
 plotContainer.classList.add("artist-container");
 const plotH1 = document.createElement("h1");
 plotH1.innerText = "Plot:"
+plotH1.setAttribute("class", "artist-container__header");
 plotContainer.appendChild(plotH1)
 contentDiv.appendChild(plotContainer);
 
@@ -40,22 +41,27 @@ directorContainer.classList.add("artist-container");
 contentDiv.appendChild(directorContainer);
 const directorH1 = document.createElement("h1");
 directorH1.innerText = "Director:"
+directorH1.setAttribute("class", "artist-container__header");
 directorContainer.append(directorH1);
 const writerContainer = document.createElement("div");
 writerContainer.classList.add("artist-container");
 contentDiv.appendChild(writerContainer);
 const writerH1 = document.createElement("h1");
 writerH1.innerText = "Writers:"
+writerH1.setAttribute("class", "artist-container__header");
 writerContainer.append(writerH1);
 const writerUl = document.createElement("ul");
+writerUl.setAttribute("class", "artist-container__list");
 writerContainer.append(writerUl);
 const actorContainer = document.createElement("div");
 actorContainer.classList.add("artist-container");
 contentDiv.appendChild(actorContainer);
 const actorH1 = document.createElement("h1");
 actorH1.innerText = "Actors:"
+actorH1.setAttribute("class", "artist-container__header");
 actorContainer.append(actorH1);
 const actorUl = document.createElement("ul");
+actorUl.setAttribute("class", "artist-container__list");
 actorContainer.append(actorUl);
 
 const navElement = document.getElementsByTagName("nav")[0];
@@ -63,11 +69,13 @@ navElement.after(infoScreenDiv);
 
 function MakeToolTip(hovertext, arr, text) {
 	const toolTipSpan = document.createElement("span");
-	toolTipSpan.classList.add("tooltip_text");
+	toolTipSpan.classList.add("tooltip");
 	hovertext.appendChild(toolTipSpan);
 	const arrUl = document.createElement("ul");
+	arrUl.setAttribute("class", "tooltip-list");
 	const textH1 = document.createElement("h1");
 	textH1.innerText = text;
+	textH1.setAttribute("class", "tooltip-header")
 	toolTipSpan.appendChild(textH1);
 	toolTipSpan.appendChild(arrUl);
 	arr.forEach(item => {
@@ -91,9 +99,11 @@ class Movie {
 		titleContainer.appendChild(titleH1);
 		const genreH1 = document.createElement("h1");
 		genreH1.innerText = "Genre: Action/Drama";
+		genreH1.setAttribute("class", "artist-container__header");
 		genreContainer.appendChild(genreH1);
 		const yearH1 = document.createElement("h1");
 		yearH1.innerText = "Year: " + 2022;
+		yearH1.setAttribute("class", "artist-container__header");
 		yearContainer.appendChild(yearH1);
 		const posterImg = document.createElement("img");
 		posterImg.src = "./resources/Poster.png";
@@ -113,14 +123,14 @@ class Movie {
 		trailerContainer.appendChild(trailerVid);
 		const plotParagraph = document.createElement("p");
 		plotParagraph.innerText = "Mitchell is a test pilot for the U.S. Navy. Despite Maverick's abundance of achievements, his persistent insubordination has kept him from being granted the flag rank. The commander of the Pacific Fleet, former Top Gun rival and good friend Admiral Tom 'Iceman' Kazansky, often has Maverick's back. Maverick is a test pilot for the hypersonic 'Darkstar' scramjet program which is planned to be scrapped due to a favor of funding drones, by Rear Admiral Chester 'Hammer' Cain. To fulfill the scramjet program's contract the goal of flying Mach 10 must be achieved. Therefore, Maverick decides to go beyond the day's test speed, which is Mach 9, and try to achieve a speed of Mach 10. This caused the scramjet to be destroyed while flying due to the high speed. However, his career is saved by Iceman by assigning him to the Top Gun school at NAS North Island. Cain insists on telling Maverick that the era of crewed fighter aircrafts is soon to fall.";
+		plotParagraph.setAttribute("class", "artist-container__text");
 		plotContainer.appendChild(plotParagraph);
 	}
 	GenerateArtists(){
 		const Dir = new Director("Joseph Kosinski", "1974-05-3", ["Top Gun: Maverick, Oblivion", "Tron: Legacy", "Spiderhead", "Only the Brave"]);
 		const writers = [
-			new Writer("Writerman", "geboorte", ["boek1", "boek2", "boek3"]),
-			new Writer("Writerman", "geboorte", ["boek4", "boek5", "boek6"]),
-			new Writer("Writerman", "geboorte", ["boek7", "boek8", "boek9"])
+			new Writer("Peter Craig", "1969-11-10", ["BLOOD FATHER", "Hot plastic", "The Martini Shot: A Novel", "By Process of Illumination"]),
+			new Writer("Justin Marks", "1981-03-25", ["You're Going to Miss Me When You’re Bored", "A Million in Prizes"]),
 		];
 		const actors = [
 			new Actor("Tom Cruise", "July 3, 1962", ["Top Gun (1986)", "Mission: Impossible (1996)", "Mission: Impossible - Fallout (2018)", "The Mummy (2017)", "Jack Reacher (2012)"], "./resources/actors/tom-cruise.png"),
@@ -142,7 +152,7 @@ class Director extends Artist {
 		
 		const directorDiv = document.createElement("div");
 		directorDiv.innerText = name + ": "+ birthDate;
-		directorDiv.classList.add("tooltip");
+		directorDiv.classList.add("artist");
 		directorContainer.appendChild(directorDiv);
 		MakeToolTip(directorDiv, movies, "Directed movies:");
 	}
@@ -154,8 +164,8 @@ class Writer extends Artist {
 		const writerLi = document.createElement("li");
 		writerUl.appendChild(writerLi);
 		const writerDiv = document.createElement("div");
-		writerDiv.innerText = name + birthDate;
-		writerDiv.classList.add("tooltip");
+		writerDiv.innerText = name + ": " + birthDate;
+		writerDiv.classList.add("artist");
 		writerLi.appendChild(writerDiv);
 		MakeToolTip(writerDiv, books, "Books:");
 	}
@@ -169,7 +179,7 @@ class Actor extends Artist {
 		actorUl.appendChild(actorLi);
 		const actorDiv = document.createElement("div");
 		actorDiv.innerText = name + ": "+ birthDate;
-		actorDiv.classList.add("tooltip");
+		actorDiv.classList.add("artist");
 		actorLi.appendChild(actorDiv);
 		const actorImg = document.createElement("img");
 		actorImg.src = photo;

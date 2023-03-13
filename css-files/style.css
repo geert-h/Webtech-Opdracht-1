@@ -13,19 +13,23 @@
 	background-color: #25272f;
 	border-radius: 1.8rem;
 	font-family: 'Catamaran Regular';
+	font-size: inherit;
 	padding: 3rem;
 }
 .artist-container:not(:last-child){
 	margin-bottom: 10rem;
 }
 
-.artist-container h1 {
+.artist-container__header {
 	font-family: 'Catamaran Bold';
 	font-size: 10rem;
 }
-.artist-container p {
+.artist-container__list {
+	font-size: inherit;
+}
+.artist-container__text {
 	font-family: 'Catamaran Regular';
-	font-size: 4rem;
+	font-size: inherit;
 }
 .artist-container img {
 	width: 8rem;
@@ -47,17 +51,15 @@
 	width: 100%;
 }
 
-.tooltip {
-	font-size: 4rem;
-}
 
-.tooltip {
+.artist {
+	font-size: 4rem;
 	position: relative;
 	display: inline-block;
 	border-bottom: 1rem dotted rgb(0, 86, 245);
 }
 
-.tooltip .tooltip_text {
+.tooltip {
 	visibility: hidden;
 	background-color: #878fab;
 	color: black;
@@ -69,11 +71,17 @@
 	font-size: 6rem;
 	box-shadow: 0 5px 8px rgb(23, 21, 27);
 }
-.tooltip .tooltip_text ul {
-	list-style-position: inside;
+
+.tooltip-header {
+	font-size: 4rem;
 }
 
-.tooltip .tooltip_text::after {
+.tooltip-list {
+	list-style-position: inside;
+	font-size: 3rem;
+}
+
+.tooltip::after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -84,7 +92,7 @@
 	border-color: #878fab transparent transparent transparent;
 }
 
-.tooltip:hover .tooltip_text {
+.artist:hover .tooltip {
 	visibility: visible;
 }
 
