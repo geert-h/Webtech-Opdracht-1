@@ -59,26 +59,38 @@ class footerInitialiser {
         selectorDiv.classList.add("container3");
         footer.appendChild(selectorDiv);
         
+
+
         const elementsRoot = document.querySelectorAll('body > *:not(script)');
 
-        generateSelector(elementsRoot);
+        GenerateSelector(elementsRoot);
 
-        document.getElementsByClassName("container__selector")[0].addEventListener("change", updateValues);
-        
+        var selectors = document.getElementsByClassName("container__selector");
+
+        var rootSelector = selectors[0];
+
+        document.getElementsByClassName("container container3")[0].addEventListener("change", updateValues);
+
         function updateValues(event) {
 
-            var rootSelector = document.getElementsByClassName("container__selector")[0];
+            var selectorsCount = selectorDiv.childElementCount;
 
-            var selectedRootElement = rootSelector.value;
+            DeleteSelectors(selectorsCount);
 
-            if (selectorDiv.childNodes.length == 1) {
-                generateSelector(document.querySelectorAll('.' + CSS.escape(selectedRootElement) + ' > *'));
+            // var selectedRootElement = rootSelector.value;
+
+            if (selectorDiv.lastChild.value != 0) {
+
+                var lastSelectorValue = selectorDiv.lastChild.value;
+                GenerateSelector(document.querySelectorAll('.' + CSS.escape(lastSelectorValue) + ' > *'));
             }
 
-            UpdateOptions(document.querySelectorAll('.' + CSS.escape(selectedRootElement) + ' > *'), document.getElementsByClassName("container__selector")[1]);
+            for (let j = 0; j < selectorsCount; j++) {
+                UpdateOptions(document.querySelectorAll('.' + CSS.escape(selectorDiv.childNodes[j]) + ' > *'), selectors[selectorDiv.childNodes[j]]);
+            }
         }
 
-        function generateSelector(parent) {
+        function GenerateSelector(parent) {
 
             const elementSelector = document.createElement("select");
             elementSelector.classList.add("container__selector");
@@ -88,39 +100,61 @@ class footerInitialiser {
         }
 
         function UpdateOptions(parent, selector) {
+            try {
+                while(selector.length) {
+                    let i = 0;
+                    selector.remove(i);
+                    i++;
+                }
 
-            while(selector.length) {
-                let i = 0;
-                selector.remove(i);
-                i++;
-            }
-            
+                const first = document.createElement("option");
+                first.value = "0";
+                first.text = "Select Element";
+                selector.appendChild(first);
+            } catch (e) {}
+
             for (let i = 0; i < parent.length; i++) {
                 const opt = document.createElement("option");
-                //opt.classList.add("");
                 opt.value = parent[i].classList;
                 opt.text = parent[i].classList;
                 selector.appendChild(opt);
             }
         }
 
-        const colorPicker = document.getElementById("color_picker");
-        console.log(colorPicker);
-        colorPicker.addEventListener("change", watchColorPicker, false);
+        function DeleteSelectors(selectorsCount) {
 
-        function watchColorPicker(event) {
-            
-            var value = elementSelector.value;
+            for (let i = 0; i < selectorsCount; i++) {
 
-            document.querySelectorAll("a").forEach((a) => {
-                a.style.color = event.target.value;
-            });
+                console.log(selectorDiv.childNodes[i].value);
 
-            document.getElementsByTagName(value)
-            // document.querySelectorAll("h1").forEach((h1) => {
-            //     h1.style.color = event.target.value;
-            // });
+                if (selectorDiv.childNodes[i].value != 0) {
+                    continue;
+                }
+
+                while(selectorsCount != i - 1) {
+                    selectorDiv.removeChild(selectorDiv.lastChild);
+                }
+                return;
+            }
         }
+
+        // const colorPicker = document.getElementById("color_picker");
+        // console.log(colorPicker);
+        // colorPicker.addEventListener("change", watchColorPicker, false);
+
+        // function watchColorPicker(event) {
+            
+        //     var value = elementSelector.value;
+
+        //     document.querySelectorAll("a").forEach((a) => {
+        //         a.style.color = event.target.value;
+        //     });
+
+        //     document.getElementsByTagName(value)
+        //     // document.querySelectorAll("h1").forEach((h1) => {
+        //     //     h1.style.color = event.target.value;
+        //     // });
+        // }
     }
 }
 
