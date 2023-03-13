@@ -1,16 +1,4 @@
-const colorPicker = document.getElementById("color_picker");
-console.log(colorPicker);
-colorPicker.addEventListener("change", watchColorPicker, false);
 
-
-function watchColorPicker(event) {
-  document.querySelectorAll("a").forEach((a) => {
-    a.style.color = event.target.value;
-  });
-  document.querySelectorAll("h1").forEach((h1) => {
-    h1.style.color = event.target.value;
-  });
-}
 
 // var cursor = document.querySelector('.cursor');
 // var cursorinner = document.querySelector('.cursor2');

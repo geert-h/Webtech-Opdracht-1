@@ -7,11 +7,13 @@ class footerInitialiser {
         const nameDiv = document.createElement("div");
         nameDiv.classList.add("container");
         footer.appendChild(nameDiv);
+
         for(let i = 0; i < 3; i++){
             const h1 = document.createElement("h1");
             h1.classList.add("container__item");
             nameDiv.appendChild(h1);
         }
+
         document.querySelectorAll(".container__item")[0].textContent = "Geert Haans";
         document.querySelectorAll(".container__item")[1].textContent = "Aron den Ouden";
         document.querySelectorAll(".container__item")[2].textContent = "Aidan Bruinsma";
@@ -20,10 +22,12 @@ class footerInitialiser {
         logoDiv.classList.add("container");
         logoDiv.classList.add("container2");
         footer.appendChild(logoDiv);
+
         const streamH1 = document.createElement("h1");
         streamH1.classList.add("container__item");
         streamH1.textContent = "Stream Top Gun: Maverick on";
         logoDiv.appendChild(streamH1);
+
         const imgDiv = document.createElement("div");
         imgDiv.classList.add("container__logos");
         logoDiv.appendChild(imgDiv);
@@ -37,6 +41,7 @@ class footerInitialiser {
             outRef.appendChild(outImg);
             imgDiv.appendChild(outRef);
         }
+        
         document.querySelectorAll(".container__image")[0].setAttribute('src', './resources/itunes.png');
         document.querySelectorAll(".container__image")[0].setAttribute('alt', 'iTunes-logo');
         document.querySelectorAll(".container__logos--out")[0].setAttribute('href', 'https://tv.apple.com/us/movie/top-gun-maverick/umc.cmc.670544bajp6s4pysx4rvctczz?playableId=tvs.sbd.9001%3A1622173773');
@@ -48,6 +53,74 @@ class footerInitialiser {
         document.querySelectorAll(".container__image")[2].setAttribute('src', './resources/paramount.png');
         document.querySelectorAll(".container__image")[2].setAttribute('alt', 'paramountplus-logo');
         document.querySelectorAll(".container__logos--out")[2].setAttribute('href', 'https://www.paramountplus.com/intl/?redirectUrl=%2Fmovies%2Ftop-gun-maverick%2FAlcn0hcGx0HosdhcawKteH8DXh3RiOF7%2F%3FsearchReferral%3Dpublisher%26cbsclick%3DwDeVvxTEyxyNWauUyyWD3WMfUkAU39RbB3vyUk0%26vndid%3D159047%26clickid%3D159047%26sharedid%3Dmetacritic%26ftag%3DPPM-09-10aag1f%26dclid%3DCJmbkd3zs_0CFUwX4Aodi-oABg');
+
+        const selectorDiv = document.createElement("div");
+        selectorDiv.classList.add("container");
+        selectorDiv.classList.add("container3");
+        footer.appendChild(selectorDiv);
+        
+        const elementsRoot = document.querySelectorAll('body > *:not(script)');
+
+        generateSelector(elementsRoot);
+
+        document.getElementsByClassName("container__selector")[0].addEventListener("change", updateValues);
+        
+        function updateValues(event) {
+
+            var rootSelector = document.getElementsByClassName("container__selector")[0];
+
+            var selectedRootElement = rootSelector.value;
+
+            if (selectorDiv.childNodes.length == 1) {
+                generateSelector(document.querySelectorAll('.' + CSS.escape(selectedRootElement) + ' > *'));
+            }
+
+            UpdateOptions(document.querySelectorAll('.' + CSS.escape(selectedRootElement) + ' > *'), document.getElementsByClassName("container__selector")[1]);
+        }
+
+        function generateSelector(parent) {
+
+            const elementSelector = document.createElement("select");
+            elementSelector.classList.add("container__selector");
+            selectorDiv.appendChild(elementSelector);
+
+            UpdateOptions(parent, elementSelector);
+        }
+
+        function UpdateOptions(parent, selector) {
+
+            while(selector.length) {
+                let i = 0;
+                selector.remove(i);
+                i++;
+            }
+            
+            for (let i = 0; i < parent.length; i++) {
+                const opt = document.createElement("option");
+                //opt.classList.add("");
+                opt.value = parent[i].classList;
+                opt.text = parent[i].classList;
+                selector.appendChild(opt);
+            }
+        }
+
+        const colorPicker = document.getElementById("color_picker");
+        console.log(colorPicker);
+        colorPicker.addEventListener("change", watchColorPicker, false);
+
+        function watchColorPicker(event) {
+            
+            var value = elementSelector.value;
+
+            document.querySelectorAll("a").forEach((a) => {
+                a.style.color = event.target.value;
+            });
+
+            document.getElementsByTagName(value)
+            // document.querySelectorAll("h1").forEach((h1) => {
+            //     h1.style.color = event.target.value;
+            // });
+        }
     }
 }
 

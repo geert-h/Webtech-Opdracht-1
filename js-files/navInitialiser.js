@@ -1,16 +1,20 @@
 class navInitialiser {
 
 	generateNav () {
+		
 		const nav = document.getElementsByTagName("nav")[0];
 		nav.classList.add("nav-content");
+
 		const hamburgerDiv = document.createElement("div");
 		hamburgerDiv.classList.add("nav-content__hamburger");
 		nav.appendChild(hamburgerDiv);
+
 		for(let i = 0; i < 3; i++){
 			const spanItem = document.createElement("span");
 			spanItem.classList.add("nav-content__hamburger--bar");
 			hamburgerDiv.appendChild(spanItem);
 		}
+
 		const logoImg = document.createElement("img");
 		logoImg.classList.add("nav-content__logo-link--image");
 		logoImg.src = "./resources/logo-white.png";
@@ -24,6 +28,7 @@ class navInitialiser {
 		const navUl = document.createElement("ul");
 		navUl.classList.add("nav-content__unordered-list");
 		nav.appendChild(navUl);
+		
 		for(let i = 0; i < 5; i++){
 			const liA = document.createElement("a");
 			liA.classList.add("nav-content__item--ref");
@@ -82,3 +87,4 @@ class navInitialiser {
 
 let nav = new navInitialiser();
 nav.generateNav();
+

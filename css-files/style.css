@@ -1023,6 +1023,11 @@ body.active {
 	flex-direction: column;
 }
 
+.container3 {
+	align-items: flex-start;
+	flex-direction: column;
+}
+
 .container__logos--out {
 	color: #ffffff;
 	text-decoration: none;
@@ -1048,6 +1053,16 @@ body.active {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.container__selector {
+	width: 50%;
+	font-size: 2rem;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	margin: 0.5rem 0;
+	background-color: slategrey;
+	transition: 0.5s;
 }
 
 .trivia__table {
