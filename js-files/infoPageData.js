@@ -102,7 +102,7 @@ class Movie {
 		genreH1.setAttribute("class", "artist-container__header");
 		genreContainer.appendChild(genreH1);
 		const yearH1 = document.createElement("h1");
-		yearH1.innerText = "Year: " + 2022;
+		yearH1.innerText = "Year of release: " + 2022;
 		yearH1.setAttribute("class", "artist-container__header");
 		yearContainer.appendChild(yearH1);
 		const posterImg = document.createElement("img");

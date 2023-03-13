@@ -67,15 +67,13 @@ class footerInitialiser {
 
         var selectors = document.getElementsByClassName("container__selector");
 
-        var rootSelector = selectors[0];
-
         document.getElementsByClassName("container container3")[0].addEventListener("change", updateValues);
 
         function updateValues(event) {
 
             var selectorsCount = selectorDiv.childElementCount;
 
-            DeleteSelectors(selectorsCount);
+            DeleteSelectors();
 
             // var selectedRootElement = rootSelector.value;
 
@@ -83,6 +81,9 @@ class footerInitialiser {
 
                 var lastSelectorValue = selectorDiv.lastChild.value;
                 GenerateSelector(document.querySelectorAll('.' + CSS.escape(lastSelectorValue) + ' > *'));
+                if(selectorDiv.lastChild.childElementCount == 1) {
+                    selectorDiv.removeChild(selectorDiv.lastChild);
+                }
             }
 
             for (let j = 0; j < selectorsCount; j++) {
@@ -102,7 +103,7 @@ class footerInitialiser {
         function UpdateOptions(parent, selector) {
             try {
                 while(selector.length) {
-                    let i = 0;
+                    let i = 0; 
                     selector.remove(i);
                     i++;
                 }
@@ -121,20 +122,31 @@ class footerInitialiser {
             }
         }
 
-        function DeleteSelectors(selectorsCount) {
+        function DeleteSelectors() {
 
-            for (let i = 0; i < selectorsCount; i++) {
+            for (let i = 0; i < selectorDiv.childElementCount; i++) {
 
-                console.log(selectorDiv.childNodes[i].value);
+                // if (selectorDiv.childNodes[i].value != 0) {
+                //     continue;
+                // }
 
-                if (selectorDiv.childNodes[i].value != 0) {
-                    continue;
+                for (let j = 0; j < selectorDiv.childNodes[i].childElementCount; j++) {
+                    console.log("i = " + selectorDiv.childNodes[i].value);
+                    console.log("j = " + document.getElementsByClassName(selectorDiv.childNodes[i].value)[0].childNodes[j].value);
+                    if (selectorDiv.childNodes[i].value != selectorDiv.childNodes[i].childNodes[j].value) {
+                        continue;
+                    }
                 }
 
-                while(selectorsCount != i - 1) {
+                console.log(i);
+
+                let j = selectorDiv.childElementCount - i;
+
+                console.log(j);
+
+                for(j; j > 0; j--) {
                     selectorDiv.removeChild(selectorDiv.lastChild);
                 }
-                return;
             }
         }
 

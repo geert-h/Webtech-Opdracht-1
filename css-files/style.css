@@ -9,6 +9,11 @@
 
 } */
 
+.info-screen {
+	background-color: rgb(23, 21, 27);
+	padding: 0 3vw;
+}
+
 .artist-container {
 	background-color: #25272f;
 	border-radius: 1.8rem;
@@ -40,6 +45,7 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .posterContainer {
 	display: flex;
 	justify-content: center;
@@ -952,6 +958,7 @@ body.active {
 	grid-gap: 1.5rem;
 	margin-top: 10rem;
 }
+
 .cast-content__container__item {
 	margin: auto 0;
 	background-color: #25272f;
@@ -960,14 +967,17 @@ body.active {
 	border-radius: 2rem;
 	display: flex;
 }
+
 .cast-content__container__item__pic {
 	width: 50%;
 }
+
 .cast-content__container__item img {
 	width: 100%;
 	padding: 5rem;
 	border-radius: 50%;
 }
+
 .cast-content__container__item__text {
 	margin: auto 0;
 	font-size: 10rem;
@@ -976,10 +986,12 @@ body.active {
 	color: white;
 	padding-right: 5rem;
 }
+
 .cast-content__container__item__text p {
 	font-size: 3rem;
 	font-family: "catamaran Regular";
 }
+
 .cast-popup {
 	position: fixed;
 	width: 60vw;
@@ -1003,16 +1015,19 @@ body.active {
 	font-family: "catamaran Regular";
 	display: none;
 }
+
 .cast-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 4vw;
 }
+
 .cast-container__left {
 	width: 50%;
 	padding-right: 5vw;
 }
+
 .cast-container__right {
 	width: 50%;
 }
@@ -1144,7 +1159,13 @@ body.active {
 	padding: 0.5rem;
 	margin: 0.5rem 0;
 	background-color: slategrey;
-	transition: 0.5s;
+	opacity: 0.7;
+	transition: 1s;
+}
+
+.container__selector:hover {
+	opacity: 1;
+	transition: 0.3s;
 }
 
 .trivia__table {
