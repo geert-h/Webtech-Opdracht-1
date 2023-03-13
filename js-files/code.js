@@ -244,5 +244,4 @@ class infoPageData {
 	static poster = "Resources/Poster.png";
 	static trailer = "Resources/trailer.mp4"; //youtube link more logical: https://www.youtube.com/watch?v=giXco2jaZ_4&ab_channel=ParamountPictures
 	plot = " "
-
 }
