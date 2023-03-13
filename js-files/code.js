@@ -224,6 +224,8 @@ class Actor extends Artist {
 	}
 }
 
+const Dir = new Director("Joseph Kosinski", "1974-05-3", "Top Gun: Maverick, Oblivion, Tron: Legacy, Spiderhead, Only the Brave");
+
 
 class infoPageData {
 
