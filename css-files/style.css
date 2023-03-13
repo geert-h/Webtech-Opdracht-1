@@ -37,17 +37,15 @@
 
 .tooltip .tooltip_text {
 	visibility: hidden;
-	background-color: rgb(0, 151, 156);
-	color: #980bb4;
-	/* text-align: center; */
-	border-radius: 0.6rem;
+	background-color: #878fab;
+	color: black;
+	border-radius: 2rem;
 	padding: 3rem 1rem;
-	position: absolute;
+	position: fixed;
 	z-index: 1;
-	/* bottom: 100%; */
-	left: 50%;
 	margin-left: -6rem;
 	font-size: 6rem;
+	box-shadow: 0 5px 8px rgb(23, 21, 27);
 }
 .tooltip .tooltip_text ul {
 	list-style-position: inside;
@@ -57,11 +55,12 @@
 	content: "";
 	position: absolute;
 	top: 100%;
-	left: 50%;
+	left: 12%;
+	right: 88%;
 	margin-left: -0.5rem;
-	border-width: 0.5rem;
+	border-width: 2rem;
 	border-style: solid;
-	border-color: rgb(0, 151, 156) transparent transparent transparent;
+	border-color: #878fab transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip_text {

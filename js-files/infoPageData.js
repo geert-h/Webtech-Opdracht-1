@@ -24,8 +24,14 @@ function MakeToolTip(hovertext, arr, text) {
 		arrLi.innerText = item;
 		arrUl.appendChild(arrLi);
 	});
+	hovertext.onmouseover = function (e) {
+		var x = e.clientX,
+			y = e.clientY;
+			height = toolTipSpan.getBoundingClientRect().height;
+		toolTipSpan.style.left = (x) + 'px';
+		toolTipSpan.style.top = (y - height - 40) + 'px';
+	}
 }
-
 
 class Movie {
 	constructor(){
@@ -61,7 +67,7 @@ class Writer extends Artist {
 		writerH1.style.color = "green";
 		writerH1.classList.add("tooltip");
 		writerDiv.appendChild(writerH1);
-		MakeToolTip(writerH1, books, "Written books previeous:");
+		MakeToolTip(writerH1, books, "Books:");
 	}
 }
 class Actor extends Artist {
@@ -79,7 +85,7 @@ class Actor extends Artist {
 		actorImg.src = photo;
 		actorImg.alt = name + " headshot";
 		actorDiv.appendChild(actorImg);
-		MakeToolTip(actorH1, movies, "Geweest in de movie:");
+		MakeToolTip(actorH1, movies, "Previous movies:");
 	}
 }
 
