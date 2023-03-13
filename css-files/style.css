@@ -1007,11 +1007,13 @@ body.active {
 	text-align: center;
 	margin: auto;
 }
+
 .container2 {
 	width: 100%;
 	padding-bottom: 1rem;
 	flex-direction: column;
 }
+
 .container__logos--out {
 	color: #ffffff;
 	text-decoration: none;
