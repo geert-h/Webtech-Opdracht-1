@@ -1,3 +1,19 @@
+const colorPicker = document.getElementById("color_picker");
+console.log(colorPicker);
+colorPicker.addEventListener("change", watchColorPicker, false);
+
+
+function watchColorPicker(event) {
+  document.querySelectorAll("a").forEach((a) => {
+    a.style.color = event.target.value;
+  });
+  document.querySelectorAll("h1").forEach((h1) => {
+    h1.style.color = event.target.value;
+  });
+}
+
+
+
 const hamburger = document.querySelector(".nav-content__hamburger");
 const navMenu = document.querySelector(".nav-content__unordered-list");
 const html = document.querySelector("html");
@@ -135,16 +151,7 @@ for (let i = 0; i < clickableDivs.length; i++) {
 	});
 }
 
-let colorPicker = document.getElementById(color_picker);
-colorPicker.addEventListener("change", watchColorPicker, false);
 
-
-function watchColorPicker(event) {
-	alert("HALLO");
-  document.querySelectorAll("p").forEach((p) => {
-    p.style.color = event.target.value;
-  });
-}
 
 for (let i = 0; i < clickablePreview.length; i++) {
 	const clickable = clickablePreview[i];
