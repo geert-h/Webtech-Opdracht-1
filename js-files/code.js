@@ -214,11 +214,14 @@ class Actor extends Artist {
 		actorH1.style.fontSize = "100px";
 		actorH1.style.color = "blue";
 		actorDiv.appendChild(actorH1);
+		const actorImg = document.createElement("img");
+		actorImg.src = photo;
+		actorDiv.appendChild(actorImg);
 	}
 }
 
 const actors = [
-	new Actor("Tom Cruise", "July 3, 1962", "moviemoviemovie", "plaatje"), 
+	new Actor("Tom Cruise", "July 3, 1962", "moviemoviemovie", "./resources/actors/tom-cruise.png"), 
 	new Actor("Jennifer Connelly", "December 12, 1970", "moviemoviemovie", "plaatje"),
 	new Actor("Miles Teller", "February 20, 1987", "moviemoviemovie", "plaatje")
 ];
