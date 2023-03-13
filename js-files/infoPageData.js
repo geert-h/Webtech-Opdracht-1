@@ -141,7 +141,7 @@ class Director extends Artist {
 		this.movies = movies;
 		
 		const directorDiv = document.createElement("div");
-		directorDiv.innerText = name + ": "+ birthDate;
+		directorDiv.innerText = name + ": " + birthDate;
 		directorDiv.classList.add("tooltip");
 		directorContainer.appendChild(directorDiv);
 		MakeToolTip(directorDiv, movies, "Directed movies:");
@@ -154,7 +154,7 @@ class Writer extends Artist {
 		const writerLi = document.createElement("li");
 		writerUl.appendChild(writerLi);
 		const writerDiv = document.createElement("div");
-		writerDiv.innerText = name + birthDate;
+		writerDiv.innerText = name + ": " + birthDate;
 		writerDiv.classList.add("tooltip");
 		writerLi.appendChild(writerDiv);
 		MakeToolTip(writerDiv, books, "Books:");
