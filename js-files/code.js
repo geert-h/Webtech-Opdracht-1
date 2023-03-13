@@ -168,9 +168,11 @@ for (let i = 0; i < clickablePreview.length; i++) {
 
 const actorDiv = document.createElement("div");
 actorDiv.classList.add("actorDiv");
+const writerDiv = document.createElement("div");
+writerDiv.classList.add("writerDiv");
 const naviman = document.getElementsByTagName("nav")[0];
 naviman.after(actorDiv);
-
+actorDiv.after(writerDiv);
 
 
 
@@ -195,6 +197,11 @@ class Writer extends Artist {
 	constructor(name, birthDate, books) {
 		super(name,birthDate)
 		this.books = books;
+		const writerH1 = document.createElement("h1");
+		writerH1.innerText = name + birthDate;
+		writerH1.style.fontSize = "100px";
+		writerH1.style.color = "green";
+		writerDiv.appendChild(writerH1);
 	}
 }
 class Actor extends Artist {
@@ -205,6 +212,7 @@ class Actor extends Artist {
 		const actorH1 = document.createElement("h1");
 		actorH1.innerText = name + birthDate;
 		actorH1.style.fontSize = "100px";
+		actorH1.style.color = "blue";
 		actorDiv.appendChild(actorH1);
 	}
 }

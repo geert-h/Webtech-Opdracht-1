@@ -6,6 +6,15 @@
 	/* cursor: none; */
 }
 
+.actorDiv {
+	background-color: rgb(29, 38, 78);
+	margin: 10rem 5rem;
+}
+.writerDiv {
+	background-color: rgb(100, 141, 25);
+	margin: 10rem 5rem;
+}
+
 
 /* .cursor {
     width: 50px;
