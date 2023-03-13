@@ -75,12 +75,11 @@ class footerInitialiser {
 
             DeleteSelectors();
 
-            // var selectedRootElement = rootSelector.value;
-
             if (selectorDiv.lastChild.value != 0) {
 
                 var lastSelectorValue = selectorDiv.lastChild.value;
                 GenerateSelector(document.querySelectorAll('.' + CSS.escape(lastSelectorValue) + ' > *'));
+                
                 if(selectorDiv.lastChild.childElementCount == 1) {
                     selectorDiv.removeChild(selectorDiv.lastChild);
                 }
@@ -126,21 +125,26 @@ class footerInitialiser {
 
             for (let i = 0; i < selectorDiv.childElementCount; i++) {
 
-                // if (selectorDiv.childNodes[i].value != 0) {
-                //     continue;
-                // }
-
-                for (let j = 0; j < selectorDiv.childNodes[i].childElementCount; j++) {
-                    console.log("i = " + selectorDiv.childNodes[i].value);
-                    console.log("j = " + document.getElementsByClassName(selectorDiv.childNodes[i].value)[0].childNodes[j].value);
-                    if (selectorDiv.childNodes[i].value != selectorDiv.childNodes[i].childNodes[j].value) {
-                        continue;
-                    }
+                if (selectorDiv.childNodes[i].value != 0) {
+                    continue;
                 }
+
+                // for (let j = 0; j < selectorDiv.childNodes[i].childElementCount; j++) {
+                //     console.log("i = " + selectorDiv.childNodes[i].value);
+                //     console.log("j = " + document.getElementsByClassName(selectorDiv.childNodes[i].value)[0].childNodes[j].value);
+                //     if (selectorDiv.childNodes[i].value != selectorDiv.childNodes[i].childNodes[j].value) {
+                //         continue;
+                //     }
+                // }
 
                 console.log(i);
 
+                if(i == 0) {
+                    i = 1;
+                }
+
                 let j = selectorDiv.childElementCount - i;
+                
 
                 console.log(j);
 
