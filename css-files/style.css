@@ -38,8 +38,8 @@
 .tooltip .tooltip_text {
 	visibility: hidden;
 	background-color: rgb(0, 151, 156);
-	color: #fff;
-	text-align: center;
+	color: #980bb4;
+	/* text-align: center; */
 	border-radius: 0.6rem;
 	padding: 3rem 1rem;
 	position: absolute;
@@ -48,6 +48,9 @@
 	left: 50%;
 	margin-left: -6rem;
 	font-size: 6rem;
+}
+.tooltip .tooltip_text ul {
+	list-style-position: inside;
 }
 
 .tooltip .tooltip_text::after {
