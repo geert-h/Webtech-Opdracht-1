@@ -15,6 +15,7 @@
 	font-family: 'Catamaran Regular';
 	font-size: inherit;
 	padding: 3rem;
+	list-style-position: inside;
 }
 .artist-container:not(:last-child){
 	margin-bottom: 10rem;
@@ -23,6 +24,8 @@
 .artist-container__header {
 	font-family: 'Catamaran Bold';
 	font-size: 10rem;
+	padding: 0 2rem;
+
 }
 .artist-container__list {
 	font-size: inherit;
@@ -32,8 +35,10 @@
 	font-size: inherit;
 }
 .artist-container img {
-	width: 8rem;
+	width: 100%;
+	padding: 1rem 6rem;
 }
+
 
 .titleContainer, .genreContainer, .yearContainer{
 	display: flex;
@@ -44,8 +49,27 @@
 	display: flex;
 	justify-content: center;
 }
-.posterContainer img {
+.generalContainer img {
 	width: 30rem;
+}
+.generalContainer {
+	display: flex;
+	flex-direction: row;
+}
+.generalLeftDiv {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+.generalRightDiv {
+	width: 50%;
+	font-size: 8rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.generalRightDiv h1{
+	font-size: 6rem;
 }
 .trailerContainer video {
 	width: 100%;
@@ -56,8 +80,29 @@
 	font-size: 4rem;
 	position: relative;
 	display: inline-block;
-	border-bottom: 1rem dotted rgb(0, 86, 245);
+	padding: 0 2rem;
+	text-align: center;
+	/* border-bottom: 1rem dotted rgb(0, 86, 245); */
 }
+
+.artist-container__content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 4rem;
+}
+.actor_block {
+	background-color: #3d3f47;
+	border-radius: 1.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+.actor_block img {
+	border-radius: 50%;
+}
+
 
 .tooltip {
 	visibility: hidden;

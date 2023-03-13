@@ -9,22 +9,26 @@ infoScreenDiv.appendChild(contentDiv);
 const titleContainer = document.createElement("div");
 titleContainer.classList.add("content__header");
 contentDiv.appendChild(titleContainer);
-const genreContainer = document.createElement("div");
-genreContainer.classList.add("genreContainer");
-genreContainer.classList.add("artist-container");
-contentDiv.appendChild(genreContainer);
-const yearContainer = document.createElement("div");
-yearContainer.classList.add("yearContainer");
-yearContainer.classList.add("artist-container");
-contentDiv.appendChild(yearContainer);
-const posterContainer = document.createElement("div");
-posterContainer.classList.add("posterContainer");
-posterContainer.classList.add("artist-container");
-contentDiv.appendChild(posterContainer);
+
+const generalContainer = document.createElement("div");
+generalContainer.classList.add("generalContainer");
+generalContainer.classList.add("artist-container");
+contentDiv.appendChild(generalContainer);
+const generalLeftDiv = document.createElement("div");
+generalLeftDiv.classList.add("generalLeftDiv");
+generalContainer.appendChild(generalLeftDiv);
+const generalRightDiv = document.createElement("div");
+generalRightDiv.classList.add("generalRightDiv");
+generalContainer.appendChild(generalRightDiv);
+
 const trailerContainer = document.createElement("div");
 trailerContainer.classList.add("trailerContainer");
 trailerContainer.classList.add("artist-container");
 contentDiv.appendChild(trailerContainer);
+const trailerH1 = document.createElement("h1");
+trailerH1.innerText = "Trailer:"
+trailerH1.setAttribute("class", "artist-container__header");
+trailerContainer.appendChild(trailerH1);
 const plotContainer = document.createElement("div");
 plotContainer.classList.add("plotContainer");
 plotContainer.classList.add("artist-container");
@@ -60,9 +64,9 @@ const actorH1 = document.createElement("h1");
 actorH1.innerText = "Actors:"
 actorH1.setAttribute("class", "artist-container__header");
 actorContainer.append(actorH1);
-const actorUl = document.createElement("ul");
-actorUl.setAttribute("class", "artist-container__list");
-actorContainer.append(actorUl);
+const actorContent = document.createElement("div");
+actorContent.setAttribute("class", "artist-container__content");
+actorContainer.append(actorContent);
 
 const navElement = document.getElementsByTagName("nav")[0];
 navElement.after(infoScreenDiv);
@@ -97,18 +101,18 @@ class Movie {
 		const titleH1 = document.createElement("h1");
 		titleH1.innerText = "Top Gun Maverick";
 		titleContainer.appendChild(titleH1);
-		const genreH1 = document.createElement("h1");
-		genreH1.innerText = "Genre: Action/Drama";
-		genreH1.setAttribute("class", "artist-container__header");
-		genreContainer.appendChild(genreH1);
-		const yearH1 = document.createElement("h1");
-		yearH1.innerText = "Year: " + 2022;
-		yearH1.setAttribute("class", "artist-container__header");
-		yearContainer.appendChild(yearH1);
 		const posterImg = document.createElement("img");
 		posterImg.src = "./resources/Poster.png";
 		posterImg.alt = "Top Gun: Maverick Poster";
-		posterContainer.appendChild(posterImg);
+		generalLeftDiv.appendChild(posterImg);
+		const genreH1 = document.createElement("h1");
+		genreH1.innerText = "Genre: Action/Drama";
+		genreH1.setAttribute("class", "artist-container__header");
+		generalRightDiv.appendChild(genreH1);
+		const yearH1 = document.createElement("h1");
+		yearH1.innerText = "Year: " + 2022;
+		yearH1.setAttribute("class", "artist-container__header");
+		generalRightDiv.appendChild(yearH1);
 		const trailerVid = document.createElement("video");
 		const trailerSrc = document.createElement("source");
 		trailerSrc.src = "./resources/trailer.mp4";
@@ -118,11 +122,9 @@ class Movie {
 		trailerVid.controls = true;
 		trailerVid.muted = true;
 		trailerVid.play();
-		// document.getElementById('vid').play();
-		// trailerVid.alt = "Top Gun: Maverick Video";
 		trailerContainer.appendChild(trailerVid);
 		const plotParagraph = document.createElement("p");
-		plotParagraph.innerText = "Mitchell is a test pilot for the U.S. Navy. Despite Maverick's abundance of achievements, his persistent insubordination has kept him from being granted the flag rank. The commander of the Pacific Fleet, former Top Gun rival and good friend Admiral Tom 'Iceman' Kazansky, often has Maverick's back. Maverick is a test pilot for the hypersonic 'Darkstar' scramjet program which is planned to be scrapped due to a favor of funding drones, by Rear Admiral Chester 'Hammer' Cain. To fulfill the scramjet program's contract the goal of flying Mach 10 must be achieved. Therefore, Maverick decides to go beyond the day's test speed, which is Mach 9, and try to achieve a speed of Mach 10. This caused the scramjet to be destroyed while flying due to the high speed. However, his career is saved by Iceman by assigning him to the Top Gun school at NAS North Island. Cain insists on telling Maverick that the era of crewed fighter aircrafts is soon to fall.";
+		plotParagraph.innerText = "More than 30 years after graduating from Top Gun , Pete 'Maverick' Mitchell is a test pilot for the U.S. Navy. Despite Maverick's abundance of achievements, his persistent insubordination has kept him from being granted the flag rank. The commander of the Pacific Fleet, former Top Gun rival and good friend Admiral Tom 'Iceman' Kazansky, often has Maverick's back. Maverick is a test pilot for the hypersonic 'Darkstar' scramjet program which is planned to be scrapped due to a favor of funding drones, by Rear Admiral Chester 'Hammer' Cain. To fulfill the scramjet program's contract the goal of flying Mach 10 must be achieved. Therefore, Maverick decides to go beyond the day's test speed, which is Mach 9, and try to achieve a speed of Mach 10. This caused the scramjet to be destroyed while flying due to the high speed. However, his career is saved by Iceman by assigning him to the Top Gun school at NAS North Island. Cain insists on telling Maverick that the era of crewed fighter aircrafts is soon to fall.";
 		plotParagraph.setAttribute("class", "artist-container__text");
 		plotContainer.appendChild(plotParagraph);
 	}
@@ -135,7 +137,10 @@ class Movie {
 		const actors = [
 			new Actor("Tom Cruise", "July 3, 1962", ["Top Gun (1986)", "Mission: Impossible (1996)", "Mission: Impossible - Fallout (2018)", "The Mummy (2017)", "Jack Reacher (2012)"], "./resources/actors/tom-cruise.png"),
 			new Actor("Jennifer Connelly", "December 12, 1970", ["Career Opportunities (1991)", "Labyrinth (1986)", "Requiem for a Dream (2000)", "A Beautiful Mind (2001)", "Hulk (2003)"], "./resources/actors/jennifer-connelly.png"),
-			new Actor("Miles Teller", "February 20, 1987", ["Whiplash (2014)", "War Dogs (2016)", "Fantastic Four (2015)", "Footloose (2011)", "The Spectacular Now (2013)"], "./resources/actors/miles-teller.png")
+			new Actor("Miles Teller", "February 20, 1987", ["Whiplash (2014)", "War Dogs (2016)", "Fantastic Four (2015)", "Footloose (2011)", "The Spectacular Now (2013)"], "./resources/actors/miles-teller.png"),
+			new Actor("Glen Powell", "October 21, 1988", ["Devotion (2022)", "Set It Up (2018)", "Hidden Figures (2016)", "The Dark Knight Rises (2012)", "Kids 3-D: Game Over (2003"], "./resources/actors/glen-powell.png"),
+			new Actor("Val Kilmer", "December 31, 1959", ["Top Gun (1986)", "Willow (1988)", "Tombstone (1993)", "Batman Forever (1995)", "Heat (1995)"], "./resources/actors/val-kilmer.png"),
+			new Actor("Jon hamm", "March 10, 1971", ["Mad Men (2007 - 2015)", "Confess, Fletch (2022)", "Baby Driver (2017)", "Tag (2018)", "Keeping Up with the Joneses (2016)"], "./resources/actors/jon-hamm.png")
 		];
 	}
 }
@@ -175,16 +180,17 @@ class Actor extends Artist {
 		super(name, birthDate)
 		this.movies = movies;
 		this.photo = photo;
-		const actorLi = document.createElement("li");
-		actorUl.appendChild(actorLi);
-		const actorDiv = document.createElement("div");
-		actorDiv.innerText = name + ": "+ birthDate;
-		actorDiv.classList.add("artist");
-		actorLi.appendChild(actorDiv);
+		const actorBlock = document.createElement("div");
+		actorBlock.classList.add("actor_block");
+		actorContent.appendChild(actorBlock);
 		const actorImg = document.createElement("img");
 		actorImg.src = photo;
 		actorImg.alt = name + " headshot";
-		actorContainer.appendChild(actorImg);
+		actorBlock.appendChild(actorImg);
+		const actorDiv = document.createElement("div");
+		actorDiv.innerText = name + "\r\n "+ birthDate;
+		actorDiv.classList.add("artist");
+		actorBlock.appendChild(actorDiv);
 		MakeToolTip(actorDiv, movies, "Previous movies:");
 	}
 }
